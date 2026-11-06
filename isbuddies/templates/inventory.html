@@ -1,0 +1,72 @@
+{% extends 'base_app.html' %}
+{% block title %}IS Buddies | Inventory{% endblock %}
+{% block content %}
+      <!-- Page header -->
+      <div class="top"><h1>Inventory Management</h1><span class="tag">Inventory Clerk</span></div>
+      <div class="row" style="align-items:center">
+        <input aria-label="Search" class="in" placeholder="Search product / SKU" style="max-width:320px"/>
+        <input aria-label="Category" class="in" placeholder="Category: All" style="max-width:180px"/>
+        <span style="flex:1"></span>
+        <button class="btn y">+ Add Product</button>
+      </div>
+      <div class="row">
+        <div class="card" style="flex:3">
+          <div class="sc">
+            <table>
+              <tr>
+                <th>SKU</th>
+                <th>Product</th>
+                <th>Category</th>
+                <th>Stock</th>
+                <th>Reorder Lvl</th>
+                <th>Price</th>
+                <th>Status</th>
+                <th>Actions</th>
+              </tr>
+              <tr>
+                <td>[SKU]</td>
+                <td>[Notebook]</td>
+                <td>[Paper]</td>
+                <td>[0]</td>
+                <td>[0]</td>
+                <td>[₱]</td>
+                <td><span class="p g">In stock</span></td>
+                <td>Edit | Delete</td>
+              </tr>
+              <tr>
+                <td>[SKU]</td>
+                <td>[Ballpen]</td>
+                <td>[Writing]</td>
+                <td>[0]</td>
+                <td>[0]</td>
+                <td>[₱]</td>
+                <td><span class="p r">Low stock</span></td>
+                <td>Edit | Delete</td>
+              </tr>
+              <tr>
+                <td>[SKU]</td>
+                <td>[Folder]</td>
+                <td>[Filing]</td>
+                <td>[0]</td>
+                <td>[0]</td>
+                <td>[₱]</td>
+                <td><span class="p g">In stock</span></td>
+                <td>Edit | Delete</td>
+              </tr>
+            </table>
+          </div>
+          <p class="note">Pagination: 1 2 3 ...</p>
+        </div>
+        <!-- Card: Add / Edit Product -->
+        <div class="card" style="flex:1">
+          <h2>Add / Edit Product</h2>
+          <label class="f">Product name<input class="in" placeholder=""/></label>
+          <label class="f">Category<input class="in" placeholder=""/></label>
+          <label class="f">Supplier<input class="in" placeholder=""/></label>
+          <label class="f">Quantity<input class="in" placeholder=""/></label>
+          <label class="f">Unit price<input class="in" placeholder=""/></label>
+          <label class="f">Reorder level<input class="in" placeholder=""/></label>
+          <div class="row"><button class="btn">Save</button><button class="btn o">Cancel</button></div>
+        </div>
+      </div>
+{% endblock %}

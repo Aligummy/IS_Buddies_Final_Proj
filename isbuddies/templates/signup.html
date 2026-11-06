@@ -1,0 +1,41 @@
+{% extends 'base_auth.html' %}
+{% block title %}IS Buddies | Sign up{% endblock %}
+{% block form %}
+      <form class="card auth-card" method="post" action="">
+        <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+        <h1>Create account</h1>
+        <p class="note">New accounts need admin approval before first login.</p>
+
+        <label class="f" for="full_name">Full name
+          <input class="in" id="full_name" name="full_name" type="text" placeholder="Juan Dela Cruz" required autocomplete="name">
+        </label>
+        <label class="f" for="email">Email
+          <input class="in" id="email" name="email" type="email" placeholder="name@example.com" required autocomplete="email">
+        </label>
+        <label class="f" for="username">Username
+          <input class="in" id="username" name="username" type="text" placeholder="Choose a username" required autocomplete="username">
+        </label>
+        <!-- Only non-admin roles can be requested here; admin and instructor accounts are created by an admin. -->
+        <label class="f" for="role">Role requested
+          <select class="in" id="role" name="role" required>
+            <option value="">Select a role</option>
+            <option value="inventory_clerk">Inventory Clerk</option>
+            <option value="sales_personnel">Sales Personnel</option>
+          </select>
+        </label>
+        <label class="f" for="password">Password
+          <input class="in" id="password" name="password" type="password" placeholder="Create a password" required minlength="8" autocomplete="new-password">
+        </label>
+        <label class="f" for="confirm_password">Confirm password
+          <input class="in" id="confirm_password" name="confirm_password" type="password" placeholder="Re-enter password" required minlength="8" autocomplete="new-password">
+        </label>
+
+        <p class="note">Password: at least 8 characters, with a letter and a number.</p>
+
+        <!-- Show errors here: username taken, passwords do not match, weak password -->
+        <div class="auth-error" role="alert">{% for m in get_flashed_messages() %}{{ m }}<br>{% endfor %}</div>
+
+        <button class="btn y" type="submit" style="width:100%">Sign up</button>
+        <p class="auth-switch">Already have an account? <a href="{{ url_for('auth.login') }}">Login</a></p>
+      </form>
+{% endblock %}

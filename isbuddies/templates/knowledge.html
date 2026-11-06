@@ -1,0 +1,75 @@
+{% extends 'base_app.html' %}
+{% block title %}IS Buddies | Knowledge Analysis{% endblock %}
+{% block content %}
+      <!-- Page header -->
+      <div class="top">
+        <h1>Knowledge Analysis &amp; Prediction</h1>
+        <span class="tag">Admin: inputs and output | Instructor: everything</span>
+      </div>
+      <!-- Tabs -->
+      <div class="tabs">
+        <span class="on">Product Demand</span>
+        <span>Sales Prediction</span>
+        <span>Slow-Moving</span>
+        <span>Best-Selling</span>
+      </div>
+      <div class="row">
+        <!-- Card: Inputs -->
+        <div class="card" style="flex:1">
+          <h2>Inputs</h2>
+          <label class="f">Model<input class="in" placeholder="Simple Linear Regression / Random Forest"/></label>
+          <label class="f">Product / Category<input class="in" placeholder=""/></label>
+          <label class="f">Period (month / week)<input class="in" placeholder=""/></label>
+          <label class="f">Forecast horizon<input class="in" placeholder=""/></label>
+          <div class="row">
+            <button class="btn">Train &amp; Save Model</button>
+            <button class="btn o">Load Model</button>
+          </div>
+          <button class="btn y" style="margin-top:10px;width:100%">Predict</button>
+        </div>
+        <div class="col" style="flex:2">
+          <!-- Card: Prediction Output -->
+          <div class="card">
+            <h2>Prediction Output</h2>
+            <div class="row">
+              <div class="ph" style="flex:1;height:70px">Predicted value [0]</div>
+              <div class="ph" style="flex:1;height:70px">Class: Fast / Slow-moving</div>
+            </div>
+            <svg aria-label="Line chart placeholder" role="img" style="width:100%;height:200px" viewbox="0 0 400 160">
+              <rect fill="#eef1fb" height="160" width="400"/>
+              <polyline fill="none" points="10,130 70,100 130,110 190,70 250,80 310,40 390,30" stroke="#1e2a5a" stroke-width="3"/>
+              </polyline>
+              <polyline fill="none" points="190,70 250,60 310,50 390,40" stroke="#1e2a5a" stroke-dasharray="6" stroke-width="2" style="stroke:#d99a00"/>
+              </polyline>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <!-- Card: Evaluation Metrics Instructor -->
+        <div class="card inst">
+          <h2>Evaluation Metrics <span class="tag">Instructor</span></h2>
+          <div class="sc">
+            <table>
+              <tr><th>Metric</th><th>SLR</th><th>Random Forest</th><th>Description</th></tr>
+              <tr><td>MAE</td><td>[ ]</td><td>[ ]</td><td>[description]</td></tr>
+              <tr><td>MSE / RMSE</td><td>[ ]</td><td>[ ]</td><td>[description]</td></tr>
+              <tr><td>R²</td><td>[ ]</td><td>[ ]</td><td>[description]</td></tr>
+            </table>
+          </div>
+        </div>
+        <!-- Card: Dataset Preview (1,000+ rows, CSV) Instructor -->
+        <div class="card inst">
+          <h2>Dataset Preview (1,000+ rows, CSV) <span class="tag">Instructor</span></h2>
+          <div class="sc">
+            <table>
+              <tr><th>date</th><th>product</th><th>category</th><th>qty</th><th>price</th></tr>
+              <tr><td>[ ]</td><td>[ ]</td><td>[ ]</td><td>[ ]</td><td>[ ]</td></tr>
+              <tr><td>[ ]</td><td>[ ]</td><td>[ ]</td><td>[ ]</td><td>[ ]</td></tr>
+              <tr><td>[ ]</td><td>[ ]</td><td>[ ]</td><td>[ ]</td><td>[ ]</td></tr>
+              <tr><td>...</td><td>...</td><td>...</td><td>...</td><td>...</td></tr>
+            </table>
+          </div>
+        </div>
+      </div>
+{% endblock %}

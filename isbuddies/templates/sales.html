@@ -1,0 +1,43 @@
+{% extends 'base_app.html' %}
+{% block title %}IS Buddies | Sales Transaction{% endblock %}
+{% block content %}
+      <!-- Page header -->
+      <div class="top"><h1>Sales Transaction</h1><span class="tag">Sales Personnel</span></div>
+      <div class="row">
+        <div class="card" style="flex:3">
+          <input aria-label="Search" class="in" placeholder="Search or scan product" style="margin-bottom:12px"/>
+          <div class="sc">
+            <table>
+              <tr><th>Product</th><th>Category</th><th>Stock</th><th>Price</th><th></th></tr>
+              <tr><td>[Notebook]</td><td>[Paper]</td><td>[0]</td><td>[₱]</td><td>Add</td></tr>
+              <tr><td>[Ballpen]</td><td>[Writing]</td><td>[0]</td><td>[₱]</td><td>Add</td></tr>
+              <tr><td>[Folder]</td><td>[Filing]</td><td>[0]</td><td>[₱]</td><td>Add</td></tr>
+            </table>
+          </div>
+        </div>
+        <!-- Card: Current Order -->
+        <div class="card" style="flex:2">
+          <h2>Current Order</h2>
+          <div class="sc">
+            <table>
+              <tr><th>Item</th><th>Qty</th><th>Subtotal</th></tr>
+              <tr><td>[Item]</td><td>[1]</td><td>[₱]</td></tr>
+              <tr><td>[Item]</td><td>[1]</td><td>[₱]</td></tr>
+              <tr><td>[Item]</td><td>[1]</td><td>[₱]</td></tr>
+            </table>
+          </div>
+          <p>Subtotal: [₱]<br/>Discount: [₱]<br/><b>Total: [₱]</b></p>
+          <label class="f">Customer (optional)<input class="in" placeholder=""/></label>
+          <label class="f">Payment method / Amount tendered<input class="in" placeholder=""/></label>
+          <div class="row">
+            <button class="btn y">Complete Sale</button>
+            <button class="btn o">Clear</button>
+          </div>
+        </div>
+      </div>
+      <!-- Card: Receipt Preview (after sale; stock auto-deducts) -->
+      <div class="card">
+        <h2>Receipt Preview (after sale; stock auto-deducts)</h2>
+        <div class="ph" style="height:90px">Printable receipt</div>
+      </div>
+{% endblock %}

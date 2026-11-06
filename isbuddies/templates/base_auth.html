@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}IS Buddies{% endblock %}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+  <main class="auth">
+    <!-- Brand panel -->
+    <section class="auth-brand">
+      <div class="auth-logo"></div>
+      <h1>IS Buddies<br>School &amp; Office Supplies</h1>
+      <p>Inventory, sales and demand prediction in one place.</p>
+    </section>
+
+    <section class="auth-panel">
+      {% block form %}{% endblock %}
+    </section>
+  </main>
+</body>
+</html>

@@ -1,0 +1,22 @@
+{% extends 'base_auth.html' %}
+{% block title %}IS Buddies | Login{% endblock %}
+{% block form %}
+      <form class="card auth-card" method="post" action="">
+        <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+        <h1>Welcome back</h1>
+        <p class="note">Sign in to continue</p>
+
+        <label class="f" for="username">Username
+          <input class="in" id="username" name="username" type="text" placeholder="Enter username" required autocomplete="username">
+        </label>
+        <label class="f" for="password">Password
+          <input class="in" id="password" name="password" type="password" placeholder="Enter password" required autocomplete="current-password">
+        </label>
+
+        <!-- Show errors here: invalid credentials, account locked, account pending approval -->
+        <div class="auth-error" role="alert">{% for m in get_flashed_messages() %}{{ m }}<br>{% endfor %}</div>
+
+        <button class="btn y" type="submit" style="width:100%">Login</button>
+        <p class="auth-switch">No account yet? <a href="{{ url_for('auth.signup') }}">Sign up</a></p>
+      </form>
+{% endblock %}
