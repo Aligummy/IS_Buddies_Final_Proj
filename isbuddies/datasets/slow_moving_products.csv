@@ -1,0 +1,1001 @@
+product_id,product_name,category,unit_price,avg_monthly_sales,stock_level,days_since_last_sale,reorder_level,turnover_rate,is_slow_moving
+P021_0000,Highlighter Set (6 colors),Writing,126.71,55.9,141,25,17,1.93,0
+P048_0001,Scissors (Student),Desk Accessories,40.6,69.1,116,9,31,1.08,0
+P040_0002,File Organizer,Filing,124.02,7.4,60,111,16,0.11,1
+P061_0003,Correction Tape,Writing,26.55,25.8,81,14,14,2.5,0
+P038_0004,Ring Binder 1 inch,Filing,70.37,17.5,57,2,14,2.71,0
+P056_0005,Glue Stick,Adhesives,33.44,1.4,176,33,29,0.14,1
+P008_0006,Index Cards (Pack),Paper,42.32,5.2,122,49,22,0.32,1
+P042_0007,Ruler 18 inches (Plastic),Measuring,22.43,15.6,38,27,13,2.67,0
+P002_0008,Notebook 200 Leaves,Paper,78.77,80.2,148,17,16,1.97,0
+P009_0009,Construction Paper (Pack),Paper,50.03,7.3,173,94,26,0.29,1
+P025_0010,Watercolor Set,Art Supplies,55.52,4.8,73,70,15,0.1,1
+P027_0011,Colored Pencils 12s,Art Supplies,59.98,28.6,55,28,17,2.18,0
+P027_0012,Colored Pencils 12s,Art Supplies,59.98,3.0,136,53,16,0.36,1
+P022_0013,Crayons 8 Colors,Art Supplies,27.79,16.6,147,18,24,1.57,0
+P060_0014,Double-Sided Tape,Adhesives,34.76,47.9,24,29,38,2.63,0
+P038_0015,Ring Binder 1 inch,Filing,70.37,19.1,121,5,34,2.04,0
+P022_0016,Crayons 8 Colors,Art Supplies,27.79,77.2,135,25,39,2.94,0
+P068_0017,Sticky Notes (Pad),Organization,44.07,70.4,108,10,21,1.91,0
+P028_0018,Colored Pencils 24s,Art Supplies,126.0,28.9,60,15,36,0.52,0
+P037_0019,Brown Envelope Short,Filing,4.22,78.1,57,10,11,0.54,0
+P067_0020,Sticker Labels (Pack),Organization,23.52,15.2,117,19,18,0.79,0
+P025_0021,Watercolor Set,Art Supplies,55.52,70.5,85,27,35,2.33,0
+P038_0022,Ring Binder 1 inch,Filing,70.37,42.1,101,29,15,2.06,0
+P014_0023,Pencil No. 2 (Pcs),Writing,9.49,7.8,131,52,19,0.15,1
+P053_0024,Paper Clips (Box),Desk Accessories,29.09,9.9,142,21,12,2.18,0
+P017_0025,Sign Pen Blue,Writing,27.61,7.1,143,49,16,0.4,1
+P004_0026,Spiral Notebook A4,Paper,77.96,40.6,89,8,39,2.76,0
+P060_0027,Double-Sided Tape,Adhesives,34.76,6.8,121,93,14,0.36,1
+P028_0028,Colored Pencils 24s,Art Supplies,126.0,7.2,43,72,25,0.08,1
+P040_0029,File Organizer,Filing,124.02,33.3,16,5,20,1.08,0
+P061_0030,Correction Tape,Writing,26.55,7.5,155,56,17,0.14,1
+P042_0031,Ruler 18 inches (Plastic),Measuring,22.43,28.3,116,0,14,1.41,0
+P011_0032,Ballpen Blue (Pcs),Writing,10.16,23.3,131,22,16,1.71,0
+P008_0033,Index Cards (Pack),Paper,42.32,64.1,68,25,11,2.46,0
+P003_0034,Composition Notebook,Paper,30.98,56.5,85,16,19,0.94,0
+P005_0035,Bond Paper A4 (Ream),Paper,223.4,142.0,53,23,17,1.59,0
+P022_0036,Crayons 8 Colors,Art Supplies,27.79,110.9,78,29,26,1.65,0
+P044_0037,Triangle Set,Measuring,42.73,46.2,68,0,23,2.76,0
+P015_0038,Mechanical Pencil,Writing,31.36,7.9,79,70,12,0.16,1
+P064_0039,Pencil Case (Premium),Organization,115.68,39.6,62,18,15,1.0,0
+P046_0040,Eraser (Pcs),Desk Accessories,9.64,22.6,64,28,21,1.82,0
+P037_0041,Brown Envelope Short,Filing,4.22,53.2,79,20,15,2.95,0
+P012_0042,Ballpen Black (Pcs),Writing,17.76,7.9,150,70,10,0.28,1
+P033_0043,Clear Book 20 Pockets,Filing,36.95,3.2,186,119,28,0.37,1
+P025_0044,Watercolor Set,Art Supplies,55.52,46.1,132,8,34,0.78,0
+P068_0045,Sticky Notes (Pad),Organization,44.07,6.8,183,78,10,0.46,1
+P064_0046,Pencil Case (Premium),Organization,115.68,21.1,47,24,32,1.34,0
+P021_0047,Highlighter Set (6 colors),Writing,126.71,2.9,55,50,10,0.15,1
+P027_0048,Colored Pencils 12s,Art Supplies,59.98,65.5,69,15,31,1.69,0
+P016_0049,Sign Pen Black,Writing,24.59,11.5,122,10,11,1.24,0
+P031_0050,Plastic Folder A4,Filing,19.9,7.9,74,68,23,0.44,1
+P054_0051,Push Pins (Box),Desk Accessories,28.42,8.0,162,117,23,0.23,1
+P060_0052,Double-Sided Tape,Adhesives,34.76,39.0,120,3,18,1.15,0
+P053_0053,Paper Clips (Box),Desk Accessories,29.09,11.2,18,18,19,2.36,0
+P046_0054,Eraser (Pcs),Desk Accessories,9.64,97.5,52,5,10,1.06,0
+P041_0055,Ruler 12 inches (Plastic),Measuring,11.22,63.7,148,15,13,1.68,0
+P012_0056,Ballpen Black (Pcs),Writing,17.76,5.7,158,104,16,0.39,1
+P053_0057,Paper Clips (Box),Desk Accessories,29.09,64.9,144,4,25,1.92,0
+P032_0058,Plastic Folder Long,Filing,14.22,73.7,20,9,38,1.57,0
+P029_0059,Acrylic Paint Set,Art Supplies,197.01,7.6,40,118,27,0.34,1
+P018_0060,Whiteboard Marker,Writing,43.12,8.1,128,15,23,1.1,0
+P011_0061,Ballpen Blue (Pcs),Writing,10.16,62.1,47,10,33,1.97,0
+P031_0062,Plastic Folder A4,Filing,19.9,19.1,109,13,31,2.82,0
+P020_0063,Highlighter (Pcs),Writing,25.82,96.3,144,28,13,2.86,0
+P019_0064,Permanent Marker,Writing,35.8,7.3,112,56,24,0.44,1
+P061_0065,Correction Tape,Writing,26.55,101.2,43,14,12,2.37,0
+P060_0066,Double-Sided Tape,Adhesives,34.76,19.7,44,8,30,1.42,0
+P017_0067,Sign Pen Blue,Writing,27.61,57.2,98,19,26,2.64,0
+P070_0068,Clipboard,Organization,84.41,30.4,52,20,28,0.93,0
+P037_0069,Brown Envelope Short,Filing,4.22,16.1,72,7,28,2.52,0
+P028_0070,Colored Pencils 24s,Art Supplies,126.0,42.6,34,1,31,0.79,0
+P019_0071,Permanent Marker,Writing,35.8,43.4,134,6,17,2.88,0
+P012_0072,Ballpen Black (Pcs),Writing,17.76,134.5,80,17,17,1.78,0
+P043_0073,Protractor,Measuring,10.52,29.0,73,21,29,1.46,0
+P039_0074,Ring Binder 2 inch,Filing,129.48,2.3,107,92,24,0.39,1
+P062_0075,Correction Fluid,Writing,31.78,14.3,120,25,38,1.63,0
+P051_0076,Stapler No. 35,Desk Accessories,118.02,39.0,122,29,31,1.93,0
+P025_0077,Watercolor Set,Art Supplies,55.52,8.5,123,14,25,2.9,0
+P007_0078,Yellow Pad Paper,Paper,31.16,69.1,109,12,18,1.87,0
+P020_0079,Highlighter (Pcs),Writing,25.82,108.8,22,17,30,2.96,0
+P030_0080,Paint Brush Set,Art Supplies,42.09,45.9,51,26,21,0.68,0
+P030_0081,Paint Brush Set,Art Supplies,42.09,46.9,32,23,34,1.42,0
+P011_0082,Ballpen Blue (Pcs),Writing,10.16,26.9,123,7,24,2.79,0
+P022_0083,Crayons 8 Colors,Art Supplies,27.79,2.6,186,69,21,0.25,1
+P017_0084,Sign Pen Blue,Writing,27.61,1.5,58,112,19,0.37,1
+P052_0085,Staple Wire No. 35,Desk Accessories,35.5,19.6,56,25,15,0.51,0
+P003_0086,Composition Notebook,Paper,30.98,7.0,135,116,10,0.24,1
+P017_0087,Sign Pen Blue,Writing,27.61,2.3,136,70,28,0.27,1
+P048_0088,Scissors (Student),Desk Accessories,40.6,32.9,131,17,27,2.03,0
+P061_0089,Correction Tape,Writing,26.55,39.9,90,11,23,0.88,0
+P030_0090,Paint Brush Set,Art Supplies,42.09,1.0,118,89,13,0.21,1
+P008_0091,Index Cards (Pack),Paper,42.32,65.8,140,29,36,1.29,0
+P044_0092,Triangle Set,Measuring,42.73,40.1,119,13,16,0.56,0
+P014_0093,Pencil No. 2 (Pcs),Writing,9.49,2.2,193,75,17,0.42,1
+P030_0094,Paint Brush Set,Art Supplies,42.09,3.1,82,49,13,0.33,1
+P040_0095,File Organizer,Filing,124.02,1.7,171,117,16,0.18,1
+P038_0096,Ring Binder 1 inch,Filing,70.37,22.3,98,19,37,1.53,0
+P020_0097,Highlighter (Pcs),Writing,25.82,50.7,112,17,24,2.25,0
+P034_0098,Clear Book 40 Pockets,Filing,92.96,4.2,118,48,28,0.15,1
+P037_0099,Brown Envelope Short,Filing,4.22,58.7,85,24,10,0.99,0
+P013_0100,Ballpen Red (Pcs),Writing,16.66,54.2,60,1,35,0.92,0
+P061_0101,Correction Tape,Writing,26.55,52.7,129,21,37,1.13,0
+P032_0102,Plastic Folder Long,Filing,14.22,119.1,108,7,15,1.08,0
+P010_0103,Pad Paper,Paper,25.62,5.4,49,65,22,0.18,1
+P037_0104,Brown Envelope Short,Filing,4.22,4.4,159,36,18,0.25,1
+P045_0105,Compass (Drawing),Measuring,34.06,27.4,79,9,14,2.36,0
+P006_0106,Bond Paper Short (Ream),Paper,198.72,119.5,22,5,31,1.94,0
+P017_0107,Sign Pen Blue,Writing,27.61,3.3,106,103,10,0.45,1
+P020_0108,Highlighter (Pcs),Writing,25.82,23.0,71,10,15,2.74,0
+P047_0109,Sharpener (Pcs),Desk Accessories,8.12,1.8,64,101,15,0.4,1
+P010_0110,Pad Paper,Paper,25.62,7.4,150,100,11,0.31,1
+P046_0111,Eraser (Pcs),Desk Accessories,9.64,18.1,141,1,28,2.23,0
+P056_0112,Glue Stick,Adhesives,33.44,4.4,38,56,18,0.29,1
+P044_0113,Triangle Set,Measuring,42.73,15.7,17,21,26,2.13,0
+P049_0114,Calculator (Basic),Desk Accessories,191.07,17.0,141,16,28,2.83,0
+P046_0115,Eraser (Pcs),Desk Accessories,9.64,55.4,49,15,39,2.51,0
+P035_0116,Expanding Envelope,Filing,49.14,36.6,130,17,34,1.72,0
+P044_0117,Triangle Set,Measuring,42.73,28.7,30,25,24,0.82,0
+P026_0118,Oil Pastel 12 Colors,Art Supplies,80.33,31.4,109,19,15,2.92,0
+P038_0119,Ring Binder 1 inch,Filing,70.37,48.5,66,10,35,0.59,0
+P048_0120,Scissors (Student),Desk Accessories,40.6,47.0,99,3,25,2.96,0
+P063_0121,Pencil Case (Basic),Organization,72.29,47.3,124,9,19,0.68,0
+P044_0122,Triangle Set,Measuring,42.73,43.0,25,3,21,2.36,0
+P059_0123,Masking Tape,Adhesives,26.13,3.0,102,112,20,0.17,1
+P020_0124,Highlighter (Pcs),Writing,25.82,78.7,20,11,29,1.21,0
+P060_0125,Double-Sided Tape,Adhesives,34.76,3.8,77,99,12,0.45,1
+P049_0126,Calculator (Basic),Desk Accessories,191.07,61.3,29,13,13,2.97,0
+P014_0127,Pencil No. 2 (Pcs),Writing,9.49,74.2,144,5,14,2.28,0
+P024_0128,Crayons 24 Colors,Art Supplies,71.49,17.7,134,16,11,2.8,0
+P018_0129,Whiteboard Marker,Writing,43.12,69.7,125,1,17,2.69,0
+P053_0130,Paper Clips (Box),Desk Accessories,29.09,7.8,32,116,26,0.45,1
+P042_0131,Ruler 18 inches (Plastic),Measuring,22.43,5.0,156,42,25,0.14,1
+P048_0132,Scissors (Student),Desk Accessories,40.6,4.2,99,110,10,0.48,1
+P070_0133,Clipboard,Organization,84.41,2.6,168,112,18,0.11,1
+P037_0134,Brown Envelope Short,Filing,4.22,16.3,86,23,12,2.72,0
+P007_0135,Yellow Pad Paper,Paper,31.16,56.2,104,25,18,0.77,0
+P032_0136,Plastic Folder Long,Filing,14.22,7.5,139,39,10,0.07,1
+P064_0137,Pencil Case (Premium),Organization,115.68,35.2,56,15,25,0.55,0
+P044_0138,Triangle Set,Measuring,42.73,7.3,153,119,16,0.44,1
+P042_0139,Ruler 18 inches (Plastic),Measuring,22.43,41.7,56,23,13,1.92,0
+P009_0140,Construction Paper (Pack),Paper,50.03,94.0,116,8,22,1.46,0
+P035_0141,Expanding Envelope,Filing,49.14,3.4,149,39,11,0.11,1
+P040_0142,File Organizer,Filing,124.02,40.3,124,10,38,0.55,0
+P021_0143,Highlighter Set (6 colors),Writing,126.71,32.4,102,16,32,2.67,0
+P051_0144,Stapler No. 35,Desk Accessories,118.02,2.2,103,91,13,0.35,1
+P038_0145,Ring Binder 1 inch,Filing,70.37,45.6,149,18,34,1.17,0
+P067_0146,Sticker Labels (Pack),Organization,23.52,49.9,103,7,30,2.72,0
+P005_0147,Bond Paper A4 (Ream),Paper,223.4,140.8,143,9,22,0.77,0
+P062_0148,Correction Fluid,Writing,31.78,34.0,98,19,33,0.96,0
+P056_0149,Glue Stick,Adhesives,33.44,2.9,62,86,17,0.18,1
+P026_0150,Oil Pastel 12 Colors,Art Supplies,80.33,24.1,119,13,13,1.18,0
+P033_0151,Clear Book 20 Pockets,Filing,36.95,15.9,104,21,29,2.4,0
+P032_0152,Plastic Folder Long,Filing,14.22,83.2,97,22,19,2.25,0
+P043_0153,Protractor,Measuring,10.52,34.1,112,28,19,2.55,0
+P041_0154,Ruler 12 inches (Plastic),Measuring,11.22,6.5,102,41,29,0.24,1
+P025_0155,Watercolor Set,Art Supplies,55.52,66.6,115,0,28,1.59,0
+P038_0156,Ring Binder 1 inch,Filing,70.37,60.9,113,0,13,2.81,0
+P021_0157,Highlighter Set (6 colors),Writing,126.71,0.7,44,69,14,0.48,1
+P031_0158,Plastic Folder A4,Filing,19.9,36.7,142,28,34,2.84,0
+P016_0159,Sign Pen Black,Writing,24.59,20.3,119,16,30,1.32,0
+P030_0160,Paint Brush Set,Art Supplies,42.09,38.5,89,5,22,2.4,0
+P065_0161,Bag Tag / ID Lace,Organization,15.62,66.9,112,18,27,2.99,0
+P005_0162,Bond Paper A4 (Ream),Paper,223.4,2.8,95,74,10,0.09,1
+P025_0163,Watercolor Set,Art Supplies,55.52,59.2,119,0,25,1.09,0
+P046_0164,Eraser (Pcs),Desk Accessories,9.64,5.2,147,66,10,0.09,1
+P063_0165,Pencil Case (Basic),Organization,72.29,65.0,59,20,11,2.64,0
+P040_0166,File Organizer,Filing,124.02,45.3,63,11,32,0.84,0
+P013_0167,Ballpen Red (Pcs),Writing,16.66,25.0,108,8,25,1.78,0
+P047_0168,Sharpener (Pcs),Desk Accessories,8.12,7.8,67,90,18,0.08,1
+P054_0169,Push Pins (Box),Desk Accessories,28.42,36.4,25,6,19,0.79,0
+P003_0170,Composition Notebook,Paper,30.98,80.0,129,6,32,2.7,0
+P067_0171,Sticker Labels (Pack),Organization,23.52,6.7,114,22,24,0.61,0
+P040_0172,File Organizer,Filing,124.02,20.1,52,20,33,2.68,0
+P035_0173,Expanding Envelope,Filing,49.14,31.6,72,27,23,0.99,0
+P050_0174,Calculator (Scientific),Desk Accessories,423.94,50.3,149,23,36,2.37,0
+P016_0175,Sign Pen Black,Writing,24.59,15.7,70,9,14,1.45,0
+P009_0176,Construction Paper (Pack),Paper,50.03,95.7,118,11,26,1.42,0
+P060_0177,Double-Sided Tape,Adhesives,34.76,6.5,115,93,21,0.07,1
+P015_0178,Mechanical Pencil,Writing,31.36,7.6,66,76,11,0.44,1
+P036_0179,Brown Envelope Long,Filing,7.04,2.7,32,101,16,0.31,1
+P032_0180,Plastic Folder Long,Filing,14.22,73.8,112,23,12,1.95,0
+P029_0181,Acrylic Paint Set,Art Supplies,197.01,12.7,122,29,39,2.44,0
+P017_0182,Sign Pen Blue,Writing,27.61,50.5,71,26,17,1.5,0
+P063_0183,Pencil Case (Basic),Organization,72.29,88.8,129,23,39,2.24,0
+P040_0184,File Organizer,Filing,124.02,45.9,59,15,12,2.63,0
+P056_0185,Glue Stick,Adhesives,33.44,80.0,106,15,18,2.06,0
+P052_0186,Staple Wire No. 35,Desk Accessories,35.5,15.8,18,14,33,1.28,0
+P029_0187,Acrylic Paint Set,Art Supplies,197.01,37.7,110,9,13,1.16,0
+P004_0188,Spiral Notebook A4,Paper,77.96,3.7,144,69,16,0.38,1
+P050_0189,Calculator (Scientific),Desk Accessories,423.94,30.2,58,25,37,1.63,0
+P008_0190,Index Cards (Pack),Paper,42.32,14.9,27,23,23,2.64,0
+P009_0191,Construction Paper (Pack),Paper,50.03,56.4,82,8,19,2.49,0
+P053_0192,Paper Clips (Box),Desk Accessories,29.09,1.9,188,85,27,0.25,1
+P029_0193,Acrylic Paint Set,Art Supplies,197.01,4.3,184,45,23,0.31,1
+P017_0194,Sign Pen Blue,Writing,27.61,18.2,89,15,12,2.08,0
+P016_0195,Sign Pen Black,Writing,24.59,1.8,170,40,19,0.14,1
+P009_0196,Construction Paper (Pack),Paper,50.03,84.6,99,24,36,1.15,0
+P040_0197,File Organizer,Filing,124.02,7.8,93,10,13,0.96,0
+P016_0198,Sign Pen Black,Writing,24.59,6.3,140,51,12,0.33,1
+P047_0199,Sharpener (Pcs),Desk Accessories,8.12,1.9,83,34,23,0.48,1
+P027_0200,Colored Pencils 12s,Art Supplies,59.98,81.0,32,13,28,2.19,0
+P044_0201,Triangle Set,Measuring,42.73,3.6,88,32,16,0.26,1
+P016_0202,Sign Pen Black,Writing,24.59,80.4,84,26,39,2.45,0
+P043_0203,Protractor,Measuring,10.52,4.1,48,109,24,0.16,1
+P013_0204,Ballpen Red (Pcs),Writing,16.66,25.3,107,8,10,2.08,0
+P033_0205,Clear Book 20 Pockets,Filing,36.95,1.7,159,83,20,0.25,1
+P030_0206,Paint Brush Set,Art Supplies,42.09,17.9,44,20,37,1.37,0
+P009_0207,Construction Paper (Pack),Paper,50.03,90.6,72,21,34,2.75,0
+P042_0208,Ruler 18 inches (Plastic),Measuring,22.43,2.9,103,46,19,0.34,1
+P010_0209,Pad Paper,Paper,25.62,15.3,133,28,28,2.7,0
+P047_0210,Sharpener (Pcs),Desk Accessories,8.12,41.4,126,8,39,1.29,0
+P057_0211,White Glue 120ml,Adhesives,21.77,7.0,137,50,16,0.42,1
+P053_0212,Paper Clips (Box),Desk Accessories,29.09,25.6,48,28,37,1.12,0
+P051_0213,Stapler No. 35,Desk Accessories,118.02,1.0,81,59,29,0.31,1
+P029_0214,Acrylic Paint Set,Art Supplies,197.01,6.3,194,54,26,0.15,1
+P021_0215,Highlighter Set (6 colors),Writing,126.71,68.7,23,17,31,2.94,0
+P009_0216,Construction Paper (Pack),Paper,50.03,5.8,159,95,26,0.45,1
+P051_0217,Stapler No. 35,Desk Accessories,118.02,61.4,24,12,29,0.7,0
+P034_0218,Clear Book 40 Pockets,Filing,92.96,10.2,116,25,18,1.04,0
+P054_0219,Push Pins (Box),Desk Accessories,28.42,37.4,47,15,15,1.2,0
+P046_0220,Eraser (Pcs),Desk Accessories,9.64,68.9,134,19,13,2.36,0
+P013_0221,Ballpen Red (Pcs),Writing,16.66,2.7,124,84,29,0.43,1
+P057_0222,White Glue 120ml,Adhesives,21.77,27.0,102,21,13,1.19,0
+P004_0223,Spiral Notebook A4,Paper,77.96,6.2,151,89,10,0.11,1
+P052_0224,Staple Wire No. 35,Desk Accessories,35.5,63.6,114,2,19,1.36,0
+P004_0225,Spiral Notebook A4,Paper,77.96,17.4,135,28,16,2.26,0
+P044_0226,Triangle Set,Measuring,42.73,4.1,117,66,28,0.38,1
+P040_0227,File Organizer,Filing,124.02,4.1,165,115,27,0.25,1
+P062_0228,Correction Fluid,Writing,31.78,47.4,60,18,12,0.86,0
+P030_0229,Paint Brush Set,Art Supplies,42.09,7.1,54,90,17,0.23,1
+P007_0230,Yellow Pad Paper,Paper,31.16,75.8,140,25,10,2.17,0
+P011_0231,Ballpen Blue (Pcs),Writing,10.16,29.5,53,18,16,2.12,0
+P002_0232,Notebook 200 Leaves,Paper,78.77,71.9,113,0,23,2.75,0
+P036_0233,Brown Envelope Long,Filing,7.04,3.8,149,71,19,0.34,1
+P049_0234,Calculator (Basic),Desk Accessories,191.07,19.0,68,19,34,2.48,0
+P048_0235,Scissors (Student),Desk Accessories,40.6,72.8,76,1,30,2.11,0
+P021_0236,Highlighter Set (6 colors),Writing,126.71,4.5,140,94,22,0.39,1
+P015_0237,Mechanical Pencil,Writing,31.36,73.8,23,27,17,1.42,0
+P019_0238,Permanent Marker,Writing,35.8,1.5,62,117,20,0.13,1
+P037_0239,Brown Envelope Short,Filing,4.22,87.3,50,11,25,2.73,0
+P011_0240,Ballpen Blue (Pcs),Writing,10.16,102.6,21,9,21,1.12,0
+P060_0241,Double-Sided Tape,Adhesives,34.76,27.8,72,21,35,1.77,0
+P044_0242,Triangle Set,Measuring,42.73,34.2,142,11,31,0.67,0
+P002_0243,Notebook 200 Leaves,Paper,78.77,120.7,99,26,15,2.07,0
+P055_0244,Desk Organizer,Desk Accessories,151.75,6.1,162,104,16,0.35,1
+P007_0245,Yellow Pad Paper,Paper,31.16,82.8,77,9,25,1.57,0
+P047_0246,Sharpener (Pcs),Desk Accessories,8.12,15.2,23,13,32,0.89,0
+P034_0247,Clear Book 40 Pockets,Filing,92.96,3.5,68,62,24,0.32,1
+P002_0248,Notebook 200 Leaves,Paper,78.77,3.2,38,40,12,0.05,1
+P025_0249,Watercolor Set,Art Supplies,55.52,7.3,113,91,12,0.16,1
+P040_0250,File Organizer,Filing,124.02,10.5,45,3,17,2.5,0
+P017_0251,Sign Pen Blue,Writing,27.61,46.1,61,2,16,1.06,0
+P033_0252,Clear Book 20 Pockets,Filing,36.95,6.5,104,93,13,0.33,1
+P038_0253,Ring Binder 1 inch,Filing,70.37,27.7,123,9,23,2.3,0
+P025_0254,Watercolor Set,Art Supplies,55.52,55.6,70,15,39,2.15,0
+P009_0255,Construction Paper (Pack),Paper,50.03,4.1,184,59,29,0.09,1
+P039_0256,Ring Binder 2 inch,Filing,129.48,26.5,55,26,37,1.23,0
+P027_0257,Colored Pencils 12s,Art Supplies,59.98,94.1,30,13,15,2.36,0
+P035_0258,Expanding Envelope,Filing,49.14,4.7,156,84,29,0.32,1
+P032_0259,Plastic Folder Long,Filing,14.22,104.7,32,2,15,2.37,0
+P057_0260,White Glue 120ml,Adhesives,21.77,28.9,101,29,38,1.08,0
+P051_0261,Stapler No. 35,Desk Accessories,118.02,4.0,191,68,27,0.16,1
+P019_0262,Permanent Marker,Writing,35.8,34.4,101,0,17,1.2,0
+P052_0263,Staple Wire No. 35,Desk Accessories,35.5,2.9,194,90,18,0.48,1
+P033_0264,Clear Book 20 Pockets,Filing,36.95,66.7,56,14,31,1.03,0
+P064_0265,Pencil Case (Premium),Organization,115.68,7.5,146,89,21,0.18,1
+P036_0266,Brown Envelope Long,Filing,7.04,66.0,52,16,15,2.36,0
+P059_0267,Masking Tape,Adhesives,26.13,42.7,71,11,30,2.35,0
+P032_0268,Plastic Folder Long,Filing,14.22,104.6,75,3,25,1.49,0
+P051_0269,Stapler No. 35,Desk Accessories,118.02,48.3,119,19,15,1.49,0
+P038_0270,Ring Binder 1 inch,Filing,70.37,27.4,90,13,18,0.74,0
+P064_0271,Pencil Case (Premium),Organization,115.68,0.5,170,119,24,0.06,1
+P051_0272,Stapler No. 35,Desk Accessories,118.02,53.0,91,7,10,0.55,0
+P054_0273,Push Pins (Box),Desk Accessories,28.42,6.8,50,74,17,0.28,1
+P042_0274,Ruler 18 inches (Plastic),Measuring,22.43,40.1,26,25,26,2.8,0
+P020_0275,Highlighter (Pcs),Writing,25.82,19.0,31,29,24,1.1,0
+P040_0276,File Organizer,Filing,124.02,22.6,121,19,15,1.84,0
+P005_0277,Bond Paper A4 (Ream),Paper,223.4,36.1,76,15,25,2.55,0
+P046_0278,Eraser (Pcs),Desk Accessories,9.64,6.0,135,113,19,0.34,1
+P005_0279,Bond Paper A4 (Ream),Paper,223.4,7.3,184,82,24,0.43,1
+P003_0280,Composition Notebook,Paper,30.98,58.6,114,1,23,0.97,0
+P003_0281,Composition Notebook,Paper,30.98,35.0,57,21,32,2.14,0
+P062_0282,Correction Fluid,Writing,31.78,12.6,71,20,14,1.31,0
+P049_0283,Calculator (Basic),Desk Accessories,191.07,77.9,126,29,35,2.64,0
+P025_0284,Watercolor Set,Art Supplies,55.52,15.3,50,13,17,1.58,0
+P041_0285,Ruler 12 inches (Plastic),Measuring,11.22,5.7,169,52,25,0.4,1
+P003_0286,Composition Notebook,Paper,30.98,2.5,52,78,23,0.08,1
+P008_0287,Index Cards (Pack),Paper,42.32,40.8,77,28,19,2.74,0
+P066_0288,Book Cover (Roll),Organization,25.85,1.1,105,100,10,0.31,1
+P062_0289,Correction Fluid,Writing,31.78,68.5,137,21,37,0.91,0
+P044_0290,Triangle Set,Measuring,42.73,31.7,25,18,11,1.46,0
+P018_0291,Whiteboard Marker,Writing,43.12,29.6,125,1,25,1.84,0
+P028_0292,Colored Pencils 24s,Art Supplies,126.0,10.3,42,29,30,1.9,0
+P002_0293,Notebook 200 Leaves,Paper,78.77,4.2,65,46,20,0.31,1
+P054_0294,Push Pins (Box),Desk Accessories,28.42,35.6,66,19,27,1.81,0
+P031_0295,Plastic Folder A4,Filing,19.9,4.1,129,68,16,0.33,1
+P050_0296,Calculator (Scientific),Desk Accessories,423.94,19.8,138,3,17,1.09,0
+P063_0297,Pencil Case (Basic),Organization,72.29,84.7,105,10,38,2.73,0
+P067_0298,Sticker Labels (Pack),Organization,23.52,62.1,147,13,35,1.25,0
+P012_0299,Ballpen Black (Pcs),Writing,17.76,2.1,141,76,14,0.23,1
+P023_0300,Crayons 16 Colors,Art Supplies,50.23,3.3,92,102,26,0.4,1
+P066_0301,Book Cover (Roll),Organization,25.85,3.6,84,82,28,0.18,1
+P012_0302,Ballpen Black (Pcs),Writing,17.76,135.9,138,7,22,2.11,0
+P057_0303,White Glue 120ml,Adhesives,21.77,83.9,139,0,21,1.14,0
+P006_0304,Bond Paper Short (Ream),Paper,198.72,116.1,60,15,30,1.35,0
+P054_0305,Push Pins (Box),Desk Accessories,28.42,6.5,122,57,19,0.15,1
+P036_0306,Brown Envelope Long,Filing,7.04,40.8,52,26,14,1.74,0
+P030_0307,Paint Brush Set,Art Supplies,42.09,16.3,17,6,15,0.59,0
+P063_0308,Pencil Case (Basic),Organization,72.29,4.0,185,49,19,0.25,1
+P026_0309,Oil Pastel 12 Colors,Art Supplies,80.33,34.3,24,10,30,2.26,0
+P067_0310,Sticker Labels (Pack),Organization,23.52,37.5,35,13,26,2.88,0
+P036_0311,Brown Envelope Long,Filing,7.04,35.6,40,4,23,0.55,0
+P032_0312,Plastic Folder Long,Filing,14.22,5.3,192,45,24,0.19,1
+P016_0313,Sign Pen Black,Writing,24.59,3.9,129,76,26,0.15,1
+P053_0314,Paper Clips (Box),Desk Accessories,29.09,56.3,29,26,23,2.8,0
+P044_0315,Triangle Set,Measuring,42.73,55.7,84,6,10,2.13,0
+P037_0316,Brown Envelope Short,Filing,4.22,3.3,157,51,20,0.37,1
+P004_0317,Spiral Notebook A4,Paper,77.96,13.3,147,29,27,1.33,0
+P053_0318,Paper Clips (Box),Desk Accessories,29.09,60.0,83,11,21,2.33,0
+P020_0319,Highlighter (Pcs),Writing,25.82,4.6,195,92,19,0.39,1
+P022_0320,Crayons 8 Colors,Art Supplies,27.79,67.7,33,27,24,0.86,0
+P063_0321,Pencil Case (Basic),Organization,72.29,92.8,74,8,11,2.33,0
+P017_0322,Sign Pen Blue,Writing,27.61,51.8,89,20,39,2.46,0
+P042_0323,Ruler 18 inches (Plastic),Measuring,22.43,2.9,116,41,16,0.19,1
+P025_0324,Watercolor Set,Art Supplies,55.52,1.4,103,48,26,0.09,1
+P007_0325,Yellow Pad Paper,Paper,31.16,3.3,163,98,25,0.47,1
+P053_0326,Paper Clips (Box),Desk Accessories,29.09,67.1,83,8,19,1.06,0
+P056_0327,Glue Stick,Adhesives,33.44,7.4,85,78,29,0.46,1
+P042_0328,Ruler 18 inches (Plastic),Measuring,22.43,7.3,116,36,12,0.19,1
+P002_0329,Notebook 200 Leaves,Paper,78.77,0.9,70,54,29,0.15,1
+P062_0330,Correction Fluid,Writing,31.78,76.3,56,2,16,1.06,0
+P030_0331,Paint Brush Set,Art Supplies,42.09,20.7,105,7,31,1.37,0
+P061_0332,Correction Tape,Writing,26.55,4.6,170,63,25,0.42,1
+P051_0333,Stapler No. 35,Desk Accessories,118.02,51.8,114,13,14,1.27,0
+P061_0334,Correction Tape,Writing,26.55,6.7,85,70,25,0.33,1
+P040_0335,File Organizer,Filing,124.02,18.0,95,9,31,1.95,0
+P069_0336,Sticky Notes (Set),Organization,49.1,10.4,85,17,32,1.35,0
+P012_0337,Ballpen Black (Pcs),Writing,17.76,7.6,88,57,23,0.4,1
+P009_0338,Construction Paper (Pack),Paper,50.03,21.2,39,22,27,1.75,0
+P035_0339,Expanding Envelope,Filing,49.14,94.2,73,2,23,0.62,0
+P044_0340,Triangle Set,Measuring,42.73,2.5,68,92,16,0.23,1
+P060_0341,Double-Sided Tape,Adhesives,34.76,40.6,58,8,19,2.53,0
+P053_0342,Paper Clips (Box),Desk Accessories,29.09,29.2,24,11,15,0.96,0
+P031_0343,Plastic Folder A4,Filing,19.9,21.5,93,7,30,2.53,0
+P001_0344,Notebook 80 Leaves,Paper,32.49,41.6,121,8,14,1.56,0
+P043_0345,Protractor,Measuring,10.52,46.6,24,11,18,0.54,0
+P059_0346,Masking Tape,Adhesives,26.13,5.9,146,86,22,0.35,1
+P060_0347,Double-Sided Tape,Adhesives,34.76,3.2,74,92,16,0.22,1
+P021_0348,Highlighter Set (6 colors),Writing,126.71,6.6,103,90,16,0.14,1
+P049_0349,Calculator (Basic),Desk Accessories,191.07,55.3,93,29,30,2.83,0
+P041_0350,Ruler 12 inches (Plastic),Measuring,11.22,31.4,58,29,12,2.31,0
+P040_0351,File Organizer,Filing,124.02,4.3,57,116,14,0.13,1
+P065_0352,Bag Tag / ID Lace,Organization,15.62,24.4,111,21,10,1.49,0
+P015_0353,Mechanical Pencil,Writing,31.36,39.6,49,7,12,2.54,0
+P026_0354,Oil Pastel 12 Colors,Art Supplies,80.33,3.4,175,37,21,0.36,1
+P007_0355,Yellow Pad Paper,Paper,31.16,2.6,165,117,16,0.07,1
+P003_0356,Composition Notebook,Paper,30.98,66.9,120,20,37,2.71,0
+P031_0357,Plastic Folder A4,Filing,19.9,48.3,83,15,28,0.97,0
+P065_0358,Bag Tag / ID Lace,Organization,15.62,52.7,47,13,16,2.69,0
+P036_0359,Brown Envelope Long,Filing,7.04,5.6,66,119,20,0.18,1
+P013_0360,Ballpen Red (Pcs),Writing,16.66,6.7,82,118,22,0.42,1
+P052_0361,Staple Wire No. 35,Desk Accessories,35.5,6.0,141,48,17,0.17,1
+P065_0362,Bag Tag / ID Lace,Organization,15.62,72.7,40,11,35,1.69,0
+P014_0363,Pencil No. 2 (Pcs),Writing,9.49,7.3,102,64,14,0.33,1
+P002_0364,Notebook 200 Leaves,Paper,78.77,39.6,146,17,37,2.65,0
+P021_0365,Highlighter Set (6 colors),Writing,126.71,1.1,107,103,10,0.31,1
+P003_0366,Composition Notebook,Paper,30.98,1.9,161,53,13,0.22,1
+P030_0367,Paint Brush Set,Art Supplies,42.09,5.9,148,59,18,0.14,1
+P008_0368,Index Cards (Pack),Paper,42.32,7.7,192,46,12,0.24,1
+P026_0369,Oil Pastel 12 Colors,Art Supplies,80.33,1.7,192,93,14,0.14,1
+P066_0370,Book Cover (Roll),Organization,25.85,8.0,120,64,17,0.14,1
+P014_0371,Pencil No. 2 (Pcs),Writing,9.49,70.0,106,24,25,1.18,0
+P034_0372,Clear Book 40 Pockets,Filing,92.96,47.1,23,20,11,2.35,0
+P020_0373,Highlighter (Pcs),Writing,25.82,99.3,70,8,24,2.29,0
+P020_0374,Highlighter (Pcs),Writing,25.82,61.9,145,2,24,0.66,0
+P035_0375,Expanding Envelope,Filing,49.14,87.5,17,4,28,0.66,0
+P041_0376,Ruler 12 inches (Plastic),Measuring,11.22,0.8,97,118,12,0.09,1
+P067_0377,Sticker Labels (Pack),Organization,23.52,25.8,15,26,33,2.13,0
+P013_0378,Ballpen Red (Pcs),Writing,16.66,62.9,84,27,17,1.1,0
+P014_0379,Pencil No. 2 (Pcs),Writing,9.49,59.2,65,20,19,1.9,0
+P059_0380,Masking Tape,Adhesives,26.13,6.5,100,22,17,1.66,0
+P052_0381,Staple Wire No. 35,Desk Accessories,35.5,2.4,89,112,17,0.41,1
+P029_0382,Acrylic Paint Set,Art Supplies,197.01,6.4,122,75,15,0.08,1
+P058_0383,Packaging Tape,Adhesives,35.88,4.5,198,62,29,0.09,1
+P067_0384,Sticker Labels (Pack),Organization,23.52,13.7,21,28,31,2.3,0
+P046_0385,Eraser (Pcs),Desk Accessories,9.64,132.6,76,6,14,1.5,0
+P058_0386,Packaging Tape,Adhesives,35.88,25.3,85,25,28,2.31,0
+P026_0387,Oil Pastel 12 Colors,Art Supplies,80.33,31.9,93,2,38,1.34,0
+P037_0388,Brown Envelope Short,Filing,4.22,7.1,192,34,11,0.09,1
+P008_0389,Index Cards (Pack),Paper,42.32,5.9,105,105,26,0.47,1
+P043_0390,Protractor,Measuring,10.52,40.7,130,25,25,1.37,0
+P025_0391,Watercolor Set,Art Supplies,55.52,6.5,60,37,26,0.48,1
+P068_0392,Sticky Notes (Pad),Organization,44.07,65.6,91,21,22,0.73,0
+P069_0393,Sticky Notes (Set),Organization,49.1,44.7,86,1,38,2.48,0
+P031_0394,Plastic Folder A4,Filing,19.9,112.9,140,24,38,2.89,0
+P063_0395,Pencil Case (Basic),Organization,72.29,70.0,98,0,20,0.75,0
+P031_0396,Plastic Folder A4,Filing,19.9,7.4,106,47,21,0.14,1
+P032_0397,Plastic Folder Long,Filing,14.22,7.0,113,45,23,0.35,1
+P022_0398,Crayons 8 Colors,Art Supplies,27.79,4.3,40,44,14,0.41,1
+P063_0399,Pencil Case (Basic),Organization,72.29,75.6,58,28,29,1.64,0
+P029_0400,Acrylic Paint Set,Art Supplies,197.01,16.1,141,12,18,1.34,0
+P058_0401,Packaging Tape,Adhesives,35.88,5.9,128,116,17,0.45,1
+P016_0402,Sign Pen Black,Writing,24.59,77.2,26,28,13,1.91,0
+P032_0403,Plastic Folder Long,Filing,14.22,116.8,66,0,32,2.48,0
+P039_0404,Ring Binder 2 inch,Filing,129.48,41.6,40,13,10,0.91,0
+P032_0405,Plastic Folder Long,Filing,14.22,105.6,80,25,26,0.51,0
+P028_0406,Colored Pencils 24s,Art Supplies,126.0,10.0,69,12,20,1.89,0
+P032_0407,Plastic Folder Long,Filing,14.22,3.6,125,64,25,0.44,1
+P069_0408,Sticky Notes (Set),Organization,49.1,38.1,79,20,34,2.93,0
+P023_0409,Crayons 16 Colors,Art Supplies,50.23,25.8,36,29,19,1.96,0
+P004_0410,Spiral Notebook A4,Paper,77.96,45.2,105,14,23,1.23,0
+P020_0411,Highlighter (Pcs),Writing,25.82,6.7,149,119,28,0.28,1
+P009_0412,Construction Paper (Pack),Paper,50.03,3.6,164,110,24,0.08,1
+P046_0413,Eraser (Pcs),Desk Accessories,9.64,2.8,129,115,23,0.17,1
+P049_0414,Calculator (Basic),Desk Accessories,191.07,25.0,75,18,29,2.48,0
+P061_0415,Correction Tape,Writing,26.55,63.5,105,13,38,0.95,0
+P046_0416,Eraser (Pcs),Desk Accessories,9.64,7.4,178,68,14,0.17,1
+P042_0417,Ruler 18 inches (Plastic),Measuring,22.43,47.7,48,17,26,2.61,0
+P044_0418,Triangle Set,Measuring,42.73,52.1,108,0,27,1.37,0
+P038_0419,Ring Binder 1 inch,Filing,70.37,4.8,172,64,10,0.36,1
+P053_0420,Paper Clips (Box),Desk Accessories,29.09,49.6,46,0,30,1.08,0
+P009_0421,Construction Paper (Pack),Paper,50.03,48.5,50,0,19,2.28,0
+P017_0422,Sign Pen Blue,Writing,27.61,0.7,152,109,21,0.06,1
+P029_0423,Acrylic Paint Set,Art Supplies,197.01,30.2,81,27,38,0.77,0
+P047_0424,Sharpener (Pcs),Desk Accessories,8.12,6.6,166,115,29,0.48,1
+P016_0425,Sign Pen Black,Writing,24.59,110.1,102,21,15,2.42,0
+P017_0426,Sign Pen Blue,Writing,27.61,1.4,48,35,16,0.49,1
+P040_0427,File Organizer,Filing,124.02,31.0,47,5,35,2.31,0
+P001_0428,Notebook 80 Leaves,Paper,32.49,80.4,36,15,18,0.74,0
+P043_0429,Protractor,Measuring,10.52,14.2,127,8,24,2.12,0
+P001_0430,Notebook 80 Leaves,Paper,32.49,1.9,166,70,12,0.09,1
+P035_0431,Expanding Envelope,Filing,49.14,41.1,36,12,26,0.57,0
+P004_0432,Spiral Notebook A4,Paper,77.96,44.2,131,1,37,2.24,0
+P042_0433,Ruler 18 inches (Plastic),Measuring,22.43,28.7,109,17,12,2.11,0
+P005_0434,Bond Paper A4 (Ream),Paper,223.4,109.7,66,25,22,0.6,0
+P032_0435,Plastic Folder Long,Filing,14.22,58.8,138,6,17,1.4,0
+P006_0436,Bond Paper Short (Ream),Paper,198.72,7.2,145,75,21,0.42,1
+P037_0437,Brown Envelope Short,Filing,4.22,25.3,101,2,29,2.52,0
+P067_0438,Sticker Labels (Pack),Organization,23.52,2.4,147,117,24,0.27,1
+P013_0439,Ballpen Red (Pcs),Writing,16.66,70.4,93,10,29,1.26,0
+P056_0440,Glue Stick,Adhesives,33.44,107.6,101,10,32,1.18,0
+P028_0441,Colored Pencils 24s,Art Supplies,126.0,26.8,124,27,38,2.21,0
+P059_0442,Masking Tape,Adhesives,26.13,1.6,194,72,27,0.25,1
+P028_0443,Colored Pencils 24s,Art Supplies,126.0,7.4,125,62,13,0.26,1
+P021_0444,Highlighter Set (6 colors),Writing,126.71,60.3,121,13,25,2.97,0
+P014_0445,Pencil No. 2 (Pcs),Writing,9.49,0.6,160,88,15,0.27,1
+P051_0446,Stapler No. 35,Desk Accessories,118.02,59.1,140,17,24,0.85,0
+P012_0447,Ballpen Black (Pcs),Writing,17.76,129.7,116,0,22,1.53,0
+P010_0448,Pad Paper,Paper,25.62,1.0,76,66,18,0.32,1
+P032_0449,Plastic Folder Long,Filing,14.22,82.8,40,11,38,1.22,0
+P047_0450,Sharpener (Pcs),Desk Accessories,8.12,55.0,78,16,39,2.39,0
+P010_0451,Pad Paper,Paper,25.62,45.0,98,27,33,0.98,0
+P016_0452,Sign Pen Black,Writing,24.59,65.2,30,19,11,0.75,0
+P037_0453,Brown Envelope Short,Filing,4.22,48.8,76,15,25,2.88,0
+P068_0454,Sticky Notes (Pad),Organization,44.07,4.5,136,87,21,0.13,1
+P059_0455,Masking Tape,Adhesives,26.13,58.8,49,18,25,2.8,0
+P044_0456,Triangle Set,Measuring,42.73,38.9,110,26,39,2.33,0
+P045_0457,Compass (Drawing),Measuring,34.06,21.4,27,9,24,0.96,0
+P030_0458,Paint Brush Set,Art Supplies,42.09,4.7,93,110,12,0.3,1
+P014_0459,Pencil No. 2 (Pcs),Writing,9.49,6.1,180,47,29,0.41,1
+P067_0460,Sticker Labels (Pack),Organization,23.52,1.8,134,81,13,0.49,1
+P007_0461,Yellow Pad Paper,Paper,31.16,63.9,102,26,21,2.42,0
+P037_0462,Brown Envelope Short,Filing,4.22,69.9,64,25,10,1.6,0
+P049_0463,Calculator (Basic),Desk Accessories,191.07,6.8,173,72,29,0.35,1
+P039_0464,Ring Binder 2 inch,Filing,129.48,19.6,149,25,17,0.99,0
+P021_0465,Highlighter Set (6 colors),Writing,126.71,27.6,95,8,13,2.21,0
+P066_0466,Book Cover (Roll),Organization,25.85,58.6,126,9,38,1.66,0
+P046_0467,Eraser (Pcs),Desk Accessories,9.64,111.8,104,12,31,2.31,0
+P003_0468,Composition Notebook,Paper,30.98,90.9,84,16,15,1.11,0
+P001_0469,Notebook 80 Leaves,Paper,32.49,17.5,132,0,23,0.67,0
+P021_0470,Highlighter Set (6 colors),Writing,126.71,37.1,140,1,30,2.63,0
+P039_0471,Ring Binder 2 inch,Filing,129.48,4.5,37,75,12,0.42,1
+P054_0472,Push Pins (Box),Desk Accessories,28.42,4.5,106,52,22,0.12,1
+P012_0473,Ballpen Black (Pcs),Writing,17.76,6.2,147,85,10,0.39,1
+P020_0474,Highlighter (Pcs),Writing,25.82,7.4,157,60,24,0.47,1
+P041_0475,Ruler 12 inches (Plastic),Measuring,11.22,31.4,36,2,37,1.08,0
+P048_0476,Scissors (Student),Desk Accessories,40.6,3.6,151,108,13,0.35,1
+P053_0477,Paper Clips (Box),Desk Accessories,29.09,63.5,70,6,33,2.18,0
+P003_0478,Composition Notebook,Paper,30.98,85.0,77,20,26,2.07,0
+P065_0479,Bag Tag / ID Lace,Organization,15.62,2.5,104,70,25,0.21,1
+P020_0480,Highlighter (Pcs),Writing,25.82,34.2,125,13,23,1.18,0
+P039_0481,Ring Binder 2 inch,Filing,129.48,33.7,131,15,38,2.58,0
+P039_0482,Ring Binder 2 inch,Filing,129.48,18.7,62,20,11,1.96,0
+P059_0483,Masking Tape,Adhesives,26.13,27.9,67,26,35,2.0,0
+P070_0484,Clipboard,Organization,84.41,33.8,77,24,37,0.6,0
+P017_0485,Sign Pen Blue,Writing,27.61,3.7,38,119,20,0.06,1
+P038_0486,Ring Binder 1 inch,Filing,70.37,3.1,67,91,11,0.21,1
+P040_0487,File Organizer,Filing,124.02,43.4,52,7,36,2.06,0
+P037_0488,Brown Envelope Short,Filing,4.22,6.4,123,115,17,0.41,1
+P068_0489,Sticky Notes (Pad),Organization,44.07,38.3,47,24,13,1.72,0
+P066_0490,Book Cover (Roll),Organization,25.85,10.6,123,4,18,2.92,0
+P044_0491,Triangle Set,Measuring,42.73,63.0,44,29,31,2.57,0
+P011_0492,Ballpen Blue (Pcs),Writing,10.16,0.9,93,118,12,0.3,1
+P054_0493,Push Pins (Box),Desk Accessories,28.42,3.2,55,44,10,0.43,1
+P044_0494,Triangle Set,Measuring,42.73,40.5,112,19,14,1.99,0
+P016_0495,Sign Pen Black,Writing,24.59,68.6,90,3,11,2.5,0
+P017_0496,Sign Pen Blue,Writing,27.61,4.1,105,76,24,0.35,1
+P006_0497,Bond Paper Short (Ream),Paper,198.72,20.0,93,28,26,1.64,0
+P069_0498,Sticky Notes (Set),Organization,49.1,27.9,109,5,11,1.26,0
+P048_0499,Scissors (Student),Desk Accessories,40.6,7.9,33,79,16,0.27,1
+P039_0500,Ring Binder 2 inch,Filing,129.48,4.7,158,54,17,0.17,1
+P026_0501,Oil Pastel 12 Colors,Art Supplies,80.33,70.7,37,2,13,0.9,0
+P015_0502,Mechanical Pencil,Writing,31.36,7.8,61,112,14,0.21,1
+P011_0503,Ballpen Blue (Pcs),Writing,10.16,7.6,64,57,19,0.22,1
+P047_0504,Sharpener (Pcs),Desk Accessories,8.12,82.7,112,2,28,1.63,0
+P044_0505,Triangle Set,Measuring,42.73,2.4,93,58,15,0.07,1
+P053_0506,Paper Clips (Box),Desk Accessories,29.09,7.2,51,36,21,0.27,1
+P028_0507,Colored Pencils 24s,Art Supplies,126.0,22.9,104,15,20,2.57,0
+P013_0508,Ballpen Red (Pcs),Writing,16.66,6.6,88,75,22,0.26,1
+P030_0509,Paint Brush Set,Art Supplies,42.09,0.9,85,95,28,0.33,1
+P026_0510,Oil Pastel 12 Colors,Art Supplies,80.33,4.6,183,101,28,0.31,1
+P065_0511,Bag Tag / ID Lace,Organization,15.62,0.8,183,76,23,0.08,1
+P013_0512,Ballpen Red (Pcs),Writing,16.66,71.2,124,2,16,2.14,0
+P001_0513,Notebook 80 Leaves,Paper,32.49,3.6,105,112,12,0.17,1
+P012_0514,Ballpen Black (Pcs),Writing,17.76,6.4,49,106,15,0.07,1
+P014_0515,Pencil No. 2 (Pcs),Writing,9.49,123.0,144,18,25,0.54,0
+P056_0516,Glue Stick,Adhesives,33.44,1.3,123,44,28,0.05,1
+P057_0517,White Glue 120ml,Adhesives,21.77,50.4,52,28,12,2.85,0
+P030_0518,Paint Brush Set,Art Supplies,42.09,9.5,24,12,32,1.17,0
+P051_0519,Stapler No. 35,Desk Accessories,118.02,10.2,53,10,35,2.59,0
+P067_0520,Sticker Labels (Pack),Organization,23.52,7.9,92,62,22,0.47,1
+P054_0521,Push Pins (Box),Desk Accessories,28.42,37.4,91,22,35,1.72,0
+P027_0522,Colored Pencils 12s,Art Supplies,59.98,14.0,124,8,39,2.81,0
+P045_0523,Compass (Drawing),Measuring,34.06,4.2,183,85,27,0.12,1
+P058_0524,Packaging Tape,Adhesives,35.88,45.9,113,26,38,1.73,0
+P069_0525,Sticky Notes (Set),Organization,49.1,26.4,99,1,32,0.51,0
+P039_0526,Ring Binder 2 inch,Filing,129.48,23.7,91,5,24,2.68,0
+P038_0527,Ring Binder 1 inch,Filing,70.37,30.0,53,2,24,2.87,0
+P014_0528,Pencil No. 2 (Pcs),Writing,9.49,29.0,34,13,38,1.4,0
+P059_0529,Masking Tape,Adhesives,26.13,5.1,132,107,10,0.13,1
+P051_0530,Stapler No. 35,Desk Accessories,118.02,7.6,62,20,25,2.86,0
+P046_0531,Eraser (Pcs),Desk Accessories,9.64,42.6,112,2,23,2.19,0
+P041_0532,Ruler 12 inches (Plastic),Measuring,11.22,104.6,147,5,14,0.59,0
+P027_0533,Colored Pencils 12s,Art Supplies,59.98,2.5,38,67,22,0.44,1
+P059_0534,Masking Tape,Adhesives,26.13,2.8,94,101,13,0.37,1
+P052_0535,Staple Wire No. 35,Desk Accessories,35.5,35.8,86,20,31,1.39,0
+P057_0536,White Glue 120ml,Adhesives,21.77,32.9,81,28,18,2.98,0
+P016_0537,Sign Pen Black,Writing,24.59,6.6,165,75,19,0.3,1
+P026_0538,Oil Pastel 12 Colors,Art Supplies,80.33,1.7,89,117,28,0.14,1
+P005_0539,Bond Paper A4 (Ream),Paper,223.4,15.3,49,19,12,0.77,0
+P009_0540,Construction Paper (Pack),Paper,50.03,4.2,190,115,16,0.41,1
+P062_0541,Correction Fluid,Writing,31.78,3.5,62,92,16,0.19,1
+P029_0542,Acrylic Paint Set,Art Supplies,197.01,38.1,127,24,28,1.2,0
+P007_0543,Yellow Pad Paper,Paper,31.16,3.4,150,117,13,0.23,1
+P054_0544,Push Pins (Box),Desk Accessories,28.42,36.5,23,11,12,1.4,0
+P005_0545,Bond Paper A4 (Ream),Paper,223.4,51.1,99,4,20,2.87,0
+P046_0546,Eraser (Pcs),Desk Accessories,9.64,5.0,119,57,15,0.31,1
+P022_0547,Crayons 8 Colors,Art Supplies,27.79,19.3,40,20,37,2.91,0
+P027_0548,Colored Pencils 12s,Art Supplies,59.98,40.7,102,14,38,1.38,0
+P002_0549,Notebook 200 Leaves,Paper,78.77,4.3,123,60,19,0.17,1
+P024_0550,Crayons 24 Colors,Art Supplies,71.49,5.8,161,55,18,0.07,1
+P012_0551,Ballpen Black (Pcs),Writing,17.76,92.9,42,7,34,1.02,0
+P052_0552,Staple Wire No. 35,Desk Accessories,35.5,69.2,17,3,17,1.24,0
+P056_0553,Glue Stick,Adhesives,33.44,57.4,112,24,14,2.26,0
+P018_0554,Whiteboard Marker,Writing,43.12,6.1,164,46,28,0.4,1
+P027_0555,Colored Pencils 12s,Art Supplies,59.98,1.6,81,36,11,0.11,1
+P027_0556,Colored Pencils 12s,Art Supplies,59.98,1.0,101,34,24,0.15,1
+P065_0557,Bag Tag / ID Lace,Organization,15.62,72.8,74,28,22,2.17,0
+P063_0558,Pencil Case (Basic),Organization,72.29,79.5,66,25,17,1.22,0
+P030_0559,Paint Brush Set,Art Supplies,42.09,11.9,61,19,38,0.69,0
+P014_0560,Pencil No. 2 (Pcs),Writing,9.49,84.8,24,3,26,1.32,0
+P054_0561,Push Pins (Box),Desk Accessories,28.42,24.1,53,15,21,1.07,0
+P007_0562,Yellow Pad Paper,Paper,31.16,41.0,102,25,27,2.47,0
+P046_0563,Eraser (Pcs),Desk Accessories,9.64,7.9,166,108,23,0.13,1
+P014_0564,Pencil No. 2 (Pcs),Writing,9.49,65.8,50,16,22,2.13,0
+P020_0565,Highlighter (Pcs),Writing,25.82,111.6,49,21,32,1.96,0
+P064_0566,Pencil Case (Premium),Organization,115.68,3.4,141,68,29,0.44,1
+P006_0567,Bond Paper Short (Ream),Paper,198.72,5.7,150,62,14,0.45,1
+P029_0568,Acrylic Paint Set,Art Supplies,197.01,1.5,87,102,14,0.28,1
+P033_0569,Clear Book 20 Pockets,Filing,36.95,89.7,91,27,37,2.86,0
+P061_0570,Correction Tape,Writing,26.55,7.5,53,34,11,0.2,1
+P042_0571,Ruler 18 inches (Plastic),Measuring,22.43,49.4,18,17,31,2.64,0
+P069_0572,Sticky Notes (Set),Organization,49.1,2.8,131,72,16,0.21,1
+P070_0573,Clipboard,Organization,84.41,15.9,64,29,26,1.74,0
+P036_0574,Brown Envelope Long,Filing,7.04,80.0,69,16,17,0.59,0
+P066_0575,Book Cover (Roll),Organization,25.85,23.6,121,22,15,1.55,0
+P025_0576,Watercolor Set,Art Supplies,55.52,5.1,108,88,21,0.19,1
+P029_0577,Acrylic Paint Set,Art Supplies,197.01,41.8,58,12,34,0.72,0
+P031_0578,Plastic Folder A4,Filing,19.9,78.6,41,13,30,1.3,0
+P020_0579,Highlighter (Pcs),Writing,25.82,7.5,117,71,18,0.35,1
+P024_0580,Crayons 24 Colors,Art Supplies,71.49,64.3,60,12,10,0.81,0
+P017_0581,Sign Pen Blue,Writing,27.61,6.5,143,88,18,0.47,1
+P020_0582,Highlighter (Pcs),Writing,25.82,42.4,115,1,11,2.53,0
+P046_0583,Eraser (Pcs),Desk Accessories,9.64,113.9,33,6,29,2.8,0
+P038_0584,Ring Binder 1 inch,Filing,70.37,20.3,42,11,35,0.65,0
+P009_0585,Construction Paper (Pack),Paper,50.03,20.1,99,6,28,1.46,0
+P004_0586,Spiral Notebook A4,Paper,77.96,5.3,87,34,21,0.22,1
+P004_0587,Spiral Notebook A4,Paper,77.96,66.2,94,4,16,1.15,0
+P049_0588,Calculator (Basic),Desk Accessories,191.07,47.8,49,3,36,2.73,0
+P057_0589,White Glue 120ml,Adhesives,21.77,46.3,105,18,17,2.53,0
+P061_0590,Correction Tape,Writing,26.55,2.9,86,75,15,0.25,1
+P025_0591,Watercolor Set,Art Supplies,55.52,78.0,101,10,34,0.72,0
+P066_0592,Book Cover (Roll),Organization,25.85,80.0,141,17,22,2.95,0
+P034_0593,Clear Book 40 Pockets,Filing,92.96,24.5,17,11,26,0.96,0
+P032_0594,Plastic Folder Long,Filing,14.22,95.2,22,19,11,0.57,0
+P045_0595,Compass (Drawing),Measuring,34.06,7.1,17,3,38,2.77,0
+P050_0596,Calculator (Scientific),Desk Accessories,423.94,51.3,116,7,19,1.7,0
+P064_0597,Pencil Case (Premium),Organization,115.68,40.9,52,22,15,2.47,0
+P005_0598,Bond Paper A4 (Ream),Paper,223.4,75.9,66,5,14,2.48,0
+P064_0599,Pencil Case (Premium),Organization,115.68,49.1,69,2,27,1.32,0
+P040_0600,File Organizer,Filing,124.02,25.2,56,10,25,1.27,0
+P060_0601,Double-Sided Tape,Adhesives,34.76,32.5,82,27,38,0.91,0
+P070_0602,Clipboard,Organization,84.41,6.1,144,117,20,0.29,1
+P068_0603,Sticky Notes (Pad),Organization,44.07,95.5,84,2,14,1.31,0
+P029_0604,Acrylic Paint Set,Art Supplies,197.01,24.1,80,28,31,1.15,0
+P041_0605,Ruler 12 inches (Plastic),Measuring,11.22,60.8,87,0,30,1.72,0
+P020_0606,Highlighter (Pcs),Writing,25.82,0.9,149,118,18,0.16,1
+P046_0607,Eraser (Pcs),Desk Accessories,9.64,15.1,35,0,39,2.4,0
+P050_0608,Calculator (Scientific),Desk Accessories,423.94,6.9,114,116,20,0.17,1
+P060_0609,Double-Sided Tape,Adhesives,34.76,48.0,85,28,10,2.3,0
+P021_0610,Highlighter Set (6 colors),Writing,126.71,46.4,67,16,28,0.87,0
+P043_0611,Protractor,Measuring,10.52,45.5,74,27,33,1.57,0
+P027_0612,Colored Pencils 12s,Art Supplies,59.98,27.4,71,9,33,0.63,0
+P004_0613,Spiral Notebook A4,Paper,77.96,2.3,37,40,20,0.07,1
+P017_0614,Sign Pen Blue,Writing,27.61,6.5,114,87,16,0.29,1
+P068_0615,Sticky Notes (Pad),Organization,44.07,7.7,31,58,22,0.39,1
+P065_0616,Bag Tag / ID Lace,Organization,15.62,59.9,43,3,32,1.12,0
+P044_0617,Triangle Set,Measuring,42.73,0.7,72,60,15,0.45,1
+P026_0618,Oil Pastel 12 Colors,Art Supplies,80.33,76.9,133,9,19,1.98,0
+P015_0619,Mechanical Pencil,Writing,31.36,3.4,174,67,24,0.35,1
+P042_0620,Ruler 18 inches (Plastic),Measuring,22.43,7.2,66,87,27,0.07,1
+P042_0621,Ruler 18 inches (Plastic),Measuring,22.43,39.5,65,21,30,1.95,0
+P053_0622,Paper Clips (Box),Desk Accessories,29.09,6.7,58,65,26,0.14,1
+P055_0623,Desk Organizer,Desk Accessories,151.75,28.1,56,25,25,2.05,0
+P015_0624,Mechanical Pencil,Writing,31.36,6.6,166,75,20,0.36,1
+P061_0625,Correction Tape,Writing,26.55,114.9,107,26,20,1.18,0
+P042_0626,Ruler 18 inches (Plastic),Measuring,22.43,63.3,15,15,37,2.66,0
+P070_0627,Clipboard,Organization,84.41,5.0,121,9,32,2.86,0
+P049_0628,Calculator (Basic),Desk Accessories,191.07,2.0,136,79,10,0.22,1
+P038_0629,Ring Binder 1 inch,Filing,70.37,18.1,66,16,35,1.83,0
+P046_0630,Eraser (Pcs),Desk Accessories,9.64,137.9,113,26,34,1.13,0
+P039_0631,Ring Binder 2 inch,Filing,129.48,4.1,122,99,17,0.24,1
+P016_0632,Sign Pen Black,Writing,24.59,59.6,58,27,29,2.95,0
+P050_0633,Calculator (Scientific),Desk Accessories,423.94,2.3,55,47,26,0.3,1
+P022_0634,Crayons 8 Colors,Art Supplies,27.79,67.8,15,29,34,0.59,0
+P034_0635,Clear Book 40 Pockets,Filing,92.96,33.0,86,18,28,2.32,0
+P020_0636,Highlighter (Pcs),Writing,25.82,6.0,97,81,15,0.16,1
+P001_0637,Notebook 80 Leaves,Paper,32.49,57.1,86,22,10,2.75,0
+P058_0638,Packaging Tape,Adhesives,35.88,2.7,197,83,15,0.24,1
+P051_0639,Stapler No. 35,Desk Accessories,118.02,14.0,126,23,24,1.03,0
+P035_0640,Expanding Envelope,Filing,49.14,42.2,110,25,38,0.71,0
+P054_0641,Push Pins (Box),Desk Accessories,28.42,16.2,78,2,25,0.81,0
+P039_0642,Ring Binder 2 inch,Filing,129.48,3.3,102,79,29,0.15,1
+P012_0643,Ballpen Black (Pcs),Writing,17.76,5.1,153,73,14,0.32,1
+P019_0644,Permanent Marker,Writing,35.8,56.0,146,26,22,2.54,0
+P048_0645,Scissors (Student),Desk Accessories,40.6,7.5,109,42,18,0.32,1
+P019_0646,Permanent Marker,Writing,35.8,21.1,100,27,21,2.08,0
+P055_0647,Desk Organizer,Desk Accessories,151.75,27.3,134,12,20,0.64,0
+P010_0648,Pad Paper,Paper,25.62,6.1,94,115,18,0.41,1
+P059_0649,Masking Tape,Adhesives,26.13,12.1,38,20,10,2.71,0
+P030_0650,Paint Brush Set,Art Supplies,42.09,23.6,67,5,38,2.9,0
+P045_0651,Compass (Drawing),Measuring,34.06,36.5,130,18,23,2.28,0
+P044_0652,Triangle Set,Measuring,42.73,61.6,92,14,26,1.7,0
+P056_0653,Glue Stick,Adhesives,33.44,2.0,113,63,18,0.39,1
+P040_0654,File Organizer,Filing,124.02,35.6,23,1,21,2.23,0
+P022_0655,Crayons 8 Colors,Art Supplies,27.79,79.6,45,15,37,1.78,0
+P055_0656,Desk Organizer,Desk Accessories,151.75,20.3,18,2,14,0.84,0
+P027_0657,Colored Pencils 12s,Art Supplies,59.98,41.7,135,18,36,1.82,0
+P025_0658,Watercolor Set,Art Supplies,55.52,64.1,99,7,13,1.13,0
+P012_0659,Ballpen Black (Pcs),Writing,17.76,2.4,145,65,22,0.29,1
+P032_0660,Plastic Folder Long,Filing,14.22,117.9,134,5,19,2.51,0
+P069_0661,Sticky Notes (Set),Organization,49.1,3.1,196,62,19,0.34,1
+P008_0662,Index Cards (Pack),Paper,42.32,76.5,46,18,36,2.06,0
+P009_0663,Construction Paper (Pack),Paper,50.03,3.8,196,64,24,0.06,1
+P026_0664,Oil Pastel 12 Colors,Art Supplies,80.33,14.4,130,16,22,1.34,0
+P040_0665,File Organizer,Filing,124.02,39.8,31,9,33,1.81,0
+P023_0666,Crayons 16 Colors,Art Supplies,50.23,90.8,83,28,21,1.07,0
+P070_0667,Clipboard,Organization,84.41,22.0,106,9,27,2.03,0
+P070_0668,Clipboard,Organization,84.41,35.5,126,27,22,2.35,0
+P060_0669,Double-Sided Tape,Adhesives,34.76,45.6,36,19,34,2.76,0
+P027_0670,Colored Pencils 12s,Art Supplies,59.98,2.4,128,112,21,0.45,1
+P015_0671,Mechanical Pencil,Writing,31.36,11.5,59,1,19,0.66,0
+P030_0672,Paint Brush Set,Art Supplies,42.09,27.0,44,21,27,2.23,0
+P031_0673,Plastic Folder A4,Filing,19.9,45.2,27,7,13,1.31,0
+P008_0674,Index Cards (Pack),Paper,42.32,36.8,44,5,15,0.98,0
+P006_0675,Bond Paper Short (Ream),Paper,198.72,8.0,118,79,17,0.35,1
+P063_0676,Pencil Case (Basic),Organization,72.29,2.5,187,56,18,0.2,1
+P004_0677,Spiral Notebook A4,Paper,77.96,1.9,147,67,25,0.36,1
+P052_0678,Staple Wire No. 35,Desk Accessories,35.5,61.5,100,18,32,0.64,0
+P049_0679,Calculator (Basic),Desk Accessories,191.07,58.9,132,22,31,2.29,0
+P043_0680,Protractor,Measuring,10.52,15.0,130,18,28,2.8,0
+P006_0681,Bond Paper Short (Ream),Paper,198.72,4.3,157,70,22,0.25,1
+P032_0682,Plastic Folder Long,Filing,14.22,21.7,29,28,31,1.19,0
+P063_0683,Pencil Case (Basic),Organization,72.29,6.5,85,62,16,0.27,1
+P026_0684,Oil Pastel 12 Colors,Art Supplies,80.33,63.4,38,17,30,2.15,0
+P027_0685,Colored Pencils 12s,Art Supplies,59.98,68.1,102,1,34,1.92,0
+P026_0686,Oil Pastel 12 Colors,Art Supplies,80.33,7.1,121,34,22,0.28,1
+P024_0687,Crayons 24 Colors,Art Supplies,71.49,90.3,58,14,13,2.82,0
+P035_0688,Expanding Envelope,Filing,49.14,4.1,37,53,11,0.11,1
+P050_0689,Calculator (Scientific),Desk Accessories,423.94,60.0,79,18,30,1.48,0
+P059_0690,Masking Tape,Adhesives,26.13,28.1,93,15,25,2.57,0
+P047_0691,Sharpener (Pcs),Desk Accessories,8.12,30.5,124,2,12,1.36,0
+P029_0692,Acrylic Paint Set,Art Supplies,197.01,7.6,174,74,13,0.41,1
+P006_0693,Bond Paper Short (Ream),Paper,198.72,67.4,71,8,36,1.33,0
+P058_0694,Packaging Tape,Adhesives,35.88,51.0,55,20,31,1.91,0
+P070_0695,Clipboard,Organization,84.41,3.4,82,95,19,0.06,1
+P029_0696,Acrylic Paint Set,Art Supplies,197.01,17.8,139,21,18,1.79,0
+P018_0697,Whiteboard Marker,Writing,43.12,4.3,187,61,18,0.13,1
+P030_0698,Paint Brush Set,Art Supplies,42.09,23.8,116,9,31,1.15,0
+P043_0699,Protractor,Measuring,10.52,52.3,44,20,26,2.97,0
+P013_0700,Ballpen Red (Pcs),Writing,16.66,0.9,118,103,27,0.15,1
+P024_0701,Crayons 24 Colors,Art Supplies,71.49,6.5,109,102,22,0.42,1
+P009_0702,Construction Paper (Pack),Paper,50.03,7.3,188,35,21,0.3,1
+P055_0703,Desk Organizer,Desk Accessories,151.75,23.1,31,16,31,1.88,0
+P038_0704,Ring Binder 1 inch,Filing,70.37,3.7,115,98,17,0.2,1
+P032_0705,Plastic Folder Long,Filing,14.22,58.5,134,3,29,0.84,0
+P044_0706,Triangle Set,Measuring,42.73,17.2,39,12,32,2.6,0
+P058_0707,Packaging Tape,Adhesives,35.88,1.3,155,64,11,0.39,1
+P051_0708,Stapler No. 35,Desk Accessories,118.02,16.6,145,3,39,2.6,0
+P012_0709,Ballpen Black (Pcs),Writing,17.76,84.2,59,16,27,1.91,0
+P027_0710,Colored Pencils 12s,Art Supplies,59.98,47.9,82,13,26,2.72,0
+P016_0711,Sign Pen Black,Writing,24.59,15.9,113,11,38,1.92,0
+P044_0712,Triangle Set,Measuring,42.73,3.5,47,39,25,0.24,1
+P058_0713,Packaging Tape,Adhesives,35.88,2.9,69,54,11,0.24,1
+P013_0714,Ballpen Red (Pcs),Writing,16.66,65.0,75,28,14,2.63,0
+P022_0715,Crayons 8 Colors,Art Supplies,27.79,7.1,133,103,20,0.31,1
+P045_0716,Compass (Drawing),Measuring,34.06,44.7,99,12,15,2.14,0
+P043_0717,Protractor,Measuring,10.52,1.4,190,69,13,0.46,1
+P005_0718,Bond Paper A4 (Ream),Paper,223.4,3.0,55,84,19,0.05,1
+P034_0719,Clear Book 40 Pockets,Filing,92.96,2.4,67,45,29,0.18,1
+P029_0720,Acrylic Paint Set,Art Supplies,197.01,3.1,90,55,23,0.07,1
+P055_0721,Desk Organizer,Desk Accessories,151.75,6.1,54,114,13,0.21,1
+P070_0722,Clipboard,Organization,84.41,22.3,76,21,25,1.46,0
+P062_0723,Correction Fluid,Writing,31.78,72.8,94,26,24,1.0,0
+P038_0724,Ring Binder 1 inch,Filing,70.37,28.8,113,12,25,2.59,0
+P045_0725,Compass (Drawing),Measuring,34.06,30.4,102,28,31,2.1,0
+P045_0726,Compass (Drawing),Measuring,34.06,41.1,66,21,18,0.87,0
+P013_0727,Ballpen Red (Pcs),Writing,16.66,0.7,141,84,10,0.1,1
+P070_0728,Clipboard,Organization,84.41,5.8,122,107,16,0.18,1
+P010_0729,Pad Paper,Paper,25.62,77.9,82,2,21,2.83,0
+P009_0730,Construction Paper (Pack),Paper,50.03,6.1,154,112,17,0.28,1
+P061_0731,Correction Tape,Writing,26.55,101.4,127,3,33,1.58,0
+P020_0732,Highlighter (Pcs),Writing,25.82,29.8,77,19,36,2.4,0
+P021_0733,Highlighter Set (6 colors),Writing,126.71,21.8,72,18,36,1.64,0
+P019_0734,Permanent Marker,Writing,35.8,30.3,82,21,10,2.73,0
+P022_0735,Crayons 8 Colors,Art Supplies,27.79,18.9,89,16,21,1.92,0
+P034_0736,Clear Book 40 Pockets,Filing,92.96,19.2,51,2,35,1.24,0
+P052_0737,Staple Wire No. 35,Desk Accessories,35.5,52.5,104,9,23,2.17,0
+P032_0738,Plastic Folder Long,Filing,14.22,5.9,67,31,19,0.13,1
+P020_0739,Highlighter (Pcs),Writing,25.82,108.4,114,24,13,1.97,0
+P012_0740,Ballpen Black (Pcs),Writing,17.76,5.2,153,34,20,0.3,1
+P024_0741,Crayons 24 Colors,Art Supplies,71.49,14.2,117,17,34,1.05,0
+P024_0742,Crayons 24 Colors,Art Supplies,71.49,31.9,63,14,33,0.92,0
+P056_0743,Glue Stick,Adhesives,33.44,2.7,54,87,23,0.46,1
+P059_0744,Masking Tape,Adhesives,26.13,6.7,63,15,24,2.01,0
+P049_0745,Calculator (Basic),Desk Accessories,191.07,76.9,124,24,15,1.69,0
+P040_0746,File Organizer,Filing,124.02,33.8,78,6,36,2.19,0
+P040_0747,File Organizer,Filing,124.02,17.9,133,16,27,2.15,0
+P033_0748,Clear Book 20 Pockets,Filing,36.95,73.7,148,1,11,1.57,0
+P009_0749,Construction Paper (Pack),Paper,50.03,1.4,192,99,29,0.07,1
+P041_0750,Ruler 12 inches (Plastic),Measuring,11.22,4.1,101,90,11,0.34,1
+P052_0751,Staple Wire No. 35,Desk Accessories,35.5,58.8,148,11,23,2.51,0
+P068_0752,Sticky Notes (Pad),Organization,44.07,24.3,84,2,28,1.1,0
+P007_0753,Yellow Pad Paper,Paper,31.16,0.9,105,53,12,0.34,1
+P002_0754,Notebook 200 Leaves,Paper,78.77,96.6,133,27,25,1.85,0
+P035_0755,Expanding Envelope,Filing,49.14,54.3,78,6,32,0.85,0
+P002_0756,Notebook 200 Leaves,Paper,78.77,38.6,47,25,28,1.5,0
+P008_0757,Index Cards (Pack),Paper,42.32,21.3,78,20,26,2.81,0
+P064_0758,Pencil Case (Premium),Organization,115.68,37.7,124,18,29,2.93,0
+P020_0759,Highlighter (Pcs),Writing,25.82,13.6,103,29,15,1.61,0
+P057_0760,White Glue 120ml,Adhesives,21.77,37.8,113,19,14,2.91,0
+P068_0761,Sticky Notes (Pad),Organization,44.07,64.9,25,15,33,2.25,0
+P025_0762,Watercolor Set,Art Supplies,55.52,40.4,132,26,20,0.73,0
+P018_0763,Whiteboard Marker,Writing,43.12,0.5,191,65,29,0.17,1
+P065_0764,Bag Tag / ID Lace,Organization,15.62,68.2,81,2,29,0.96,0
+P035_0765,Expanding Envelope,Filing,49.14,54.9,112,1,26,0.8,0
+P068_0766,Sticky Notes (Pad),Organization,44.07,3.2,110,110,10,0.3,1
+P069_0767,Sticky Notes (Set),Organization,49.1,17.2,78,22,35,1.46,0
+P058_0768,Packaging Tape,Adhesives,35.88,56.7,144,5,24,0.65,0
+P070_0769,Clipboard,Organization,84.41,22.9,35,13,18,2.24,0
+P038_0770,Ring Binder 1 inch,Filing,70.37,3.6,124,42,21,0.18,1
+P069_0771,Sticky Notes (Set),Organization,49.1,10.2,32,3,39,0.95,0
+P062_0772,Correction Fluid,Writing,31.78,44.9,139,23,39,2.49,0
+P038_0773,Ring Binder 1 inch,Filing,70.37,50.9,120,6,15,2.8,0
+P061_0774,Correction Tape,Writing,26.55,115.5,134,3,14,0.79,0
+P060_0775,Double-Sided Tape,Adhesives,34.76,17.7,71,19,16,1.39,0
+P005_0776,Bond Paper A4 (Ream),Paper,223.4,113.6,94,7,10,2.51,0
+P018_0777,Whiteboard Marker,Writing,43.12,67.1,67,5,27,2.57,0
+P027_0778,Colored Pencils 12s,Art Supplies,59.98,65.2,96,19,28,0.83,0
+P029_0779,Acrylic Paint Set,Art Supplies,197.01,6.3,135,4,36,2.66,0
+P006_0780,Bond Paper Short (Ream),Paper,198.72,42.8,77,27,22,2.07,0
+P065_0781,Bag Tag / ID Lace,Organization,15.62,70.4,32,19,30,2.14,0
+P066_0782,Book Cover (Roll),Organization,25.85,30.3,95,16,19,2.45,0
+P019_0783,Permanent Marker,Writing,35.8,54.1,131,17,29,1.89,0
+P041_0784,Ruler 12 inches (Plastic),Measuring,11.22,6.6,98,80,13,0.45,1
+P055_0785,Desk Organizer,Desk Accessories,151.75,4.3,52,65,13,0.17,1
+P046_0786,Eraser (Pcs),Desk Accessories,9.64,4.7,36,38,24,0.37,1
+P008_0787,Index Cards (Pack),Paper,42.32,24.8,116,13,30,2.16,0
+P050_0788,Calculator (Scientific),Desk Accessories,423.94,5.2,43,34,12,0.05,1
+P043_0789,Protractor,Measuring,10.52,18.5,46,24,25,2.25,0
+P006_0790,Bond Paper Short (Ream),Paper,198.72,3.2,55,102,20,0.41,1
+P034_0791,Clear Book 40 Pockets,Filing,92.96,49.8,60,15,27,2.72,0
+P036_0792,Brown Envelope Long,Filing,7.04,81.7,103,21,31,2.91,0
+P041_0793,Ruler 12 inches (Plastic),Measuring,11.22,71.9,66,28,25,2.92,0
+P025_0794,Watercolor Set,Art Supplies,55.52,54.6,18,21,35,2.15,0
+P029_0795,Acrylic Paint Set,Art Supplies,197.01,15.0,58,18,27,2.89,0
+P012_0796,Ballpen Black (Pcs),Writing,17.76,7.0,34,112,16,0.27,1
+P009_0797,Construction Paper (Pack),Paper,50.03,15.3,52,4,38,0.73,0
+P057_0798,White Glue 120ml,Adhesives,21.77,62.1,140,11,31,2.9,0
+P030_0799,Paint Brush Set,Art Supplies,42.09,45.0,139,21,37,2.91,0
+P065_0800,Bag Tag / ID Lace,Organization,15.62,14.8,149,18,35,0.67,0
+P003_0801,Composition Notebook,Paper,30.98,1.9,184,50,21,0.09,1
+P029_0802,Acrylic Paint Set,Art Supplies,197.01,7.9,165,90,28,0.47,1
+P045_0803,Compass (Drawing),Measuring,34.06,2.9,36,55,17,0.07,1
+P045_0804,Compass (Drawing),Measuring,34.06,6.1,40,47,18,0.25,1
+P065_0805,Bag Tag / ID Lace,Organization,15.62,1.0,115,70,12,0.27,1
+P059_0806,Masking Tape,Adhesives,26.13,49.0,117,22,10,2.81,0
+P025_0807,Watercolor Set,Art Supplies,55.52,23.9,67,18,10,1.59,0
+P062_0808,Correction Fluid,Writing,31.78,9.8,58,2,33,2.81,0
+P053_0809,Paper Clips (Box),Desk Accessories,29.09,16.9,49,28,34,2.45,0
+P030_0810,Paint Brush Set,Art Supplies,42.09,7.7,134,95,27,0.43,1
+P001_0811,Notebook 80 Leaves,Paper,32.49,2.6,68,109,22,0.3,1
+P034_0812,Clear Book 40 Pockets,Filing,92.96,66.4,103,19,10,1.29,0
+P052_0813,Staple Wire No. 35,Desk Accessories,35.5,37.1,131,27,37,2.58,0
+P051_0814,Stapler No. 35,Desk Accessories,118.02,3.5,113,50,28,0.37,1
+P064_0815,Pencil Case (Premium),Organization,115.68,2.7,135,104,20,0.1,1
+P006_0816,Bond Paper Short (Ream),Paper,198.72,5.3,71,51,15,0.31,1
+P061_0817,Correction Tape,Writing,26.55,65.3,87,19,38,2.13,0
+P046_0818,Eraser (Pcs),Desk Accessories,9.64,95.6,24,3,27,1.49,0
+P057_0819,White Glue 120ml,Adhesives,21.77,2.5,146,97,12,0.39,1
+P015_0820,Mechanical Pencil,Writing,31.36,2.5,168,118,25,0.28,1
+P026_0821,Oil Pastel 12 Colors,Art Supplies,80.33,7.8,73,68,13,0.11,1
+P034_0822,Clear Book 40 Pockets,Filing,92.96,76.4,53,2,34,3.0,0
+P048_0823,Scissors (Student),Desk Accessories,40.6,16.0,87,8,37,1.63,0
+P061_0824,Correction Tape,Writing,26.55,6.1,185,83,14,0.15,1
+P070_0825,Clipboard,Organization,84.41,10.4,74,20,22,0.65,0
+P042_0826,Ruler 18 inches (Plastic),Measuring,22.43,22.3,46,9,36,1.8,0
+P053_0827,Paper Clips (Box),Desk Accessories,29.09,13.1,18,13,33,0.9,0
+P064_0828,Pencil Case (Premium),Organization,115.68,34.0,148,21,39,1.63,0
+P012_0829,Ballpen Black (Pcs),Writing,17.76,32.3,20,0,19,0.68,0
+P031_0830,Plastic Folder A4,Filing,19.9,15.8,105,18,12,2.83,0
+P036_0831,Brown Envelope Long,Filing,7.04,105.9,68,14,17,0.5,0
+P028_0832,Colored Pencils 24s,Art Supplies,126.0,7.7,52,84,29,0.11,1
+P045_0833,Compass (Drawing),Measuring,34.06,36.2,119,20,34,0.81,0
+P053_0834,Paper Clips (Box),Desk Accessories,29.09,21.0,20,17,20,1.51,0
+P026_0835,Oil Pastel 12 Colors,Art Supplies,80.33,51.3,64,5,27,2.45,0
+P046_0836,Eraser (Pcs),Desk Accessories,9.64,134.1,101,25,26,1.66,0
+P030_0837,Paint Brush Set,Art Supplies,42.09,2.9,99,112,11,0.39,1
+P001_0838,Notebook 80 Leaves,Paper,32.49,89.9,20,28,12,1.99,0
+P033_0839,Clear Book 20 Pockets,Filing,36.95,0.6,55,58,19,0.08,1
+P059_0840,Masking Tape,Adhesives,26.13,47.1,109,25,12,0.77,0
+P045_0841,Compass (Drawing),Measuring,34.06,24.9,144,28,37,2.77,0
+P066_0842,Book Cover (Roll),Organization,25.85,69.6,18,3,14,0.56,0
+P065_0843,Bag Tag / ID Lace,Organization,15.62,5.4,68,74,16,0.47,1
+P007_0844,Yellow Pad Paper,Paper,31.16,22.6,148,3,22,1.1,0
+P045_0845,Compass (Drawing),Measuring,34.06,30.6,149,18,29,0.61,0
+P032_0846,Plastic Folder Long,Filing,14.22,4.1,165,80,13,0.26,1
+P016_0847,Sign Pen Black,Writing,24.59,45.1,40,7,25,1.2,0
+P011_0848,Ballpen Blue (Pcs),Writing,10.16,121.8,37,22,30,0.53,0
+P046_0849,Eraser (Pcs),Desk Accessories,9.64,126.0,99,26,19,0.83,0
+P063_0850,Pencil Case (Basic),Organization,72.29,55.2,142,18,31,1.21,0
+P012_0851,Ballpen Black (Pcs),Writing,17.76,111.5,117,26,32,1.35,0
+P003_0852,Composition Notebook,Paper,30.98,49.3,127,19,25,1.09,0
+P033_0853,Clear Book 20 Pockets,Filing,36.95,5.7,135,70,14,0.24,1
+P017_0854,Sign Pen Blue,Writing,27.61,1.9,124,109,22,0.34,1
+P011_0855,Ballpen Blue (Pcs),Writing,10.16,3.5,184,77,21,0.13,1
+P019_0856,Permanent Marker,Writing,35.8,38.6,49,0,20,1.93,0
+P045_0857,Compass (Drawing),Measuring,34.06,27.4,120,0,33,1.8,0
+P059_0858,Masking Tape,Adhesives,26.13,6.0,172,83,12,0.19,1
+P017_0859,Sign Pen Blue,Writing,27.61,5.5,137,99,11,0.18,1
+P027_0860,Colored Pencils 12s,Art Supplies,59.98,39.7,17,2,13,2.51,0
+P014_0861,Pencil No. 2 (Pcs),Writing,9.49,55.4,37,22,18,2.9,0
+P069_0862,Sticky Notes (Set),Organization,49.1,1.3,84,104,23,0.12,1
+P033_0863,Clear Book 20 Pockets,Filing,36.95,53.9,63,25,19,0.74,0
+P058_0864,Packaging Tape,Adhesives,35.88,46.5,125,5,29,2.01,0
+P061_0865,Correction Tape,Writing,26.55,6.8,196,49,21,0.05,1
+P015_0866,Mechanical Pencil,Writing,31.36,12.5,86,8,34,1.04,0
+P046_0867,Eraser (Pcs),Desk Accessories,9.64,22.7,54,19,18,1.11,0
+P042_0868,Ruler 18 inches (Plastic),Measuring,22.43,20.0,50,3,34,1.53,0
+P065_0869,Bag Tag / ID Lace,Organization,15.62,1.9,54,61,10,0.24,1
+P057_0870,White Glue 120ml,Adhesives,21.77,53.6,29,16,34,1.44,0
+P003_0871,Composition Notebook,Paper,30.98,94.5,49,7,26,1.92,0
+P066_0872,Book Cover (Roll),Organization,25.85,3.6,99,110,14,0.33,1
+P032_0873,Plastic Folder Long,Filing,14.22,117.8,82,14,23,0.57,0
+P030_0874,Paint Brush Set,Art Supplies,42.09,5.7,100,36,23,0.33,1
+P010_0875,Pad Paper,Paper,25.62,71.7,112,14,25,0.58,0
+P037_0876,Brown Envelope Short,Filing,4.22,59.7,58,28,28,0.51,0
+P040_0877,File Organizer,Filing,124.02,9.2,113,15,23,2.23,0
+P023_0878,Crayons 16 Colors,Art Supplies,50.23,110.4,66,7,25,2.06,0
+P010_0879,Pad Paper,Paper,25.62,12.7,45,13,30,1.05,0
+P009_0880,Construction Paper (Pack),Paper,50.03,4.5,33,109,25,0.14,1
+P028_0881,Colored Pencils 24s,Art Supplies,126.0,35.7,147,20,28,1.81,0
+P041_0882,Ruler 12 inches (Plastic),Measuring,11.22,102.2,88,12,34,2.5,0
+P009_0883,Construction Paper (Pack),Paper,50.03,92.6,69,6,10,1.09,0
+P030_0884,Paint Brush Set,Art Supplies,42.09,18.4,27,27,36,2.48,0
+P063_0885,Pencil Case (Basic),Organization,72.29,87.1,121,24,19,1.56,0
+P063_0886,Pencil Case (Basic),Organization,72.29,4.2,139,69,25,0.1,1
+P049_0887,Calculator (Basic),Desk Accessories,191.07,3.6,151,31,15,0.11,1
+P031_0888,Plastic Folder A4,Filing,19.9,2.9,104,55,28,0.22,1
+P050_0889,Calculator (Scientific),Desk Accessories,423.94,2.1,59,69,20,0.05,1
+P055_0890,Desk Organizer,Desk Accessories,151.75,7.7,24,1,17,1.75,0
+P018_0891,Whiteboard Marker,Writing,43.12,0.9,93,48,28,0.31,1
+P007_0892,Yellow Pad Paper,Paper,31.16,49.0,32,7,29,0.63,0
+P032_0893,Plastic Folder Long,Filing,14.22,2.0,146,104,24,0.33,1
+P056_0894,Glue Stick,Adhesives,33.44,1.8,100,64,18,0.14,1
+P039_0895,Ring Binder 2 inch,Filing,129.48,44.9,67,1,31,1.23,0
+P034_0896,Clear Book 40 Pockets,Filing,92.96,5.9,169,83,16,0.19,1
+P023_0897,Crayons 16 Colors,Art Supplies,50.23,2.3,77,47,22,0.34,1
+P010_0898,Pad Paper,Paper,25.62,24.4,112,14,15,2.25,0
+P055_0899,Desk Organizer,Desk Accessories,151.75,8.0,144,76,29,0.41,1
+P015_0900,Mechanical Pencil,Writing,31.36,42.9,107,5,39,1.97,0
+P046_0901,Eraser (Pcs),Desk Accessories,9.64,51.8,124,2,18,0.6,0
+P067_0902,Sticker Labels (Pack),Organization,23.52,4.6,86,58,15,0.15,1
+P042_0903,Ruler 18 inches (Plastic),Measuring,22.43,25.2,88,13,13,2.77,0
+P063_0904,Pencil Case (Basic),Organization,72.29,13.2,107,13,36,2.35,0
+P022_0905,Crayons 8 Colors,Art Supplies,27.79,64.4,29,4,34,2.82,0
+P036_0906,Brown Envelope Long,Filing,7.04,2.1,30,100,11,0.25,1
+P057_0907,White Glue 120ml,Adhesives,21.77,7.8,132,103,19,0.37,1
+P007_0908,Yellow Pad Paper,Paper,31.16,4.3,117,119,14,0.35,1
+P053_0909,Paper Clips (Box),Desk Accessories,29.09,19.6,125,17,12,2.12,0
+P038_0910,Ring Binder 1 inch,Filing,70.37,32.9,73,5,21,2.98,0
+P018_0911,Whiteboard Marker,Writing,43.12,12.2,79,0,28,1.97,0
+P018_0912,Whiteboard Marker,Writing,43.12,68.0,109,2,32,0.95,0
+P011_0913,Ballpen Blue (Pcs),Writing,10.16,89.4,142,15,33,1.17,0
+P046_0914,Eraser (Pcs),Desk Accessories,9.64,114.0,131,24,22,2.33,0
+P037_0915,Brown Envelope Short,Filing,4.22,83.1,59,4,14,1.18,0
+P035_0916,Expanding Envelope,Filing,49.14,17.3,138,27,31,2.75,0
+P003_0917,Composition Notebook,Paper,30.98,2.3,108,111,27,0.37,1
+P006_0918,Bond Paper Short (Ream),Paper,198.72,27.7,123,27,20,2.26,0
+P054_0919,Push Pins (Box),Desk Accessories,28.42,16.2,108,2,37,1.98,0
+P024_0920,Crayons 24 Colors,Art Supplies,71.49,76.5,145,26,33,2.24,0
+P005_0921,Bond Paper A4 (Ream),Paper,223.4,46.4,42,28,38,2.98,0
+P041_0922,Ruler 12 inches (Plastic),Measuring,11.22,3.7,112,113,12,0.28,1
+P009_0923,Construction Paper (Pack),Paper,50.03,1.3,103,64,29,0.48,1
+P044_0924,Triangle Set,Measuring,42.73,5.3,189,100,15,0.18,1
+P045_0925,Compass (Drawing),Measuring,34.06,3.6,58,63,22,0.41,1
+P059_0926,Masking Tape,Adhesives,26.13,2.7,47,63,15,0.33,1
+P007_0927,Yellow Pad Paper,Paper,31.16,49.0,23,22,39,0.67,0
+P015_0928,Mechanical Pencil,Writing,31.36,2.8,123,118,25,0.22,1
+P034_0929,Clear Book 40 Pockets,Filing,92.96,62.5,68,12,28,1.76,0
+P054_0930,Push Pins (Box),Desk Accessories,28.42,4.9,164,98,24,0.39,1
+P043_0931,Protractor,Measuring,10.52,22.8,78,5,25,2.64,0
+P049_0932,Calculator (Basic),Desk Accessories,191.07,66.0,23,5,30,2.65,0
+P020_0933,Highlighter (Pcs),Writing,25.82,82.3,68,1,37,2.33,0
+P053_0934,Paper Clips (Box),Desk Accessories,29.09,68.7,31,3,13,1.72,0
+P032_0935,Plastic Folder Long,Filing,14.22,47.2,93,8,22,1.02,0
+P024_0936,Crayons 24 Colors,Art Supplies,71.49,11.0,18,14,15,1.96,0
+P064_0937,Pencil Case (Premium),Organization,115.68,34.3,71,21,17,2.04,0
+P012_0938,Ballpen Black (Pcs),Writing,17.76,131.8,68,9,38,2.07,0
+P014_0939,Pencil No. 2 (Pcs),Writing,9.49,101.3,56,12,28,1.09,0
+P039_0940,Ring Binder 2 inch,Filing,129.48,4.9,148,107,24,0.4,1
+P005_0941,Bond Paper A4 (Ream),Paper,223.4,6.6,78,34,12,0.38,1
+P026_0942,Oil Pastel 12 Colors,Art Supplies,80.33,1.8,55,47,18,0.28,1
+P051_0943,Stapler No. 35,Desk Accessories,118.02,18.9,115,4,36,1.52,0
+P061_0944,Correction Tape,Writing,26.55,3.9,157,112,16,0.25,1
+P062_0945,Correction Fluid,Writing,31.78,78.6,52,24,10,2.2,0
+P044_0946,Triangle Set,Measuring,42.73,7.3,199,99,19,0.05,1
+P069_0947,Sticky Notes (Set),Organization,49.1,41.3,79,28,10,2.28,0
+P010_0948,Pad Paper,Paper,25.62,95.5,75,15,17,2.75,0
+P028_0949,Colored Pencils 24s,Art Supplies,126.0,4.1,71,82,24,0.2,1
+P007_0950,Yellow Pad Paper,Paper,31.16,6.1,111,45,15,0.27,1
+P032_0951,Plastic Folder Long,Filing,14.22,17.7,28,15,27,2.32,0
+P043_0952,Protractor,Measuring,10.52,35.8,56,15,36,2.23,0
+P009_0953,Construction Paper (Pack),Paper,50.03,1.2,198,51,22,0.18,1
+P023_0954,Crayons 16 Colors,Art Supplies,50.23,25.8,91,27,14,1.53,0
+P034_0955,Clear Book 40 Pockets,Filing,92.96,7.3,105,92,12,0.06,1
+P059_0956,Masking Tape,Adhesives,26.13,27.9,33,16,21,2.34,0
+P065_0957,Bag Tag / ID Lace,Organization,15.62,4.8,137,57,24,0.22,1
+P002_0958,Notebook 200 Leaves,Paper,78.77,7.4,179,44,28,0.3,1
+P050_0959,Calculator (Scientific),Desk Accessories,423.94,44.7,72,25,31,1.21,0
+P041_0960,Ruler 12 inches (Plastic),Measuring,11.22,29.9,107,1,20,0.95,0
+P048_0961,Scissors (Student),Desk Accessories,40.6,4.1,199,67,13,0.32,1
+P062_0962,Correction Fluid,Writing,31.78,3.3,134,74,23,0.07,1
+P043_0963,Protractor,Measuring,10.52,7.4,129,33,29,0.19,1
+P026_0964,Oil Pastel 12 Colors,Art Supplies,80.33,16.3,102,22,35,2.34,0
+P027_0965,Colored Pencils 12s,Art Supplies,59.98,4.2,166,55,15,0.42,1
+P001_0966,Notebook 80 Leaves,Paper,32.49,1.7,182,57,14,0.06,1
+P068_0967,Sticky Notes (Pad),Organization,44.07,94.8,46,20,35,1.08,0
+P012_0968,Ballpen Black (Pcs),Writing,17.76,1.0,198,91,28,0.2,1
+P059_0969,Masking Tape,Adhesives,26.13,51.4,97,15,27,0.74,0
+P019_0970,Permanent Marker,Writing,35.8,49.8,135,10,15,0.55,0
+P001_0971,Notebook 80 Leaves,Paper,32.49,7.6,113,80,27,0.44,1
+P015_0972,Mechanical Pencil,Writing,31.36,2.5,107,97,24,0.33,1
+P010_0973,Pad Paper,Paper,25.62,94.5,135,5,11,1.54,0
+P019_0974,Permanent Marker,Writing,35.8,40.8,23,11,19,1.1,0
+P014_0975,Pencil No. 2 (Pcs),Writing,9.49,1.7,47,34,24,0.13,1
+P048_0976,Scissors (Student),Desk Accessories,40.6,0.7,169,72,21,0.2,1
+P042_0977,Ruler 18 inches (Plastic),Measuring,22.43,7.0,42,64,16,0.49,1
+P012_0978,Ballpen Black (Pcs),Writing,17.76,6.7,172,53,29,0.23,1
+P043_0979,Protractor,Measuring,10.52,2.5,116,60,19,0.12,1
+P021_0980,Highlighter Set (6 colors),Writing,126.71,7.2,63,98,16,0.26,1
+P061_0981,Correction Tape,Writing,26.55,4.9,164,103,13,0.23,1
+P005_0982,Bond Paper A4 (Ream),Paper,223.4,5.2,117,41,22,0.25,1
+P007_0983,Yellow Pad Paper,Paper,31.16,60.5,90,11,14,1.62,0
+P012_0984,Ballpen Black (Pcs),Writing,17.76,142.3,135,15,28,2.87,0
+P044_0985,Triangle Set,Measuring,42.73,2.4,95,43,16,0.35,1
+P033_0986,Clear Book 20 Pockets,Filing,36.95,44.4,115,3,36,1.23,0
+P056_0987,Glue Stick,Adhesives,33.44,75.4,56,6,38,0.72,0
+P023_0988,Crayons 16 Colors,Art Supplies,50.23,90.8,84,7,28,2.34,0
+P069_0989,Sticky Notes (Set),Organization,49.1,19.8,77,19,26,0.9,0
+P016_0990,Sign Pen Black,Writing,24.59,53.4,105,18,21,1.91,0
+P044_0991,Triangle Set,Measuring,42.73,35.6,108,9,22,0.55,0
+P046_0992,Eraser (Pcs),Desk Accessories,9.64,0.9,105,96,26,0.48,1
+P061_0993,Correction Tape,Writing,26.55,3.0,190,89,20,0.14,1
+P027_0994,Colored Pencils 12s,Art Supplies,59.98,30.4,145,15,18,1.21,0
+P020_0995,Highlighter (Pcs),Writing,25.82,34.4,15,17,25,1.69,0
+P053_0996,Paper Clips (Box),Desk Accessories,29.09,2.9,113,45,18,0.46,1
+P043_0997,Protractor,Measuring,10.52,14.0,51,13,38,0.96,0
+P003_0998,Composition Notebook,Paper,30.98,72.5,43,20,16,1.35,0
+P031_0999,Plastic Folder A4,Filing,19.9,7.9,128,74,25,0.48,1

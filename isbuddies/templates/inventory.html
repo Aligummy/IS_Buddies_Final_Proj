@@ -1,72 +1,255 @@
 {% extends 'base_app.html' %}
-{% block title %}IS Buddies | Inventory{% endblock %}
+{% block title %}IS Buddies | Inventory Management{% endblock %}
 {% block content %}
-      <!-- Page header -->
-      <div class="top"><h1>Inventory Management</h1><span class="tag">Inventory Clerk</span></div>
-      <div class="row" style="align-items:center">
-        <input aria-label="Search" class="in" placeholder="Search product / SKU" style="max-width:320px"/>
-        <input aria-label="Category" class="in" placeholder="Category: All" style="max-width:180px"/>
-        <span style="flex:1"></span>
-        <button class="btn y">+ Add Product</button>
+<div class="top">
+  <h1>Inventory Management</h1>
+  <span class="tag">{{ current_user.role_label }}</span>
+</div>
+
+<div class="row" style="align-items:center; flex-wrap:wrap;">
+  <input id="inv-search" class="in" placeholder="🔍 Search product or SKU..." style="max-width:300px"/>
+  <select id="inv-category-filter" class="in" style="max-width:200px">
+    <option value="">All Categories</option>
+    {% for cat in categories %}
+      <option value="{{ cat }}">{{ cat }}</option>
+    {% endfor %}
+  </select>
+  <span style="flex:1"></span>
+  {% if current_user.role in ['admin', 'inventory_clerk'] %}
+  <button id="btn-show-add" class="btn y" onclick="resetForm()">+ New Product</button>
+  {% endif %}
+</div>
+
+<div class="row">
+  <!-- Products Table Card -->
+  <div class="card" style="flex:3">
+    <h2>Product Catalog</h2>
+    <div class="sc">
+      <table id="products-table">
+        <thead>
+          <tr>
+            <th>SKU</th>
+            <th>Product Name</th>
+            <th>Category</th>
+            <th>Supplier</th>
+            <th style="text-align:right">Stock</th>
+            <th style="text-align:right">Reorder</th>
+            <th style="text-align:right">Price</th>
+            <th>Status</th>
+            {% if current_user.role in ['admin', 'inventory_clerk'] %}
+            <th>Actions</th>
+            {% endif %}
+          </tr>
+        </thead>
+        <tbody id="products-tbody">
+          <tr><td colspan="9" class="note">Loading inventory...</td></tr>
+        </tbody>
+      </table>
+    </div>
+    
+    <div style="display:flex; justify-content:space-between; align-items:center; margin-top:15px;">
+      <span class="note" id="inv-count-info">Showing 0 products</span>
+      <div id="inv-pagination" style="display:flex; gap:6px;"></div>
+    </div>
+  </div>
+
+  <!-- Add / Edit Product Card -->
+  {% if current_user.role in ['admin', 'inventory_clerk'] %}
+  <div class="card" style="flex:1; min-width:280px;">
+    <h2 id="form-heading">Add Product</h2>
+    <form id="product-form" onsubmit="handleSaveProduct(event)">
+      <input type="hidden" id="prod-id" value="">
+      
+      <label class="f">SKU / Barcode
+        <input id="prod-sku" class="in" required placeholder="e.g. NB-001">
+      </label>
+      
+      <label class="f">Product Name
+        <input id="prod-name" class="in" required placeholder="e.g. Spiral Notebook 80 leaves">
+      </label>
+      
+      <label class="f">Category
+        <input id="prod-category" class="in" placeholder="Paper / Writing / Filing...">
+      </label>
+      
+      <label class="f">Supplier
+        <input id="prod-supplier" class="in" placeholder="e.g. Advance Paper Corp">
+      </label>
+
+      <div class="row" style="gap:10px;">
+        <label class="f" style="flex:1;">Initial Stock
+          <input id="prod-stock" class="in" type="number" min="0" value="0" required>
+        </label>
+        <label class="f" style="flex:1;">Reorder Level
+          <input id="prod-reorder" class="in" type="number" min="0" value="10" required>
+        </label>
       </div>
-      <div class="row">
-        <div class="card" style="flex:3">
-          <div class="sc">
-            <table>
-              <tr>
-                <th>SKU</th>
-                <th>Product</th>
-                <th>Category</th>
-                <th>Stock</th>
-                <th>Reorder Lvl</th>
-                <th>Price</th>
-                <th>Status</th>
-                <th>Actions</th>
-              </tr>
-              <tr>
-                <td>[SKU]</td>
-                <td>[Notebook]</td>
-                <td>[Paper]</td>
-                <td>[0]</td>
-                <td>[0]</td>
-                <td>[₱]</td>
-                <td><span class="p g">In stock</span></td>
-                <td>Edit | Delete</td>
-              </tr>
-              <tr>
-                <td>[SKU]</td>
-                <td>[Ballpen]</td>
-                <td>[Writing]</td>
-                <td>[0]</td>
-                <td>[0]</td>
-                <td>[₱]</td>
-                <td><span class="p r">Low stock</span></td>
-                <td>Edit | Delete</td>
-              </tr>
-              <tr>
-                <td>[SKU]</td>
-                <td>[Folder]</td>
-                <td>[Filing]</td>
-                <td>[0]</td>
-                <td>[0]</td>
-                <td>[₱]</td>
-                <td><span class="p g">In stock</span></td>
-                <td>Edit | Delete</td>
-              </tr>
-            </table>
-          </div>
-          <p class="note">Pagination: 1 2 3 ...</p>
-        </div>
-        <!-- Card: Add / Edit Product -->
-        <div class="card" style="flex:1">
-          <h2>Add / Edit Product</h2>
-          <label class="f">Product name<input class="in" placeholder=""/></label>
-          <label class="f">Category<input class="in" placeholder=""/></label>
-          <label class="f">Supplier<input class="in" placeholder=""/></label>
-          <label class="f">Quantity<input class="in" placeholder=""/></label>
-          <label class="f">Unit price<input class="in" placeholder=""/></label>
-          <label class="f">Reorder level<input class="in" placeholder=""/></label>
-          <div class="row"><button class="btn">Save</button><button class="btn o">Cancel</button></div>
-        </div>
+
+      <label class="f">Unit Price (₱)
+        <input id="prod-price" class="in" type="number" step="0.01" min="0" placeholder="0.00" required>
+      </label>
+
+      <div class="row" style="margin-top:12px;">
+        <button type="submit" class="btn" style="flex:1">Save Product</button>
+        <button type="button" class="btn o" onclick="resetForm()">Clear</button>
       </div>
+    </form>
+  </div>
+  {% endif %}
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+let currentPage = 1;
+const userRole = "{{ current_user.role }}";
+const canEdit = userRole === 'admin' || userRole === 'inventory_clerk';
+
+async function loadProducts(page = 1) {
+  currentPage = page;
+  const q = document.getElementById("inv-search").value.trim();
+  const cat = document.getElementById("inv-category-filter").value.trim();
+  const params = new URLSearchParams({ page, per_page: 12 });
+  if (q) params.set("q", q);
+  if (cat) params.set("category", cat);
+
+  const res = await fetch(`/api/products?${params}`);
+  const data = await res.json();
+  const tbody = document.getElementById("products-tbody");
+
+  if (!data.products || data.products.length === 0) {
+    tbody.innerHTML = `<tr><td colspan="${canEdit ? 9 : 8}" class="note">No products found.</td></tr>`;
+    document.getElementById("inv-count-info").textContent = "0 products";
+    document.getElementById("inv-pagination").innerHTML = "";
+    return;
+  }
+
+  tbody.innerHTML = data.products.map(p => `
+    <tr>
+      <td><code>${p.sku}</code></td>
+      <td><strong>${p.name}</strong></td>
+      <td><span class="tag">${p.category || 'General'}</span></td>
+      <td>${p.supplier || '-'}</td>
+      <td style="text-align:right"><strong>${p.stock}</strong></td>
+      <td style="text-align:right">${p.reorder_level}</td>
+      <td style="text-align:right">₱ ${p.unit_price.toFixed(2)}</td>
+      <td><span class="p ${p.status_class}">${p.status}</span></td>
+      ${canEdit ? `
+        <td>
+          <button class="btn o" style="padding:4px 8px; min-height:auto; font-size:11px;" onclick='editProduct(${JSON.stringify(p)})'>Edit</button>
+          <button class="btn y" style="padding:4px 8px; min-height:auto; font-size:11px;" onclick="restockModal(${p.id}, '${p.name}')">+Stock</button>
+          <button class="btn" style="padding:4px 8px; min-height:auto; font-size:11px; background:var(--bad-bg); color:var(--bad-text);" onclick="deleteProduct(${p.id})">✕</button>
+        </td>
+      ` : ''}
+    </tr>
+  `).join("");
+
+  document.getElementById("inv-count-info").textContent = `Total: ${data.total} item(s) (Page ${data.page} of ${data.pages || 1})`;
+
+  // Build pagination buttons
+  const pag = document.getElementById("inv-pagination");
+  pag.innerHTML = "";
+  for (let i = 1; i <= (data.pages || 1); i++) {
+    if (i === 1 || i === data.pages || (i >= currentPage - 2 && i <= currentPage + 2)) {
+      const b = document.createElement("button");
+      b.className = i === currentPage ? "btn" : "btn o";
+      b.style.cssText = "padding:4px 10px; min-height:30px; font-size:11px;";
+      b.textContent = i;
+      b.onclick = () => loadProducts(i);
+      pag.appendChild(b);
+    }
+  }
+}
+
+function resetForm() {
+  const form = document.getElementById("product-form");
+  if (!form) return;
+  form.reset();
+  document.getElementById("prod-id").value = "";
+  document.getElementById("form-heading").textContent = "Add Product";
+  document.getElementById("prod-sku").disabled = false;
+}
+
+function editProduct(p) {
+  document.getElementById("form-heading").textContent = "Edit Product";
+  document.getElementById("prod-id").value = p.id;
+  document.getElementById("prod-sku").value = p.sku;
+  document.getElementById("prod-sku").disabled = true;
+  document.getElementById("prod-name").value = p.name;
+  document.getElementById("prod-category").value = p.category || "";
+  document.getElementById("prod-supplier").value = p.supplier || "";
+  document.getElementById("prod-stock").value = p.stock;
+  document.getElementById("prod-reorder").value = p.reorder_level;
+  document.getElementById("prod-price").value = p.unit_price;
+}
+
+async function handleSaveProduct(e) {
+  e.preventDefault();
+  const id = document.getElementById("prod-id").value;
+  const body = {
+    sku: document.getElementById("prod-sku").value.trim(),
+    name: document.getElementById("prod-name").value.trim(),
+    category: document.getElementById("prod-category").value.trim(),
+    supplier: document.getElementById("prod-supplier").value.trim(),
+    stock: parseInt(document.getElementById("prod-stock").value, 10),
+    reorder_level: parseInt(document.getElementById("prod-reorder").value, 10),
+    unit_price: parseFloat(document.getElementById("prod-price").value),
+  };
+
+  const url = id ? `/api/products/${id}` : "/api/products";
+  const method = id ? "PUT" : "POST";
+
+  const res = await fetch(url, {
+    method,
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(body),
+  });
+
+  const resData = await res.json();
+  if (!res.ok) {
+    alert(resData.error || "Failed to save product.");
+    return;
+  }
+
+  resetForm();
+  loadProducts(currentPage);
+}
+
+async function deleteProduct(id) {
+  if (!confirm("Are you sure you want to delete this product?")) return;
+  const res = await fetch(`/api/products/${id}`, { method: "DELETE" });
+  const data = await res.json();
+  if (!res.ok) {
+    alert(data.error || "Could not delete product.");
+    return;
+  }
+  loadProducts(currentPage);
+}
+
+async function restockModal(id, name) {
+  const qtyStr = prompt(`Add stock quantity for "${name}":`, "10");
+  if (!qtyStr) return;
+  const qty = parseInt(qtyStr, 10);
+  if (isNaN(qty) || qty <= 0) {
+    alert("Please enter a valid positive number.");
+    return;
+  }
+  const res = await fetch(`/api/products/${id}/restock`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ qty, reason: "Manual replenishment" }),
+  });
+  const data = await res.json();
+  if (!res.ok) {
+    alert(data.error || "Failed to restock.");
+    return;
+  }
+  loadProducts(currentPage);
+}
+
+document.getElementById("inv-search").addEventListener("input", () => loadProducts(1));
+document.getElementById("inv-category-filter").addEventListener("change", () => loadProducts(1));
+
+document.addEventListener("DOMContentLoaded", () => loadProducts(1));
+</script>
 {% endblock %}

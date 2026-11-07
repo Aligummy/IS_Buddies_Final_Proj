@@ -1,71 +1,169 @@
 {% extends 'base_app.html' %}
 {% block title %}IS Buddies | Dashboard{% endblock %}
 {% block content %}
-      <!-- Page header -->
-      <div class="top"><h1>Dashboard</h1><span class="tag">Admin / Instructor</span></div>
-      <div class="row">
-        <div class="card"><span class="ic"></span>Sales Today<b class="n">[₱ 0.00]</b></div>
-        <div class="card"><span class="ic d"></span>Low-Stock Items<b class="n">[0]</b></div>
-        <div class="card">
-          <span class="ic c"></span>
-          Predicted Sales (Next Month)
-          <b class="n">[₱ 0.00]</b>
-        </div>
-        <div class="card">
-          <span class="ic b"></span>
-          Best-Selling Product
-          <b class="n" style="font-size:16px">[Product name]</b>
-        </div>
-      </div>
-      <div class="row">
-        <!-- Card: Monthly Sales vs Predicted -->
-        <div class="card">
-          <h2>Monthly Sales vs Predicted</h2>
-          <svg aria-label="Line chart placeholder" role="img" style="width:100%;height:200px" viewbox="0 0 400 160">
-            <rect fill="#eef1fb" height="160" width="400"/>
-            <polyline fill="none" points="10,130 70,100 130,110 190,70 250,80 310,40 390,30" stroke="#1e2a5a" stroke-width="3"/>
-            </polyline>
-            <polyline fill="none" points="190,70 250,60 310,50 390,40" stroke="#1e2a5a" stroke-dasharray="6" stroke-width="2" style="stroke:#d99a00"/>
-            </polyline>
-          </svg>
-        </div>
-        <!-- Card: Top 5 Best-Selling Products -->
-        <div class="card">
-          <h2>Top 5 Best-Selling Products</h2>
-          <svg aria-label="Bar chart placeholder" role="img" style="width:100%;height:200px" viewbox="0 0 400 160">
-            <rect fill="#eef1fb" height="160" width="400"/>
-            <rect fill="#f5b301" height="120" width="40" x="30" y="30"/>
-            <rect fill="#1e2a5a" height="95" width="40" x="100" y="55"/>
-            <rect fill="#1e2a5a" height="75" width="40" x="170" y="75"/>
-            <rect fill="#1e2a5a" height="50" width="40" x="240" y="100"/>
-            <rect fill="#1e2a5a" height="30" width="40" x="310" y="120"/>
-          </svg>
-        </div>
-      </div>
-      <div class="row">
-        <!-- Card: Slow-Moving Products -->
-        <div class="card">
-          <h2>Slow-Moving Products</h2>
-          <div class="sc">
-            <table>
-              <tr><th>Product</th><th>Stock</th><th>Days no sale</th></tr>
-              <tr><td>[Item]</td><td>[0]</td><td>[0]</td></tr>
-              <tr><td>[Item]</td><td>[0]</td><td>[0]</td></tr>
-              <tr><td>[Item]</td><td>[0]</td><td>[0]</td></tr>
-            </table>
-          </div>
-        </div>
-        <!-- Card: Recent Transactions -->
-        <div class="card">
-          <h2>Recent Transactions</h2>
-          <div class="sc">
-            <table>
-              <tr><th>Receipt #</th><th>Cashier</th><th>Total</th></tr>
-              <tr><td>[0001]</td><td>[Name]</td><td>[₱]</td></tr>
-              <tr><td>[0001]</td><td>[Name]</td><td>[₱]</td></tr>
-              <tr><td>[0001]</td><td>[Name]</td><td>[₱]</td></tr>
-            </table>
-          </div>
-        </div>
-      </div>
+<div class="top">
+  <h1>Dashboard</h1>
+  <span class="tag">{{ current_user.role_label }} Overview</span>
+</div>
+
+<div class="row">
+  <div class="card">
+    <span class="ic c"></span>
+    Sales Today
+    <b class="n" id="stat-sales-today">₱ 0.00</b>
+  </div>
+  <div class="card">
+    <span class="ic d"></span>
+    Low-Stock Items
+    <b class="n" id="stat-low-stock">0</b>
+  </div>
+  <div class="card">
+    <span class="ic"></span>
+    Total Products
+    <b class="n" id="stat-total-products">0</b>
+  </div>
+  <div class="card">
+    <span class="ic b"></span>
+    Top Best-Seller
+    <b class="n" id="stat-best-seller" style="font-size:16px; margin-top:8px;">-</b>
+  </div>
+</div>
+
+<div class="row">
+  <!-- Card: Monthly Sales Trend -->
+  <div class="card" style="flex:2">
+    <h2>Monthly Sales Revenue</h2>
+    <div id="chart-container" style="width:100%; height:220px; display:flex; align-items:flex-end; gap:12px; padding:15px 5px 0 5px; box-sizing:border-box;">
+      <p class="note" id="chart-loading">Loading chart data...</p>
+    </div>
+  </div>
+
+  <!-- Card: Top 5 Best-Selling Products -->
+  <div class="card" style="flex:1">
+    <h2>Top 5 Selling Items</h2>
+    <div class="sc">
+      <table id="table-top-products">
+        <thead>
+          <tr><th>Product</th><th style="text-align:right">Units Sold</th></tr>
+        </thead>
+        <tbody>
+          <tr><td colspan="2" class="note">Loading top products...</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <!-- Card: Slow-Moving Products -->
+  <div class="card">
+    <h2>Slow-Moving Items (30+ Days No Sale)</h2>
+    <div class="sc">
+      <table id="table-slow-products">
+        <thead>
+          <tr><th>Product</th><th>Category</th><th style="text-align:right">Current Stock</th></tr>
+        </thead>
+        <tbody>
+          <tr><td colspan="3" class="note">Loading...</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Card: Recent Transactions -->
+  <div class="card">
+    <h2>Recent Transactions</h2>
+    <div class="sc">
+      <table id="table-recent-sales">
+        <thead>
+          <tr><th>Receipt #</th><th>Cashier</th><th>Date</th><th style="text-align:right">Total</th></tr>
+        </thead>
+        <tbody>
+          <tr><td colspan="4" class="note">Loading...</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+document.addEventListener("DOMContentLoaded", async () => {
+  try {
+    const res = await fetch("/api/dashboard/stats");
+    if (!res.ok) throw new Error("Failed to load dashboard stats");
+    const data = await res.json();
+
+    document.getElementById("stat-sales-today").textContent = "₱ " + Number(data.sales_today).toLocaleString("en-US", {minimumFractionDigits: 2, maximumFractionDigits: 2});
+    document.getElementById("stat-low-stock").textContent = data.low_stock;
+    document.getElementById("stat-total-products").textContent = data.total_products;
+    document.getElementById("stat-best-seller").textContent = data.best_seller + (data.best_seller_qty ? ` (${data.best_seller_qty} sold)` : "");
+
+    // Top products table
+    const topTbody = document.querySelector("#table-top-products tbody");
+    if (data.top_products && data.top_products.length > 0) {
+      topTbody.innerHTML = data.top_products.map(p => `
+        <tr>
+          <td><strong>${p.name}</strong></td>
+          <td style="text-align:right"><span class="p g">${p.qty}</span></td>
+        </tr>
+      `).join("");
+    } else {
+      topTbody.innerHTML = `<tr><td colspan="2" class="note">No sales recorded yet.</td></tr>`;
+    }
+
+    // Slow products table
+    const slowTbody = document.querySelector("#table-slow-products tbody");
+    if (data.slow_products && data.slow_products.length > 0) {
+      slowTbody.innerHTML = data.slow_products.map(p => `
+        <tr>
+          <td>${p.name}</td>
+          <td><span class="tag">${p.category || 'General'}</span></td>
+          <td style="text-align:right"><strong>${p.stock}</strong></td>
+        </tr>
+      `).join("");
+    } else {
+      slowTbody.innerHTML = `<tr><td colspan="3" class="note">No slow-moving inventory detected.</td></tr>`;
+    }
+
+    // Recent transactions table
+    const recTbody = document.querySelector("#table-recent-sales tbody");
+    if (data.recent_sales && data.recent_sales.length > 0) {
+      recTbody.innerHTML = data.recent_sales.map(s => `
+        <tr>
+          <td><strong>${s.receipt_no}</strong></td>
+          <td>${s.cashier}</td>
+          <td>${s.date}</td>
+          <td style="text-align:right"><strong>₱ ${Number(s.total).toFixed(2)}</strong></td>
+        </tr>
+      `).join("");
+    } else {
+      recTbody.innerHTML = `<tr><td colspan="4" class="note">No recent transactions.</td></tr>`;
+    }
+
+    // Monthly sales chart rendering
+    const chartContainer = document.getElementById("chart-container");
+    chartContainer.innerHTML = "";
+    if (data.monthly_sales && data.monthly_sales.length > 0) {
+      const maxVal = Math.max(...data.monthly_sales.map(m => m.total), 100);
+      data.monthly_sales.forEach(m => {
+        const heightPct = Math.max(12, Math.round((m.total / maxVal) * 160));
+        const col = document.createElement("div");
+        col.style.cssText = "flex:1; display:flex; flex-direction:column; align-items:center; gap:6px; height:100%; justify-content:flex-end;";
+        col.innerHTML = `
+          <span style="font-size:10px; font-weight:600; color:var(--muted)">₱${Math.round(m.total)}</span>
+          <div style="width:80%; max-width:40px; height:${heightPct}px; background:var(--navy); border-radius:6px 6px 0 0; transition:all 0.3s;" title="${m.month}: ₱${m.total}"></div>
+          <span style="font-size:10px; color:var(--text); white-space:nowrap;">${m.month.split(' ')[0]}</span>
+        `;
+        chartContainer.appendChild(col);
+      });
+    } else {
+      chartContainer.innerHTML = `<p class="note">No monthly data available.</p>`;
+    }
+  } catch (err) {
+    console.error(err);
+  }
+});
+</script>
 {% endblock %}

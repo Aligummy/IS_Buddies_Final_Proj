@@ -4,19 +4,26 @@ from flask import Blueprint, abort, flash, redirect, render_template, request, u
 from flask_login import current_user, login_required
 
 from . import db
-from .models import User
+from .models import User, Product, Sale, SaleItem
 
 bp = Blueprint("main", __name__)
 
-# (endpoint, label) per role -> drives the sidebar in base_app.html
+# (endpoint, icon, label) per role -> drives the sidebar in base_app.html
 NAV = {
-    "admin": [("main.dashboard", "Dashboard"), ("main.inventory", "Inventory (view)"),
-              ("main.sales", "Sales Records (view)"), ("main.users", "Users"),
-              ("main.knowledge", "Knowledge Analysis")],
-    "instructor": [("main.dashboard", "Dashboard"), ("main.inventory", "Inventory (view)"),
-                   ("main.sales", "Sales Records (view)"), ("main.knowledge", "Knowledge Analysis")],
-    "inventory_clerk": [("main.inventory", "Products")],
-    "sales_personnel": [("main.sales", "New Sale")],
+    "admin": [("main.dashboard", "📊", "Dashboard"),
+              ("main.inventory", "📦", "Inventory"),
+              ("main.sales", "🛒", "Sales"),
+              ("main.users", "👥", "Users"),
+              ("main.suppliers_page", "🏭", "Suppliers"),
+              ("main.knowledge", "🧠", "Knowledge Analysis")],
+    "instructor": [("main.dashboard", "📊", "Dashboard"),
+                   ("main.inventory", "📦", "Inventory (view)"),
+                   ("main.sales", "🛒", "Sales (view)"),
+                   ("main.knowledge", "🧠", "Knowledge Analysis")],
+    "inventory_clerk": [("main.inventory", "📦", "Inventory"),
+                        ("main.suppliers_page", "🏭", "Suppliers")],
+    "sales_personnel": [("main.sales", "🛒", "Sales"),
+                        ("main.sales_history", "📋", "Sales History")],
 }
 
 
@@ -48,7 +55,11 @@ def dashboard():
 @bp.route("/inventory")
 @roles_required("admin", "instructor", "inventory_clerk")
 def inventory():
-    return render_template("inventory.html")
+    categories = db.session.query(Product.category).distinct().filter(
+        Product.category.isnot(None)
+    ).order_by(Product.category).all()
+    cats = [c[0] for c in categories]
+    return render_template("inventory.html", categories=cats)
 
 
 @bp.route("/sales")
@@ -57,10 +68,22 @@ def sales():
     return render_template("sales.html")
 
 
+@bp.route("/sales/history")
+@roles_required("admin", "instructor", "sales_personnel")
+def sales_history():
+    return render_template("sales_history.html")
+
+
 @bp.route("/knowledge")
 @roles_required("admin", "instructor")
 def knowledge():
     return render_template("knowledge.html")
+
+
+@bp.route("/suppliers")
+@roles_required("admin", "inventory_clerk")
+def suppliers_page():
+    return render_template("suppliers.html")
 
 
 @bp.route("/users")

@@ -353,3 +353,58 @@ th {
   color: var(--navy);
   font-weight: 600;
 }
+
+
+/* ===== Additional Utility & Print Styles ===== */
+.flash-msg {
+  background: var(--warn-bg);
+  border-left: 4px solid var(--yellow);
+  padding: 10px 14px;
+  border-radius: 6px;
+  font-size: 13px;
+  color: var(--text);
+  margin: 0;
+}
+
+button.btn {
+  cursor: pointer;
+  transition: opacity 0.2s, background-color 0.2s;
+}
+
+button.btn:hover {
+  opacity: 0.9;
+}
+
+button.btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.tabs span {
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.tabs span:hover:not(.on) {
+  background: var(--tint);
+}
+
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  #receipt-card, #receipt-card * {
+    visibility: visible;
+  }
+  #receipt-card {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    border: none !important;
+    box-shadow: none !important;
+  }
+  #receipt-card button {
+    display: none !important;
+  }
+}

@@ -1,0 +1,99 @@
+{% extends 'base_app.html' %}
+{% block title %}IS Buddies | Suppliers{% endblock %}
+{% block content %}
+<div class="top">
+  <h1>Suppliers Directory</h1>
+  <span class="tag">Supply Chain</span>
+</div>
+
+<div class="row">
+  <div class="card" style="flex:2">
+    <h2>Registered Suppliers</h2>
+    <div class="sc">
+      <table>
+        <thead>
+          <tr>
+            <th>Company Name</th>
+            <th>Contact Person</th>
+            <th>Phone</th>
+            <th>Email</th>
+            <th>Address</th>
+          </tr>
+        </thead>
+        <tbody id="suppliers-tbody">
+          <tr><td colspan="5" class="note">Loading suppliers...</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="card" style="flex:1">
+    <h2>Add New Supplier</h2>
+    <form id="supplier-form" onsubmit="createSupplier(event)">
+      <label class="f">Company Name
+        <input id="sup-name" class="in" required placeholder="e.g. Star Paper Corp">
+      </label>
+      <label class="f">Contact Person
+        <input id="sup-contact" class="in" placeholder="e.g. Maria Santos">
+      </label>
+      <label class="f">Phone Number
+        <input id="sup-phone" class="in" placeholder="e.g. 0917-123-4567">
+      </label>
+      <label class="f">Email
+        <input id="sup-email" type="email" class="in" placeholder="sales@starpaper.ph">
+      </label>
+      <label class="f">Address
+        <textarea id="sup-address" class="in" style="min-height:70px;" placeholder="Metro Manila, Philippines"></textarea>
+      </label>
+      <button type="submit" class="btn" style="width:100%; margin-top:8px;">Save Supplier</button>
+    </form>
+  </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+async function loadSuppliers() {
+  const res = await fetch("/api/suppliers");
+  const list = await res.json();
+  const tbody = document.getElementById("suppliers-tbody");
+  if (!list || list.length === 0) {
+    tbody.innerHTML = `<tr><td colspan="5" class="note">No suppliers recorded yet.</td></tr>`;
+    return;
+  }
+  tbody.innerHTML = list.map(s => `
+    <tr>
+      <td><strong>${s.name}</strong></td>
+      <td>${s.contact_person || '-'}</td>
+      <td>${s.phone || '-'}</td>
+      <td>${s.email || '-'}</td>
+      <td>${s.address || '-'}</td>
+    </tr>
+  `).join("");
+}
+
+async function createSupplier(e) {
+  e.preventDefault();
+  const body = {
+    name: document.getElementById("sup-name").value.trim(),
+    contact_person: document.getElementById("sup-contact").value.trim(),
+    phone: document.getElementById("sup-phone").value.trim(),
+    email: document.getElementById("sup-email").value.trim(),
+    address: document.getElementById("sup-address").value.trim()
+  };
+  const res = await fetch("/api/suppliers", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(body)
+  });
+  if (!res.ok) {
+    alert("Failed to create supplier.");
+    return;
+  }
+  document.getElementById("supplier-form").reset();
+  loadSuppliers();
+}
+
+document.addEventListener("DOMContentLoaded", loadSuppliers);
+</script>
+{% endblock %}

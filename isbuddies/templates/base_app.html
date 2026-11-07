@@ -11,15 +11,16 @@
     <div class="sb">
       <b>IS Buddies Supplies</b>
       <i>{{ current_user.role_label }}</i>
-      {% for endpoint, label in nav_items %}
-        <a href="{{ url_for(endpoint) }}"{% if request.endpoint == endpoint %} class="on"{% endif %}>{{ label }}</a>
+      {% for endpoint, icon, label in nav_items %}
+        <a href="{{ url_for(endpoint) }}"{% if request.endpoint == endpoint %} class="on"{% endif %}>{{ icon }} {{ label }}</a>
       {% endfor %}
-      <a href="{{ url_for('auth.logout') }}" style="margin-top:auto">Logout</a>
+      <a href="{{ url_for('auth.logout') }}" style="margin-top:auto">🚪 Logout</a>
     </div>
     <div class="mn">
-      {% for m in get_flashed_messages() %}<p class="note">{{ m }}</p>{% endfor %}
+      {% for m in get_flashed_messages() %}<p class="note flash-msg">{{ m }}</p>{% endfor %}
 {% block content %}{% endblock %}
     </div>
   </div>
+{% block scripts %}{% endblock %}
 </body>
 </html>

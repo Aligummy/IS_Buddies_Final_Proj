@@ -1,0 +1,1201 @@
+date,product_id,product_name,category,day_of_week,month,is_school_season,unit_price,stock_level,qty_sold,revenue
+2024-01-01,P021,Highlighter Set (6 colors),Writing,Monday,1,1,126.71,87,12,1520.52
+2024-01-02,P033,Clear Book 20 Pockets,Filing,Tuesday,1,1,36.95,65,28,1034.6
+2024-01-03,P009,Construction Paper (Pack),Paper,Wednesday,1,1,50.03,40,18,900.54
+2024-01-04,P063,Pencil Case (Basic),Organization,Thursday,1,1,72.29,36,9,650.61
+2024-01-04,P007,Yellow Pad Paper,Paper,Thursday,1,1,31.16,74,30,934.8
+2024-01-05,P009,Construction Paper (Pack),Paper,Friday,1,1,50.03,79,11,550.33
+2024-01-06,P014,Pencil No. 2 (Pcs),Writing,Saturday,1,1,9.49,68,24,227.76
+2024-01-07,P043,Protractor,Measuring,Sunday,1,1,10.52,76,9,94.68
+2024-01-09,P015,Mechanical Pencil,Writing,Tuesday,1,1,31.36,99,17,533.12
+2024-01-09,P065,Bag Tag / ID Lace,Organization,Tuesday,1,1,15.62,107,14,218.68
+2024-01-10,P030,Paint Brush Set,Art Supplies,Wednesday,1,1,42.09,122,11,462.99
+2024-01-10,P001,Notebook 80 Leaves,Paper,Wednesday,1,1,32.49,70,25,812.25
+2024-01-12,P001,Notebook 80 Leaves,Paper,Friday,1,1,32.49,100,28,909.72
+2024-01-17,P006,Bond Paper Short (Ream),Paper,Wednesday,1,1,198.72,81,24,4769.28
+2024-01-17,P032,Plastic Folder Long,Filing,Wednesday,1,1,14.22,110,24,341.28
+2024-01-17,P012,Ballpen Black (Pcs),Writing,Wednesday,1,1,17.76,36,26,461.76
+2024-01-17,P063,Pencil Case (Basic),Organization,Wednesday,1,1,72.29,157,26,1879.54
+2024-01-18,P016,Sign Pen Black,Writing,Thursday,1,1,24.59,46,25,614.75
+2024-01-19,P052,Staple Wire No. 35,Desk Accessories,Friday,1,1,35.5,73,18,639.0
+2024-01-19,P010,Pad Paper,Paper,Friday,1,1,25.62,130,13,333.06
+2024-01-19,P009,Construction Paper (Pack),Paper,Friday,1,1,50.03,74,12,600.36
+2024-01-20,P022,Crayons 8 Colors,Art Supplies,Saturday,1,1,27.79,116,15,416.85
+2024-01-21,P024,Crayons 24 Colors,Art Supplies,Sunday,1,1,71.49,108,11,786.39
+2024-01-21,P025,Watercolor Set,Art Supplies,Sunday,1,1,55.52,24,11,610.72
+2024-01-22,P030,Paint Brush Set,Art Supplies,Monday,1,1,42.09,89,9,378.81
+2024-01-22,P058,Packaging Tape,Adhesives,Monday,1,1,35.88,133,15,538.2
+2024-01-26,P058,Packaging Tape,Adhesives,Friday,1,1,35.88,123,11,394.68
+2024-01-26,P065,Bag Tag / ID Lace,Organization,Friday,1,1,15.62,93,14,218.68
+2024-01-26,P043,Protractor,Measuring,Friday,1,1,10.52,97,11,115.72
+2024-01-27,P062,Correction Fluid,Writing,Saturday,1,1,31.78,129,14,444.92
+2024-01-28,P047,Sharpener (Pcs),Desk Accessories,Sunday,1,1,8.12,55,11,89.32
+2024-01-29,P023,Crayons 16 Colors,Art Supplies,Monday,1,1,50.23,5,14,703.22
+2024-01-29,P053,Paper Clips (Box),Desk Accessories,Monday,1,1,29.09,121,12,349.08
+2024-01-29,P070,Clipboard,Organization,Monday,1,1,84.41,48,12,1012.92
+2024-01-31,P047,Sharpener (Pcs),Desk Accessories,Wednesday,1,1,8.12,105,24,194.88
+2024-01-31,P061,Correction Tape,Writing,Wednesday,1,1,26.55,65,26,690.3
+2024-02-02,P032,Plastic Folder Long,Filing,Friday,2,1,14.22,77,27,383.94
+2024-02-05,P012,Ballpen Black (Pcs),Writing,Monday,2,1,17.76,106,34,603.84
+2024-02-06,P059,Masking Tape,Adhesives,Tuesday,2,1,26.13,68,11,287.43
+2024-02-07,P044,Triangle Set,Measuring,Wednesday,2,1,42.73,143,8,341.84
+2024-02-09,P028,Colored Pencils 24s,Art Supplies,Friday,2,1,126.0,70,16,2016.0
+2024-02-10,P027,Colored Pencils 12s,Art Supplies,Saturday,2,1,59.98,71,15,899.7
+2024-02-10,P019,Permanent Marker,Writing,Saturday,2,1,35.8,125,7,250.6
+2024-02-11,P020,Highlighter (Pcs),Writing,Sunday,2,1,25.82,60,16,413.12
+2024-02-11,P043,Protractor,Measuring,Sunday,2,1,10.52,68,8,84.16
+2024-02-11,P066,Book Cover (Roll),Organization,Sunday,2,1,25.85,137,16,413.6
+2024-02-12,P013,Ballpen Red (Pcs),Writing,Monday,2,1,16.66,90,9,149.94
+2024-02-12,P027,Colored Pencils 12s,Art Supplies,Monday,2,1,59.98,102,17,1019.66
+2024-02-13,P058,Packaging Tape,Adhesives,Tuesday,2,1,35.88,93,10,358.8
+2024-02-16,P064,Pencil Case (Premium),Organization,Friday,2,1,115.68,106,13,1503.84
+2024-02-21,P031,Plastic Folder A4,Filing,Wednesday,2,1,19.9,112,33,656.7
+2024-02-22,P018,Whiteboard Marker,Writing,Thursday,2,1,43.12,75,24,1034.88
+2024-02-24,P050,Calculator (Scientific),Desk Accessories,Saturday,2,1,423.94,53,8,3391.52
+2024-02-24,P004,Spiral Notebook A4,Paper,Saturday,2,1,77.96,36,13,1013.48
+2024-02-24,P057,White Glue 120ml,Adhesives,Saturday,2,1,21.77,34,15,326.55
+2024-02-25,P057,White Glue 120ml,Adhesives,Sunday,2,1,21.77,91,15,326.55
+2024-02-25,P037,Brown Envelope Short,Filing,Sunday,2,1,4.22,77,14,59.08
+2024-02-25,P011,Ballpen Blue (Pcs),Writing,Sunday,2,1,10.16,114,22,223.52
+2024-02-27,P029,Acrylic Paint Set,Art Supplies,Tuesday,2,1,197.01,100,12,2364.12
+2024-02-27,P004,Spiral Notebook A4,Paper,Tuesday,2,1,77.96,47,17,1325.32
+2024-02-27,P027,Colored Pencils 12s,Art Supplies,Tuesday,2,1,59.98,55,22,1319.56
+2024-02-27,P001,Notebook 80 Leaves,Paper,Tuesday,2,1,32.49,99,32,1039.68
+2024-02-28,P063,Pencil Case (Basic),Organization,Wednesday,2,1,72.29,117,12,867.48
+2024-02-29,P051,Stapler No. 35,Desk Accessories,Thursday,2,1,118.02,63,5,590.1
+2024-03-01,P029,Acrylic Paint Set,Art Supplies,Friday,3,1,197.01,105,4,788.04
+2024-03-01,P014,Pencil No. 2 (Pcs),Writing,Friday,3,1,9.49,77,30,284.7
+2024-03-02,P055,Desk Organizer,Desk Accessories,Saturday,3,1,151.75,95,2,303.5
+2024-03-02,P049,Calculator (Basic),Desk Accessories,Saturday,3,1,191.07,59,7,1337.49
+2024-03-04,P017,Sign Pen Blue,Writing,Monday,3,1,27.61,71,21,579.81
+2024-03-05,P018,Whiteboard Marker,Writing,Tuesday,3,1,43.12,76,17,733.04
+2024-03-07,P042,Ruler 18 inches (Plastic),Measuring,Thursday,3,1,22.43,92,10,224.3
+2024-03-07,P061,Correction Tape,Writing,Thursday,3,1,26.55,53,29,769.95
+2024-03-09,P008,Index Cards (Pack),Paper,Saturday,3,1,42.32,56,8,338.56
+2024-03-09,P016,Sign Pen Black,Writing,Saturday,3,1,24.59,83,19,467.21
+2024-03-10,P056,Glue Stick,Adhesives,Sunday,3,1,33.44,68,11,367.84
+2024-03-10,P039,Ring Binder 2 inch,Filing,Sunday,3,1,129.48,44,4,517.92
+2024-03-12,P055,Desk Organizer,Desk Accessories,Tuesday,3,1,151.75,85,5,758.75
+2024-03-13,P004,Spiral Notebook A4,Paper,Wednesday,3,1,77.96,61,18,1403.28
+2024-03-14,P048,Scissors (Student),Desk Accessories,Thursday,3,1,40.6,86,14,568.4
+2024-03-16,P066,Book Cover (Roll),Organization,Saturday,3,1,25.85,39,9,232.65
+2024-03-17,P006,Bond Paper Short (Ream),Paper,Sunday,3,1,198.72,82,14,2782.08
+2024-03-18,P028,Colored Pencils 24s,Art Supplies,Monday,3,1,126.0,105,13,1638.0
+2024-03-18,P036,Brown Envelope Long,Filing,Monday,3,1,7.04,99,18,126.72
+2024-03-19,P028,Colored Pencils 24s,Art Supplies,Tuesday,3,1,126.0,52,16,2016.0
+2024-03-20,P004,Spiral Notebook A4,Paper,Wednesday,3,1,77.96,74,11,857.56
+2024-03-22,P056,Glue Stick,Adhesives,Friday,3,1,33.44,85,23,769.12
+2024-03-23,P020,Highlighter (Pcs),Writing,Saturday,3,1,25.82,67,11,284.02
+2024-03-23,P067,Sticker Labels (Pack),Organization,Saturday,3,1,23.52,96,6,141.12
+2024-03-23,P068,Sticky Notes (Pad),Organization,Saturday,3,1,44.07,117,7,308.49
+2024-03-23,P017,Sign Pen Blue,Writing,Saturday,3,1,27.61,21,9,248.49
+2024-03-23,P032,Plastic Folder Long,Filing,Saturday,3,1,14.22,123,14,199.08
+2024-03-24,P047,Sharpener (Pcs),Desk Accessories,Sunday,3,1,8.12,134,9,73.08
+2024-03-24,P006,Bond Paper Short (Ream),Paper,Sunday,3,1,198.72,114,14,2782.08
+2024-03-26,P019,Permanent Marker,Writing,Tuesday,3,1,35.8,78,11,393.8
+2024-03-26,P034,Clear Book 40 Pockets,Filing,Tuesday,3,1,92.96,17,16,1487.36
+2024-03-27,P068,Sticky Notes (Pad),Organization,Wednesday,3,1,44.07,40,14,616.98
+2024-03-27,P042,Ruler 18 inches (Plastic),Measuring,Wednesday,3,1,22.43,69,10,224.3
+2024-03-27,P047,Sharpener (Pcs),Desk Accessories,Wednesday,3,1,8.12,55,12,97.44
+2024-03-28,P066,Book Cover (Roll),Organization,Thursday,3,1,25.85,79,15,387.75
+2024-03-28,P061,Correction Tape,Writing,Thursday,3,1,26.55,100,15,398.25
+2024-03-29,P009,Construction Paper (Pack),Paper,Friday,3,1,50.03,102,13,650.39
+2024-03-30,P032,Plastic Folder Long,Filing,Saturday,3,1,14.22,87,11,156.42
+2024-03-30,P034,Clear Book 40 Pockets,Filing,Saturday,3,1,92.96,32,11,1022.56
+2024-03-30,P023,Crayons 16 Colors,Art Supplies,Saturday,3,1,50.23,88,10,502.3
+2024-03-31,P065,Bag Tag / ID Lace,Organization,Sunday,3,1,15.62,54,11,171.82
+2024-04-01,P017,Sign Pen Blue,Writing,Monday,4,0,27.61,162,7,193.27
+2024-04-01,P046,Eraser (Pcs),Desk Accessories,Monday,4,0,9.64,151,11,106.04
+2024-04-01,P025,Watercolor Set,Art Supplies,Monday,4,0,55.52,122,7,388.64
+2024-04-01,P040,File Organizer,Filing,Monday,4,0,124.02,78,4,496.08
+2024-04-04,P029,Acrylic Paint Set,Art Supplies,Thursday,4,0,197.01,170,1,197.01
+2024-04-04,P061,Correction Tape,Writing,Thursday,4,0,26.55,154,12,318.6
+2024-04-04,P008,Index Cards (Pack),Paper,Thursday,4,0,42.32,183,3,126.96
+2024-04-07,P017,Sign Pen Blue,Writing,Sunday,4,0,27.61,149,7,193.27
+2024-04-08,P068,Sticky Notes (Pad),Organization,Monday,4,0,44.07,196,6,264.42
+2024-04-09,P048,Scissors (Student),Desk Accessories,Tuesday,4,0,40.6,174,6,243.6
+2024-04-10,P026,Oil Pastel 12 Colors,Art Supplies,Wednesday,4,0,80.33,129,7,562.31
+2024-04-14,P028,Colored Pencils 24s,Art Supplies,Sunday,4,0,126.0,127,4,504.0
+2024-04-14,P014,Pencil No. 2 (Pcs),Writing,Sunday,4,0,9.49,166,10,94.9
+2024-04-16,P055,Desk Organizer,Desk Accessories,Tuesday,4,0,151.75,124,2,303.5
+2024-04-17,P063,Pencil Case (Basic),Organization,Wednesday,4,0,72.29,162,7,506.03
+2024-04-18,P066,Book Cover (Roll),Organization,Thursday,4,0,25.85,153,7,180.95
+2024-04-19,P056,Glue Stick,Adhesives,Friday,4,0,33.44,89,10,334.4
+2024-04-19,P041,Ruler 12 inches (Plastic),Measuring,Friday,4,0,11.22,124,5,56.1
+2024-04-21,P059,Masking Tape,Adhesives,Sunday,4,0,26.13,150,1,26.13
+2024-04-22,P033,Clear Book 20 Pockets,Filing,Monday,4,0,36.95,40,8,295.6
+2024-04-22,P042,Ruler 18 inches (Plastic),Measuring,Monday,4,0,22.43,146,4,89.72
+2024-04-22,P017,Sign Pen Blue,Writing,Monday,4,0,27.61,80,7,193.27
+2024-04-24,P032,Plastic Folder Long,Filing,Wednesday,4,0,14.22,178,7,99.54
+2024-04-25,P003,Composition Notebook,Paper,Thursday,4,0,30.98,80,13,402.74
+2024-04-26,P002,Notebook 200 Leaves,Paper,Friday,4,0,78.77,136,8,630.16
+2024-04-26,P047,Sharpener (Pcs),Desk Accessories,Friday,4,0,8.12,226,11,89.32
+2024-04-26,P036,Brown Envelope Long,Filing,Friday,4,0,7.04,98,8,56.32
+2024-04-27,P028,Colored Pencils 24s,Art Supplies,Saturday,4,0,126.0,213,4,504.0
+2024-04-27,P023,Crayons 16 Colors,Art Supplies,Saturday,4,0,50.23,171,9,452.07
+2024-04-28,P016,Sign Pen Black,Writing,Sunday,4,0,24.59,115,5,122.95
+2024-05-01,P057,White Glue 120ml,Adhesives,Wednesday,5,0,21.77,196,6,130.62
+2024-05-02,P013,Ballpen Red (Pcs),Writing,Thursday,5,0,16.66,180,10,166.6
+2024-05-03,P058,Packaging Tape,Adhesives,Friday,5,0,35.88,90,7,251.16
+2024-05-03,P069,Sticky Notes (Set),Organization,Friday,5,0,49.1,170,1,49.1
+2024-05-04,P020,Highlighter (Pcs),Writing,Saturday,5,0,25.82,145,4,103.28
+2024-05-05,P065,Bag Tag / ID Lace,Organization,Sunday,5,0,15.62,128,3,46.86
+2024-05-07,P022,Crayons 8 Colors,Art Supplies,Tuesday,5,0,27.79,126,8,222.32
+2024-05-07,P046,Eraser (Pcs),Desk Accessories,Tuesday,5,0,9.64,119,18,173.52
+2024-05-08,P048,Scissors (Student),Desk Accessories,Wednesday,5,0,40.6,176,7,284.2
+2024-05-09,P001,Notebook 80 Leaves,Paper,Thursday,5,0,32.49,134,13,422.37
+2024-05-10,P004,Spiral Notebook A4,Paper,Friday,5,0,77.96,222,2,155.92
+2024-05-10,P033,Clear Book 20 Pockets,Filing,Friday,5,0,36.95,119,9,332.55
+2024-05-10,P005,Bond Paper A4 (Ream),Paper,Friday,5,0,223.4,169,8,1787.2
+2024-05-15,P028,Colored Pencils 24s,Art Supplies,Wednesday,5,0,126.0,190,1,126.0
+2024-05-16,P057,White Glue 120ml,Adhesives,Thursday,5,0,21.77,118,10,217.7
+2024-05-16,P032,Plastic Folder Long,Filing,Thursday,5,0,14.22,128,15,213.3
+2024-05-17,P061,Correction Tape,Writing,Friday,5,0,26.55,97,7,185.85
+2024-05-18,P033,Clear Book 20 Pockets,Filing,Saturday,5,0,36.95,191,1,36.95
+2024-05-18,P007,Yellow Pad Paper,Paper,Saturday,5,0,31.16,174,9,280.44
+2024-05-20,P003,Composition Notebook,Paper,Monday,5,0,30.98,219,8,247.84
+2024-05-20,P020,Highlighter (Pcs),Writing,Monday,5,0,25.82,210,7,180.74
+2024-05-20,P060,Double-Sided Tape,Adhesives,Monday,5,0,34.76,175,3,104.28
+2024-05-20,P041,Ruler 12 inches (Plastic),Measuring,Monday,5,0,11.22,141,9,100.98
+2024-05-22,P036,Brown Envelope Long,Filing,Wednesday,5,0,7.04,116,7,49.28
+2024-05-22,P011,Ballpen Blue (Pcs),Writing,Wednesday,5,0,10.16,205,8,81.28
+2024-05-24,P046,Eraser (Pcs),Desk Accessories,Friday,5,0,9.64,219,12,115.68
+2024-05-24,P012,Ballpen Black (Pcs),Writing,Friday,5,0,17.76,140,8,142.08
+2024-05-25,P047,Sharpener (Pcs),Desk Accessories,Saturday,5,0,8.12,154,5,40.6
+2024-05-26,P052,Staple Wire No. 35,Desk Accessories,Sunday,5,0,35.5,98,2,71.0
+2024-05-26,P030,Paint Brush Set,Art Supplies,Sunday,5,0,42.09,185,2,84.18
+2024-05-26,P022,Crayons 8 Colors,Art Supplies,Sunday,5,0,27.79,96,4,111.16
+2024-05-28,P050,Calculator (Scientific),Desk Accessories,Tuesday,5,0,423.94,83,9,3815.46
+2024-05-28,P060,Double-Sided Tape,Adhesives,Tuesday,5,0,34.76,120,4,139.04
+2024-05-29,P052,Staple Wire No. 35,Desk Accessories,Wednesday,5,0,35.5,143,5,177.5
+2024-05-29,P028,Colored Pencils 24s,Art Supplies,Wednesday,5,0,126.0,127,7,882.0
+2024-06-02,P038,Ring Binder 1 inch,Filing,Sunday,6,1,70.37,77,8,562.96
+2024-06-02,P001,Notebook 80 Leaves,Paper,Sunday,6,1,32.49,120,40,1299.6
+2024-06-03,P051,Stapler No. 35,Desk Accessories,Monday,6,1,118.02,97,16,1888.32
+2024-06-03,P039,Ring Binder 2 inch,Filing,Monday,6,1,129.48,108,25,3237.0
+2024-06-05,P020,Highlighter (Pcs),Writing,Wednesday,6,1,25.82,92,48,1239.36
+2024-06-06,P016,Sign Pen Black,Writing,Thursday,6,1,24.59,148,31,762.29
+2024-06-08,P033,Clear Book 20 Pockets,Filing,Saturday,6,1,36.95,86,26,960.7
+2024-06-09,P004,Spiral Notebook A4,Paper,Sunday,6,1,77.96,98,21,1637.16
+2024-06-10,P027,Colored Pencils 12s,Art Supplies,Monday,6,1,59.98,96,28,1679.44
+2024-06-11,P035,Expanding Envelope,Filing,Tuesday,6,1,49.14,56,34,1670.76
+2024-06-11,P011,Ballpen Blue (Pcs),Writing,Tuesday,6,1,10.16,91,40,406.4
+2024-06-12,P015,Mechanical Pencil,Writing,Wednesday,6,1,31.36,59,27,846.72
+2024-06-13,P068,Sticky Notes (Pad),Organization,Thursday,6,1,44.07,64,26,1145.82
+2024-06-13,P020,Highlighter (Pcs),Writing,Thursday,6,1,25.82,123,38,981.16
+2024-06-13,P008,Index Cards (Pack),Paper,Thursday,6,1,42.32,31,28,1184.96
+2024-06-13,P052,Staple Wire No. 35,Desk Accessories,Thursday,6,1,35.5,116,28,994.0
+2024-06-15,P017,Sign Pen Blue,Writing,Saturday,6,1,27.61,78,25,690.25
+2024-06-17,P067,Sticker Labels (Pack),Organization,Monday,6,1,23.52,56,20,470.4
+2024-06-17,P008,Index Cards (Pack),Paper,Monday,6,1,42.32,76,32,1354.24
+2024-06-18,P049,Calculator (Basic),Desk Accessories,Tuesday,6,1,191.07,49,21,4012.47
+2024-06-18,P046,Eraser (Pcs),Desk Accessories,Tuesday,6,1,9.64,50,39,375.96
+2024-06-18,P023,Crayons 16 Colors,Art Supplies,Tuesday,6,1,50.23,32,58,2913.34
+2024-06-19,P003,Composition Notebook,Paper,Wednesday,6,1,30.98,73,41,1270.18
+2024-06-21,P001,Notebook 80 Leaves,Paper,Friday,6,1,32.49,55,45,1462.05
+2024-06-21,P001,Notebook 80 Leaves,Paper,Friday,6,1,32.49,118,49,1592.01
+2024-06-21,P051,Stapler No. 35,Desk Accessories,Friday,6,1,118.02,88,15,1770.3
+2024-06-23,P026,Oil Pastel 12 Colors,Art Supplies,Sunday,6,1,80.33,118,21,1686.93
+2024-06-24,P044,Triangle Set,Measuring,Monday,6,1,42.73,49,20,854.6
+2024-06-24,P032,Plastic Folder Long,Filing,Monday,6,1,14.22,69,43,611.46
+2024-06-25,P003,Composition Notebook,Paper,Tuesday,6,1,30.98,54,38,1177.24
+2024-06-25,P052,Staple Wire No. 35,Desk Accessories,Tuesday,6,1,35.5,75,21,745.5
+2024-06-27,P066,Book Cover (Roll),Organization,Thursday,6,1,25.85,83,34,878.9
+2024-06-27,P019,Permanent Marker,Writing,Thursday,6,1,35.8,83,24,859.2
+2024-07-02,P046,Eraser (Pcs),Desk Accessories,Tuesday,7,1,9.64,118,39,375.96
+2024-07-04,P018,Whiteboard Marker,Writing,Thursday,7,1,43.12,40,24,1034.88
+2024-07-05,P050,Calculator (Scientific),Desk Accessories,Friday,7,1,423.94,137,14,5935.16
+2024-07-07,P045,Compass (Drawing),Measuring,Sunday,7,1,34.06,83,11,374.66
+2024-07-07,P036,Brown Envelope Long,Filing,Sunday,7,1,7.04,67,22,154.88
+2024-07-08,P033,Clear Book 20 Pockets,Filing,Monday,7,1,36.95,22,31,1145.45
+2024-07-08,P006,Bond Paper Short (Ream),Paper,Monday,7,1,198.72,73,34,6756.48
+2024-07-10,P024,Crayons 24 Colors,Art Supplies,Wednesday,7,1,71.49,106,31,2216.19
+2024-07-10,P056,Glue Stick,Adhesives,Wednesday,7,1,33.44,84,39,1304.16
+2024-07-10,P005,Bond Paper A4 (Ream),Paper,Wednesday,7,1,223.4,34,42,9382.8
+2024-07-10,P062,Correction Fluid,Writing,Wednesday,7,1,31.78,76,23,730.94
+2024-07-12,P068,Sticky Notes (Pad),Organization,Friday,7,1,44.07,112,25,1101.75
+2024-07-12,P033,Clear Book 20 Pockets,Filing,Friday,7,1,36.95,107,33,1219.35
+2024-07-13,P021,Highlighter Set (6 colors),Writing,Saturday,7,1,126.71,80,14,1773.94
+2024-07-13,P059,Masking Tape,Adhesives,Saturday,7,1,26.13,103,18,470.34
+2024-07-14,P022,Crayons 8 Colors,Art Supplies,Sunday,7,1,27.79,99,23,639.17
+2024-07-16,P010,Pad Paper,Paper,Tuesday,7,1,25.62,65,21,538.02
+2024-07-16,P058,Packaging Tape,Adhesives,Tuesday,7,1,35.88,82,19,681.72
+2024-07-17,P030,Paint Brush Set,Art Supplies,Wednesday,7,1,42.09,127,12,505.08
+2024-07-19,P017,Sign Pen Blue,Writing,Friday,7,1,27.61,12,36,993.96
+2024-07-19,P001,Notebook 80 Leaves,Paper,Friday,7,1,32.49,60,39,1267.11
+2024-07-22,P058,Packaging Tape,Adhesives,Monday,7,1,35.88,70,11,394.68
+2024-07-22,P011,Ballpen Blue (Pcs),Writing,Monday,7,1,10.16,108,58,589.28
+2024-07-23,P015,Mechanical Pencil,Writing,Tuesday,7,1,31.36,21,31,972.16
+2024-07-24,P022,Crayons 8 Colors,Art Supplies,Wednesday,7,1,27.79,132,30,833.7
+2024-07-25,P032,Plastic Folder Long,Filing,Thursday,7,1,14.22,113,38,540.36
+2024-07-25,P015,Mechanical Pencil,Writing,Thursday,7,1,31.36,78,25,784.0
+2024-07-26,P041,Ruler 12 inches (Plastic),Measuring,Friday,7,1,11.22,153,36,403.92
+2024-07-26,P024,Crayons 24 Colors,Art Supplies,Friday,7,1,71.49,98,35,2502.15
+2024-07-28,P061,Correction Tape,Writing,Sunday,7,1,26.55,126,31,823.05
+2024-07-29,P001,Notebook 80 Leaves,Paper,Monday,7,1,32.49,79,49,1592.01
+2024-07-29,P022,Crayons 8 Colors,Art Supplies,Monday,7,1,27.79,75,40,1111.6
+2024-07-29,P060,Double-Sided Tape,Adhesives,Monday,7,1,34.76,63,14,486.64
+2024-07-29,P059,Masking Tape,Adhesives,Monday,7,1,26.13,34,25,653.25
+2024-07-30,P013,Ballpen Red (Pcs),Writing,Tuesday,7,1,16.66,49,39,649.74
+2024-07-31,P046,Eraser (Pcs),Desk Accessories,Wednesday,7,1,9.64,80,54,520.56
+2024-08-01,P001,Notebook 80 Leaves,Paper,Thursday,8,1,32.49,116,44,1429.56
+2024-08-01,P049,Calculator (Basic),Desk Accessories,Thursday,8,1,191.07,70,13,2483.91
+2024-08-01,P062,Correction Fluid,Writing,Thursday,8,1,31.78,54,19,603.82
+2024-08-02,P011,Ballpen Blue (Pcs),Writing,Friday,8,1,10.16,71,34,345.44
+2024-08-02,P001,Notebook 80 Leaves,Paper,Friday,8,1,32.49,31,39,1267.11
+2024-08-03,P050,Calculator (Scientific),Desk Accessories,Saturday,8,1,423.94,73,11,4663.34
+2024-08-03,P038,Ring Binder 1 inch,Filing,Saturday,8,1,70.37,5,9,633.33
+2024-08-05,P005,Bond Paper A4 (Ream),Paper,Monday,8,1,223.4,173,25,5585.0
+2024-08-08,P023,Crayons 16 Colors,Art Supplies,Thursday,8,1,50.23,48,31,1557.13
+2024-08-08,P055,Desk Organizer,Desk Accessories,Thursday,8,1,151.75,95,7,1062.25
+2024-08-10,P005,Bond Paper A4 (Ream),Paper,Saturday,8,1,223.4,98,20,4468.0
+2024-08-11,P012,Ballpen Black (Pcs),Writing,Sunday,8,1,17.76,83,23,408.48
+2024-08-12,P034,Clear Book 40 Pockets,Filing,Monday,8,1,92.96,88,30,2788.8
+2024-08-12,P027,Colored Pencils 12s,Art Supplies,Monday,8,1,59.98,124,24,1439.52
+2024-08-13,P046,Eraser (Pcs),Desk Accessories,Tuesday,8,1,9.64,93,33,318.12
+2024-08-13,P061,Correction Tape,Writing,Tuesday,8,1,26.55,129,38,1008.9
+2024-08-14,P022,Crayons 8 Colors,Art Supplies,Wednesday,8,1,27.79,70,29,805.91
+2024-08-14,P069,Sticky Notes (Set),Organization,Wednesday,8,1,49.1,97,11,540.1
+2024-08-16,P003,Composition Notebook,Paper,Friday,8,1,30.98,40,30,929.4
+2024-08-18,P053,Paper Clips (Box),Desk Accessories,Sunday,8,1,29.09,60,9,261.81
+2024-08-18,P039,Ring Binder 2 inch,Filing,Sunday,8,1,129.48,91,9,1165.32
+2024-08-18,P061,Correction Tape,Writing,Sunday,8,1,26.55,64,19,504.45
+2024-08-18,P025,Watercolor Set,Art Supplies,Sunday,8,1,55.52,83,14,777.28
+2024-08-18,P042,Ruler 18 inches (Plastic),Measuring,Sunday,8,1,22.43,102,9,201.87
+2024-08-20,P057,White Glue 120ml,Adhesives,Tuesday,8,1,21.77,80,19,413.63
+2024-08-24,P026,Oil Pastel 12 Colors,Art Supplies,Saturday,8,1,80.33,19,18,1445.94
+2024-08-25,P033,Clear Book 20 Pockets,Filing,Sunday,8,1,36.95,60,11,406.45
+2024-09-01,P030,Paint Brush Set,Art Supplies,Sunday,9,1,42.09,55,8,336.72
+2024-09-01,P059,Masking Tape,Adhesives,Sunday,9,1,26.13,46,11,287.43
+2024-09-01,P066,Book Cover (Roll),Organization,Sunday,9,1,25.85,50,24,620.4
+2024-09-03,P036,Brown Envelope Long,Filing,Tuesday,9,1,7.04,64,19,133.76
+2024-09-03,P014,Pencil No. 2 (Pcs),Writing,Tuesday,9,1,9.49,49,28,265.72
+2024-09-04,P003,Composition Notebook,Paper,Wednesday,9,1,30.98,97,31,960.38
+2024-09-05,P032,Plastic Folder Long,Filing,Thursday,9,1,14.22,83,34,483.48
+2024-09-06,P057,White Glue 120ml,Adhesives,Friday,9,1,21.77,80,24,522.48
+2024-09-06,P007,Yellow Pad Paper,Paper,Friday,9,1,31.16,24,29,903.64
+2024-09-07,P004,Spiral Notebook A4,Paper,Saturday,9,1,77.96,95,14,1091.44
+2024-09-09,P018,Whiteboard Marker,Writing,Monday,9,1,43.12,49,23,991.76
+2024-09-09,P005,Bond Paper A4 (Ream),Paper,Monday,9,1,223.4,98,30,6702.0
+2024-09-13,P023,Crayons 16 Colors,Art Supplies,Friday,9,1,50.23,64,28,1406.44
+2024-09-13,P010,Pad Paper,Paper,Friday,9,1,25.62,90,26,666.12
+2024-09-13,P058,Packaging Tape,Adhesives,Friday,9,1,35.88,115,16,574.08
+2024-09-14,P002,Notebook 200 Leaves,Paper,Saturday,9,1,78.77,61,21,1654.17
+2024-09-14,P052,Staple Wire No. 35,Desk Accessories,Saturday,9,1,35.5,64,13,461.5
+2024-09-16,P041,Ruler 12 inches (Plastic),Measuring,Monday,9,1,11.22,111,19,213.18
+2024-09-16,P008,Index Cards (Pack),Paper,Monday,9,1,42.32,24,22,931.04
+2024-09-17,P020,Highlighter (Pcs),Writing,Tuesday,9,1,25.82,68,30,774.6
+2024-09-17,P018,Whiteboard Marker,Writing,Tuesday,9,1,43.12,78,22,948.64
+2024-09-17,P004,Spiral Notebook A4,Paper,Tuesday,9,1,77.96,113,26,2026.96
+2024-09-18,P050,Calculator (Scientific),Desk Accessories,Wednesday,9,1,423.94,36,14,5935.16
+2024-09-19,P046,Eraser (Pcs),Desk Accessories,Thursday,9,1,9.64,59,31,298.84
+2024-09-22,P056,Glue Stick,Adhesives,Sunday,9,1,33.44,79,13,434.72
+2024-09-25,P052,Staple Wire No. 35,Desk Accessories,Wednesday,9,1,35.5,93,17,603.5
+2024-09-26,P054,Push Pins (Box),Desk Accessories,Thursday,9,1,28.42,94,14,397.88
+2024-09-26,P042,Ruler 18 inches (Plastic),Measuring,Thursday,9,1,22.43,128,11,246.73
+2024-09-26,P044,Triangle Set,Measuring,Thursday,9,1,42.73,64,21,897.33
+2024-09-27,P002,Notebook 200 Leaves,Paper,Friday,9,1,78.77,62,26,2048.02
+2024-09-27,P038,Ring Binder 1 inch,Filing,Friday,9,1,70.37,128,9,633.33
+2024-09-27,P043,Protractor,Measuring,Friday,9,1,10.52,65,14,147.28
+2024-09-28,P006,Bond Paper Short (Ream),Paper,Saturday,9,1,198.72,52,18,3576.96
+2024-09-28,P019,Permanent Marker,Writing,Saturday,9,1,35.8,111,10,358.0
+2024-09-29,P061,Correction Tape,Writing,Sunday,9,1,26.55,46,19,504.45
+2024-09-29,P057,White Glue 120ml,Adhesives,Sunday,9,1,21.77,31,16,348.32
+2024-09-30,P037,Brown Envelope Short,Filing,Monday,9,1,4.22,93,13,54.86
+2024-10-01,P065,Bag Tag / ID Lace,Organization,Tuesday,10,1,15.62,52,21,328.02
+2024-10-01,P002,Notebook 200 Leaves,Paper,Tuesday,10,1,78.77,98,29,2284.33
+2024-10-02,P003,Composition Notebook,Paper,Wednesday,10,1,30.98,58,35,1084.3
+2024-10-03,P067,Sticker Labels (Pack),Organization,Thursday,10,1,23.52,74,18,423.36
+2024-10-04,P006,Bond Paper Short (Ream),Paper,Friday,10,1,198.72,49,35,6955.2
+2024-10-06,P019,Permanent Marker,Writing,Sunday,10,1,35.8,51,10,358.0
+2024-10-09,P067,Sticker Labels (Pack),Organization,Wednesday,10,1,23.52,95,11,258.72
+2024-10-09,P066,Book Cover (Roll),Organization,Wednesday,10,1,25.85,97,20,517.0
+2024-10-09,P014,Pencil No. 2 (Pcs),Writing,Wednesday,10,1,9.49,79,39,370.11
+2024-10-09,P046,Eraser (Pcs),Desk Accessories,Wednesday,10,1,9.64,45,29,279.56
+2024-10-10,P041,Ruler 12 inches (Plastic),Measuring,Thursday,10,1,11.22,115,23,258.06
+2024-10-10,P011,Ballpen Blue (Pcs),Writing,Thursday,10,1,10.16,70,35,355.6
+2024-10-10,P001,Notebook 80 Leaves,Paper,Thursday,10,1,32.49,89,32,1039.68
+2024-10-12,P003,Composition Notebook,Paper,Saturday,10,1,30.98,82,18,557.64
+2024-10-15,P058,Packaging Tape,Adhesives,Tuesday,10,1,35.88,78,11,394.68
+2024-10-16,P021,Highlighter Set (6 colors),Writing,Wednesday,10,1,126.71,60,22,2787.62
+2024-10-19,P061,Correction Tape,Writing,Saturday,10,1,26.55,109,23,610.65
+2024-10-19,P034,Clear Book 40 Pockets,Filing,Saturday,10,1,92.96,29,11,1022.56
+2024-10-21,P015,Mechanical Pencil,Writing,Monday,10,1,31.36,102,20,627.2
+2024-10-22,P059,Masking Tape,Adhesives,Tuesday,10,1,26.13,76,18,470.34
+2024-10-22,P056,Glue Stick,Adhesives,Tuesday,10,1,33.44,54,28,936.32
+2024-10-25,P011,Ballpen Blue (Pcs),Writing,Friday,10,1,10.16,86,36,365.76
+2024-10-25,P063,Pencil Case (Basic),Organization,Friday,10,1,72.29,93,19,1373.51
+2024-10-26,P006,Bond Paper Short (Ream),Paper,Saturday,10,1,198.72,95,21,4173.12
+2024-10-26,P027,Colored Pencils 12s,Art Supplies,Saturday,10,1,59.98,81,9,539.82
+2024-10-28,P010,Pad Paper,Paper,Monday,10,1,25.62,134,26,666.12
+2024-10-29,P022,Crayons 8 Colors,Art Supplies,Tuesday,10,1,27.79,81,25,694.75
+2024-10-29,P036,Brown Envelope Long,Filing,Tuesday,10,1,7.04,64,28,197.12
+2024-10-30,P034,Clear Book 40 Pockets,Filing,Wednesday,10,1,92.96,125,13,1208.48
+2024-10-31,P034,Clear Book 40 Pockets,Filing,Thursday,10,1,92.96,44,17,1580.32
+2024-11-02,P009,Construction Paper (Pack),Paper,Saturday,11,0,50.03,95,3,150.09
+2024-11-02,P017,Sign Pen Blue,Writing,Saturday,11,0,27.61,180,2,55.22
+2024-11-05,P021,Highlighter Set (6 colors),Writing,Tuesday,11,0,126.71,106,4,506.84
+2024-11-05,P064,Pencil Case (Premium),Organization,Tuesday,11,0,115.68,167,5,578.4
+2024-11-06,P021,Highlighter Set (6 colors),Writing,Wednesday,11,0,126.71,153,8,1013.68
+2024-11-06,P009,Construction Paper (Pack),Paper,Wednesday,11,0,50.03,173,11,550.33
+2024-11-07,P038,Ring Binder 1 inch,Filing,Thursday,11,0,70.37,170,8,562.96
+2024-11-07,P035,Expanding Envelope,Filing,Thursday,11,0,49.14,113,9,442.26
+2024-11-08,P001,Notebook 80 Leaves,Paper,Friday,11,0,32.49,182,10,324.9
+2024-11-08,P011,Ballpen Blue (Pcs),Writing,Friday,11,0,10.16,142,10,101.6
+2024-11-09,P052,Staple Wire No. 35,Desk Accessories,Saturday,11,0,35.5,222,4,142.0
+2024-11-09,P004,Spiral Notebook A4,Paper,Saturday,11,0,77.96,170,5,389.8
+2024-11-10,P066,Book Cover (Roll),Organization,Sunday,11,0,25.85,152,8,206.8
+2024-11-10,P012,Ballpen Black (Pcs),Writing,Sunday,11,0,17.76,158,1,17.76
+2024-11-10,P069,Sticky Notes (Set),Organization,Sunday,11,0,49.1,123,2,98.2
+2024-11-10,P027,Colored Pencils 12s,Art Supplies,Sunday,11,0,59.98,71,4,239.92
+2024-11-12,P026,Oil Pastel 12 Colors,Art Supplies,Tuesday,11,0,80.33,204,6,481.98
+2024-11-13,P049,Calculator (Basic),Desk Accessories,Wednesday,11,0,191.07,173,7,1337.49
+2024-11-15,P022,Crayons 8 Colors,Art Supplies,Friday,11,0,27.79,189,9,250.11
+2024-11-16,P034,Clear Book 40 Pockets,Filing,Saturday,11,0,92.96,209,1,92.96
+2024-11-16,P057,White Glue 120ml,Adhesives,Saturday,11,0,21.77,180,5,108.85
+2024-11-16,P066,Book Cover (Roll),Organization,Saturday,11,0,25.85,202,2,51.7
+2024-11-17,P004,Spiral Notebook A4,Paper,Sunday,11,0,77.96,150,5,389.8
+2024-11-17,P002,Notebook 200 Leaves,Paper,Sunday,11,0,78.77,88,9,708.93
+2024-11-19,P053,Paper Clips (Box),Desk Accessories,Tuesday,11,0,29.09,156,5,145.45
+2024-11-20,P002,Notebook 200 Leaves,Paper,Wednesday,11,0,78.77,142,9,708.93
+2024-11-20,P047,Sharpener (Pcs),Desk Accessories,Wednesday,11,0,8.12,126,12,97.44
+2024-11-21,P056,Glue Stick,Adhesives,Thursday,11,0,33.44,118,7,234.08
+2024-11-22,P058,Packaging Tape,Adhesives,Friday,11,0,35.88,138,6,215.28
+2024-11-22,P022,Crayons 8 Colors,Art Supplies,Friday,11,0,27.79,91,12,333.48
+2024-11-22,P005,Bond Paper A4 (Ream),Paper,Friday,11,0,223.4,137,3,670.2
+2024-11-23,P027,Colored Pencils 12s,Art Supplies,Saturday,11,0,59.98,149,6,359.88
+2024-11-23,P032,Plastic Folder Long,Filing,Saturday,11,0,14.22,180,7,99.54
+2024-11-25,P037,Brown Envelope Short,Filing,Monday,11,0,4.22,129,8,33.76
+2024-11-25,P005,Bond Paper A4 (Ream),Paper,Monday,11,0,223.4,139,8,1787.2
+2024-11-26,P011,Ballpen Blue (Pcs),Writing,Tuesday,11,0,10.16,124,11,111.76
+2024-11-26,P037,Brown Envelope Short,Filing,Tuesday,11,0,4.22,74,9,37.98
+2024-11-27,P063,Pencil Case (Basic),Organization,Wednesday,11,0,72.29,257,4,289.16
+2024-11-27,P005,Bond Paper A4 (Ream),Paper,Wednesday,11,0,223.4,154,12,2680.8
+2024-11-29,P003,Composition Notebook,Paper,Friday,11,0,30.98,64,7,216.86
+2024-11-29,P020,Highlighter (Pcs),Writing,Friday,11,0,25.82,189,8,206.56
+2024-11-30,P046,Eraser (Pcs),Desk Accessories,Saturday,11,0,9.64,195,6,57.84
+2024-12-01,P051,Stapler No. 35,Desk Accessories,Sunday,12,0,118.02,182,3,354.06
+2024-12-02,P058,Packaging Tape,Adhesives,Monday,12,0,35.88,228,7,251.16
+2024-12-03,P030,Paint Brush Set,Art Supplies,Tuesday,12,0,42.09,134,5,210.45
+2024-12-03,P065,Bag Tag / ID Lace,Organization,Tuesday,12,0,15.62,128,8,124.96
+2024-12-03,P061,Correction Tape,Writing,Tuesday,12,0,26.55,183,14,371.7
+2024-12-04,P025,Watercolor Set,Art Supplies,Wednesday,12,0,55.52,223,13,721.76
+2024-12-04,P035,Expanding Envelope,Filing,Wednesday,12,0,49.14,172,14,687.96
+2024-12-04,P036,Brown Envelope Long,Filing,Wednesday,12,0,7.04,95,12,84.48
+2024-12-05,P025,Watercolor Set,Art Supplies,Thursday,12,0,55.52,218,13,721.76
+2024-12-05,P046,Eraser (Pcs),Desk Accessories,Thursday,12,0,9.64,83,14,134.96
+2024-12-05,P048,Scissors (Student),Desk Accessories,Thursday,12,0,40.6,141,8,324.8
+2024-12-06,P061,Correction Tape,Writing,Friday,12,0,26.55,157,14,371.7
+2024-12-09,P057,White Glue 120ml,Adhesives,Monday,12,0,21.77,208,8,174.16
+2024-12-10,P011,Ballpen Blue (Pcs),Writing,Tuesday,12,0,10.16,155,20,203.2
+2024-12-10,P057,White Glue 120ml,Adhesives,Tuesday,12,0,21.77,131,10,217.7
+2024-12-12,P049,Calculator (Basic),Desk Accessories,Thursday,12,0,191.07,132,6,1146.42
+2024-12-13,P067,Sticker Labels (Pack),Organization,Friday,12,0,23.52,180,5,117.6
+2024-12-13,P022,Crayons 8 Colors,Art Supplies,Friday,12,0,27.79,263,13,361.27
+2024-12-13,P027,Colored Pencils 12s,Art Supplies,Friday,12,0,59.98,186,14,839.72
+2024-12-14,P011,Ballpen Blue (Pcs),Writing,Saturday,12,0,10.16,136,15,152.4
+2024-12-15,P009,Construction Paper (Pack),Paper,Sunday,12,0,50.03,157,6,300.18
+2024-12-15,P011,Ballpen Blue (Pcs),Writing,Sunday,12,0,10.16,177,9,91.44
+2024-12-17,P016,Sign Pen Black,Writing,Tuesday,12,0,24.59,123,18,442.62
+2024-12-18,P057,White Glue 120ml,Adhesives,Wednesday,12,0,21.77,131,10,217.7
+2024-12-20,P041,Ruler 12 inches (Plastic),Measuring,Friday,12,0,11.22,169,9,100.98
+2024-12-21,P005,Bond Paper A4 (Ream),Paper,Saturday,12,0,223.4,104,12,2680.8
+2024-12-21,P005,Bond Paper A4 (Ream),Paper,Saturday,12,0,223.4,175,11,2457.4
+2024-12-24,P051,Stapler No. 35,Desk Accessories,Tuesday,12,0,118.02,131,4,472.08
+2024-12-25,P013,Ballpen Red (Pcs),Writing,Wednesday,12,0,16.66,123,8,133.28
+2024-12-25,P046,Eraser (Pcs),Desk Accessories,Wednesday,12,0,9.64,112,15,144.6
+2024-12-26,P006,Bond Paper Short (Ream),Paper,Thursday,12,0,198.72,163,13,2583.36
+2024-12-27,P029,Acrylic Paint Set,Art Supplies,Friday,12,0,197.01,174,7,1379.07
+2024-12-28,P042,Ruler 18 inches (Plastic),Measuring,Saturday,12,0,22.43,161,4,89.72
+2024-12-29,P003,Composition Notebook,Paper,Sunday,12,0,30.98,139,9,278.82
+2024-12-30,P050,Calculator (Scientific),Desk Accessories,Monday,12,0,423.94,77,5,2119.7
+2024-12-30,P052,Staple Wire No. 35,Desk Accessories,Monday,12,0,35.5,192,10,355.0
+2024-12-31,P019,Permanent Marker,Writing,Tuesday,12,0,35.8,123,7,250.6
+2024-12-31,P016,Sign Pen Black,Writing,Tuesday,12,0,24.59,93,8,196.72
+2024-12-31,P069,Sticky Notes (Set),Organization,Tuesday,12,0,49.1,201,9,441.9
+2025-01-02,P066,Book Cover (Roll),Organization,Thursday,1,1,25.85,45,25,646.25
+2025-01-02,P068,Sticky Notes (Pad),Organization,Thursday,1,1,44.07,37,16,705.12
+2025-01-03,P057,White Glue 120ml,Adhesives,Friday,1,1,21.77,131,20,435.4
+2025-01-08,P041,Ruler 12 inches (Plastic),Measuring,Wednesday,1,1,11.22,84,24,269.28
+2025-01-08,P055,Desk Organizer,Desk Accessories,Wednesday,1,1,151.75,80,9,1365.75
+2025-01-08,P048,Scissors (Student),Desk Accessories,Wednesday,1,1,40.6,69,19,771.4
+2025-01-09,P010,Pad Paper,Paper,Thursday,1,1,25.62,97,19,486.78
+2025-01-10,P004,Spiral Notebook A4,Paper,Friday,1,1,77.96,97,22,1715.12
+2025-01-10,P016,Sign Pen Black,Writing,Friday,1,1,24.59,78,19,467.21
+2025-01-12,P003,Composition Notebook,Paper,Sunday,1,1,30.98,115,16,495.68
+2025-01-13,P022,Crayons 8 Colors,Art Supplies,Monday,1,1,27.79,107,18,500.22
+2025-01-15,P056,Glue Stick,Adhesives,Wednesday,1,1,33.44,81,25,836.0
+2025-01-15,P069,Sticky Notes (Set),Organization,Wednesday,1,1,49.1,28,12,589.2
+2025-01-15,P006,Bond Paper Short (Ream),Paper,Wednesday,1,1,198.72,63,32,6359.04
+2025-01-17,P050,Calculator (Scientific),Desk Accessories,Friday,1,1,423.94,64,16,6783.04
+2025-01-18,P003,Composition Notebook,Paper,Saturday,1,1,30.98,45,11,340.78
+2025-01-18,P007,Yellow Pad Paper,Paper,Saturday,1,1,31.16,92,18,560.88
+2025-01-19,P013,Ballpen Red (Pcs),Writing,Sunday,1,1,16.66,114,7,116.62
+2025-01-20,P028,Colored Pencils 24s,Art Supplies,Monday,1,1,126.0,82,14,1764.0
+2025-01-21,P021,Highlighter Set (6 colors),Writing,Tuesday,1,1,126.71,110,22,2787.62
+2025-01-22,P001,Notebook 80 Leaves,Paper,Wednesday,1,1,32.49,120,39,1267.11
+2025-01-24,P033,Clear Book 20 Pockets,Filing,Friday,1,1,36.95,39,23,849.85
+2025-01-24,P014,Pencil No. 2 (Pcs),Writing,Friday,1,1,9.49,71,33,313.17
+2025-01-26,P024,Crayons 24 Colors,Art Supplies,Sunday,1,1,71.49,17,16,1143.84
+2025-01-27,P035,Expanding Envelope,Filing,Monday,1,1,49.14,67,22,1081.08
+2025-01-30,P018,Whiteboard Marker,Writing,Thursday,1,1,43.12,77,18,776.16
+2025-01-30,P049,Calculator (Basic),Desk Accessories,Thursday,1,1,191.07,109,11,2101.77
+2025-01-30,P019,Permanent Marker,Writing,Thursday,1,1,35.8,79,15,537.0
+2025-01-31,P069,Sticky Notes (Set),Organization,Friday,1,1,49.1,106,10,491.0
+2025-01-31,P007,Yellow Pad Paper,Paper,Friday,1,1,31.16,73,15,467.4
+2025-02-01,P018,Whiteboard Marker,Writing,Saturday,2,1,43.12,92,13,560.56
+2025-02-01,P044,Triangle Set,Measuring,Saturday,2,1,42.73,48,10,427.3
+2025-02-02,P023,Crayons 16 Colors,Art Supplies,Sunday,2,1,50.23,64,14,703.22
+2025-02-03,P003,Composition Notebook,Paper,Monday,2,1,30.98,108,27,836.46
+2025-02-03,P022,Crayons 8 Colors,Art Supplies,Monday,2,1,27.79,117,32,889.28
+2025-02-03,P019,Permanent Marker,Writing,Monday,2,1,35.8,105,13,465.4
+2025-02-04,P029,Acrylic Paint Set,Art Supplies,Tuesday,2,1,197.01,80,10,1970.1
+2025-02-04,P007,Yellow Pad Paper,Paper,Tuesday,2,1,31.16,84,24,747.84
+2025-02-05,P053,Paper Clips (Box),Desk Accessories,Wednesday,2,1,29.09,42,13,378.17
+2025-02-06,P047,Sharpener (Pcs),Desk Accessories,Thursday,2,1,8.12,92,31,251.72
+2025-02-07,P013,Ballpen Red (Pcs),Writing,Friday,2,1,16.66,82,11,183.26
+2025-02-07,P048,Scissors (Student),Desk Accessories,Friday,2,1,40.6,110,15,609.0
+2025-02-07,P061,Correction Tape,Writing,Friday,2,1,26.55,53,30,796.5
+2025-02-08,P018,Whiteboard Marker,Writing,Saturday,2,1,43.12,41,6,258.72
+2025-02-08,P001,Notebook 80 Leaves,Paper,Saturday,2,1,32.49,114,18,584.82
+2025-02-08,P066,Book Cover (Roll),Organization,Saturday,2,1,25.85,61,11,284.35
+2025-02-10,P023,Crayons 16 Colors,Art Supplies,Monday,2,1,50.23,54,26,1305.98
+2025-02-11,P058,Packaging Tape,Adhesives,Tuesday,2,1,35.88,106,12,430.56
+2025-02-13,P018,Whiteboard Marker,Writing,Thursday,2,1,43.12,51,10,431.2
+2025-02-13,P033,Clear Book 20 Pockets,Filing,Thursday,2,1,36.95,72,28,1034.6
+2025-02-14,P005,Bond Paper A4 (Ream),Paper,Friday,2,1,223.4,69,38,8489.2
+2025-02-15,P036,Brown Envelope Long,Filing,Saturday,2,1,7.04,57,18,126.72
+2025-02-17,P002,Notebook 200 Leaves,Paper,Monday,2,1,78.77,47,22,1732.94
+2025-02-20,P017,Sign Pen Blue,Writing,Thursday,2,1,27.61,58,17,469.37
+2025-02-23,P049,Calculator (Basic),Desk Accessories,Sunday,2,1,191.07,48,14,2674.98
+2025-02-23,P022,Crayons 8 Colors,Art Supplies,Sunday,2,1,27.79,106,17,472.43
+2025-02-23,P070,Clipboard,Organization,Sunday,2,1,84.41,82,7,590.87
+2025-02-24,P042,Ruler 18 inches (Plastic),Measuring,Monday,2,1,22.43,101,9,201.87
+2025-02-24,P005,Bond Paper A4 (Ream),Paper,Monday,2,1,223.4,116,39,8712.6
+2025-02-24,P037,Brown Envelope Short,Filing,Monday,2,1,4.22,101,21,88.62
+2025-02-26,P065,Bag Tag / ID Lace,Organization,Wednesday,2,1,15.62,86,18,281.16
+2025-02-26,P025,Watercolor Set,Art Supplies,Wednesday,2,1,55.52,107,16,888.32
+2025-02-27,P064,Pencil Case (Premium),Organization,Thursday,2,1,115.68,46,11,1272.48
+2025-02-28,P046,Eraser (Pcs),Desk Accessories,Friday,2,1,9.64,77,28,269.92
+2025-02-28,P011,Ballpen Blue (Pcs),Writing,Friday,2,1,10.16,91,32,325.12
+2025-02-28,P039,Ring Binder 2 inch,Filing,Friday,2,1,129.48,64,10,1294.8
+2025-03-02,P063,Pencil Case (Basic),Organization,Sunday,3,1,72.29,82,12,867.48
+2025-03-03,P013,Ballpen Red (Pcs),Writing,Monday,3,1,16.66,81,7,116.62
+2025-03-04,P014,Pencil No. 2 (Pcs),Writing,Tuesday,3,1,9.49,76,29,275.21
+2025-03-04,P056,Glue Stick,Adhesives,Tuesday,3,1,33.44,14,15,501.6
+2025-03-04,P006,Bond Paper Short (Ream),Paper,Tuesday,3,1,198.72,82,19,3775.68
+2025-03-04,P014,Pencil No. 2 (Pcs),Writing,Tuesday,3,1,9.49,123,19,180.31
+2025-03-05,P032,Plastic Folder Long,Filing,Wednesday,3,1,14.22,117,17,241.74
+2025-03-06,P016,Sign Pen Black,Writing,Thursday,3,1,24.59,99,15,368.85
+2025-03-07,P055,Desk Organizer,Desk Accessories,Friday,3,1,151.75,80,3,455.25
+2025-03-08,P014,Pencil No. 2 (Pcs),Writing,Saturday,3,1,9.49,102,21,199.29
+2025-03-09,P041,Ruler 12 inches (Plastic),Measuring,Sunday,3,1,11.22,119,8,89.76
+2025-03-09,P007,Yellow Pad Paper,Paper,Sunday,3,1,31.16,72,11,342.76
+2025-03-10,P062,Correction Fluid,Writing,Monday,3,1,31.78,53,14,444.92
+2025-03-10,P012,Ballpen Black (Pcs),Writing,Monday,3,1,17.76,157,31,550.56
+2025-03-13,P065,Bag Tag / ID Lace,Organization,Thursday,3,1,15.62,36,14,218.68
+2025-03-14,P033,Clear Book 20 Pockets,Filing,Friday,3,1,36.95,78,22,812.9
+2025-03-16,P019,Permanent Marker,Writing,Sunday,3,1,35.8,59,7,250.6
+2025-03-16,P048,Scissors (Student),Desk Accessories,Sunday,3,1,40.6,109,7,284.2
+2025-03-17,P005,Bond Paper A4 (Ream),Paper,Monday,3,1,223.4,68,27,6031.8
+2025-03-17,P067,Sticker Labels (Pack),Organization,Monday,3,1,23.52,47,8,188.16
+2025-03-18,P023,Crayons 16 Colors,Art Supplies,Tuesday,3,1,50.23,89,33,1657.59
+2025-03-18,P032,Plastic Folder Long,Filing,Tuesday,3,1,14.22,108,24,341.28
+2025-03-19,P066,Book Cover (Roll),Organization,Wednesday,3,1,25.85,127,12,310.2
+2025-03-19,P021,Highlighter Set (6 colors),Writing,Wednesday,3,1,126.71,68,18,2280.78
+2025-03-19,P002,Notebook 200 Leaves,Paper,Wednesday,3,1,78.77,104,23,1811.71
+2025-03-20,P023,Crayons 16 Colors,Art Supplies,Thursday,3,1,50.23,14,26,1305.98
+2025-03-24,P017,Sign Pen Blue,Writing,Monday,3,1,27.61,58,14,386.54
+2025-03-24,P026,Oil Pastel 12 Colors,Art Supplies,Monday,3,1,80.33,59,5,401.65
+2025-03-25,P027,Colored Pencils 12s,Art Supplies,Tuesday,3,1,59.98,127,12,719.76
+2025-03-25,P061,Correction Tape,Writing,Tuesday,3,1,26.55,70,22,584.1
+2025-03-26,P024,Crayons 24 Colors,Art Supplies,Wednesday,3,1,71.49,63,12,857.88
+2025-03-27,P042,Ruler 18 inches (Plastic),Measuring,Thursday,3,1,22.43,98,6,134.58
+2025-03-27,P068,Sticky Notes (Pad),Organization,Thursday,3,1,44.07,63,19,837.33
+2025-03-27,P066,Book Cover (Roll),Organization,Thursday,3,1,25.85,61,11,284.35
+2025-03-28,P062,Correction Fluid,Writing,Friday,3,1,31.78,118,14,444.92
+2025-03-28,P037,Brown Envelope Short,Filing,Friday,3,1,4.22,69,20,84.4
+2025-03-29,P006,Bond Paper Short (Ream),Paper,Saturday,3,1,198.72,70,19,3775.68
+2025-03-29,P018,Whiteboard Marker,Writing,Saturday,3,1,43.12,69,11,474.32
+2025-03-30,P037,Brown Envelope Short,Filing,Sunday,3,1,4.22,93,11,46.42
+2025-03-30,P036,Brown Envelope Long,Filing,Sunday,3,1,7.04,110,17,119.68
+2025-03-30,P070,Clipboard,Organization,Sunday,3,1,84.41,102,4,337.64
+2025-03-31,P055,Desk Organizer,Desk Accessories,Monday,3,1,151.75,184,4,607.0
+2025-03-31,P044,Triangle Set,Measuring,Monday,3,1,42.73,32,8,341.84
+2025-04-01,P025,Watercolor Set,Art Supplies,Tuesday,4,0,55.52,146,4,222.08
+2025-04-01,P007,Yellow Pad Paper,Paper,Tuesday,4,0,31.16,191,12,373.92
+2025-04-01,P036,Brown Envelope Long,Filing,Tuesday,4,0,7.04,175,10,70.4
+2025-04-02,P001,Notebook 80 Leaves,Paper,Wednesday,4,0,32.49,174,12,389.88
+2025-04-03,P069,Sticky Notes (Set),Organization,Thursday,4,0,49.1,134,3,147.3
+2025-04-04,P013,Ballpen Red (Pcs),Writing,Friday,4,0,16.66,207,5,83.3
+2025-04-05,P036,Brown Envelope Long,Filing,Saturday,4,0,7.04,146,5,35.2
+2025-04-05,P056,Glue Stick,Adhesives,Saturday,4,0,33.44,116,7,234.08
+2025-04-05,P027,Colored Pencils 12s,Art Supplies,Saturday,4,0,59.98,97,2,119.96
+2025-04-08,P052,Staple Wire No. 35,Desk Accessories,Tuesday,4,0,35.5,144,8,284.0
+2025-04-10,P022,Crayons 8 Colors,Art Supplies,Thursday,4,0,27.79,171,11,305.69
+2025-04-10,P002,Notebook 200 Leaves,Paper,Thursday,4,0,78.77,144,4,315.08
+2025-04-10,P053,Paper Clips (Box),Desk Accessories,Thursday,4,0,29.09,138,7,203.63
+2025-04-15,P044,Triangle Set,Measuring,Tuesday,4,0,42.73,180,8,341.84
+2025-04-15,P064,Pencil Case (Premium),Organization,Tuesday,4,0,115.68,214,4,462.72
+2025-04-15,P054,Push Pins (Box),Desk Accessories,Tuesday,4,0,28.42,133,4,113.68
+2025-04-16,P020,Highlighter (Pcs),Writing,Wednesday,4,0,25.82,160,4,103.28
+2025-04-17,P061,Correction Tape,Writing,Thursday,4,0,26.55,165,13,345.15
+2025-04-18,P026,Oil Pastel 12 Colors,Art Supplies,Friday,4,0,80.33,195,7,562.31
+2025-04-20,P048,Scissors (Student),Desk Accessories,Sunday,4,0,40.6,143,7,284.2
+2025-04-20,P003,Composition Notebook,Paper,Sunday,4,0,30.98,53,4,123.92
+2025-04-21,P062,Correction Fluid,Writing,Monday,4,0,31.78,124,8,254.24
+2025-04-21,P023,Crayons 16 Colors,Art Supplies,Monday,4,0,50.23,170,12,602.76
+2025-04-22,P010,Pad Paper,Paper,Tuesday,4,0,25.62,103,9,230.58
+2025-04-23,P069,Sticky Notes (Set),Organization,Wednesday,4,0,49.1,151,8,392.8
+2025-04-23,P016,Sign Pen Black,Writing,Wednesday,4,0,24.59,144,9,221.31
+2025-04-24,P050,Calculator (Scientific),Desk Accessories,Thursday,4,0,423.94,127,3,1271.82
+2025-04-24,P059,Masking Tape,Adhesives,Thursday,4,0,26.13,126,5,130.65
+2025-04-25,P012,Ballpen Black (Pcs),Writing,Friday,4,0,17.76,101,9,159.84
+2025-04-26,P041,Ruler 12 inches (Plastic),Measuring,Saturday,4,0,11.22,160,5,56.1
+2025-04-27,P008,Index Cards (Pack),Paper,Sunday,4,0,42.32,156,6,253.92
+2025-04-29,P057,White Glue 120ml,Adhesives,Tuesday,4,0,21.77,255,8,174.16
+2025-04-30,P067,Sticker Labels (Pack),Organization,Wednesday,4,0,23.52,150,1,23.52
+2025-04-30,P008,Index Cards (Pack),Paper,Wednesday,4,0,42.32,120,5,211.6
+2025-05-02,P026,Oil Pastel 12 Colors,Art Supplies,Friday,5,0,80.33,158,5,401.65
+2025-05-03,P006,Bond Paper Short (Ream),Paper,Saturday,5,0,198.72,207,11,2185.92
+2025-05-04,P053,Paper Clips (Box),Desk Accessories,Sunday,5,0,29.09,195,5,145.45
+2025-05-05,P017,Sign Pen Blue,Writing,Monday,5,0,27.61,140,7,193.27
+2025-05-06,P029,Acrylic Paint Set,Art Supplies,Tuesday,5,0,197.01,140,8,1576.08
+2025-05-06,P037,Brown Envelope Short,Filing,Tuesday,5,0,4.22,143,15,63.3
+2025-05-07,P003,Composition Notebook,Paper,Wednesday,5,0,30.98,113,8,247.84
+2025-05-07,P056,Glue Stick,Adhesives,Wednesday,5,0,33.44,213,8,267.52
+2025-05-07,P044,Triangle Set,Measuring,Wednesday,5,0,42.73,201,5,213.65
+2025-05-09,P031,Plastic Folder A4,Filing,Friday,5,0,19.9,123,14,278.6
+2025-05-10,P062,Correction Fluid,Writing,Saturday,5,0,31.78,166,6,190.68
+2025-05-11,P034,Clear Book 40 Pockets,Filing,Sunday,5,0,92.96,132,3,278.88
+2025-05-11,P001,Notebook 80 Leaves,Paper,Sunday,5,0,32.49,157,6,194.94
+2025-05-13,P006,Bond Paper Short (Ream),Paper,Tuesday,5,0,198.72,164,7,1391.04
+2025-05-14,P006,Bond Paper Short (Ream),Paper,Wednesday,5,0,198.72,110,12,2384.64
+2025-05-14,P013,Ballpen Red (Pcs),Writing,Wednesday,5,0,16.66,153,8,133.28
+2025-05-14,P012,Ballpen Black (Pcs),Writing,Wednesday,5,0,17.76,150,11,195.36
+2025-05-14,P021,Highlighter Set (6 colors),Writing,Wednesday,5,0,126.71,128,2,253.42
+2025-05-14,P032,Plastic Folder Long,Filing,Wednesday,5,0,14.22,212,11,156.42
+2025-05-16,P048,Scissors (Student),Desk Accessories,Friday,5,0,40.6,136,4,162.4
+2025-05-16,P026,Oil Pastel 12 Colors,Art Supplies,Friday,5,0,80.33,183,6,481.98
+2025-05-16,P011,Ballpen Blue (Pcs),Writing,Friday,5,0,10.16,69,8,81.28
+2025-05-17,P031,Plastic Folder A4,Filing,Saturday,5,0,19.9,157,5,99.5
+2025-05-17,P017,Sign Pen Blue,Writing,Saturday,5,0,27.61,134,7,193.27
+2025-05-19,P024,Crayons 24 Colors,Art Supplies,Monday,5,0,71.49,141,6,428.94
+2025-05-19,P061,Correction Tape,Writing,Monday,5,0,26.55,220,8,212.4
+2025-05-20,P053,Paper Clips (Box),Desk Accessories,Tuesday,5,0,29.09,176,4,116.36
+2025-05-20,P065,Bag Tag / ID Lace,Organization,Tuesday,5,0,15.62,147,5,78.1
+2025-05-21,P043,Protractor,Measuring,Wednesday,5,0,10.52,247,7,73.64
+2025-05-23,P011,Ballpen Blue (Pcs),Writing,Friday,5,0,10.16,167,10,101.6
+2025-05-27,P062,Correction Fluid,Writing,Tuesday,5,0,31.78,138,3,95.34
+2025-05-28,P007,Yellow Pad Paper,Paper,Wednesday,5,0,31.16,191,12,373.92
+2025-05-28,P013,Ballpen Red (Pcs),Writing,Wednesday,5,0,16.66,94,4,66.64
+2025-05-28,P016,Sign Pen Black,Writing,Wednesday,5,0,24.59,135,7,172.13
+2025-05-29,P069,Sticky Notes (Set),Organization,Thursday,5,0,49.1,216,3,147.3
+2025-05-30,P060,Double-Sided Tape,Adhesives,Friday,5,0,34.76,129,2,69.52
+2025-05-30,P025,Watercolor Set,Art Supplies,Friday,5,0,55.52,194,5,277.6
+2025-05-30,P037,Brown Envelope Short,Filing,Friday,5,0,4.22,204,5,21.1
+2025-05-30,P032,Plastic Folder Long,Filing,Friday,5,0,14.22,116,8,113.76
+2025-05-30,P058,Packaging Tape,Adhesives,Friday,5,0,35.88,85,5,179.4
+2025-05-31,P029,Acrylic Paint Set,Art Supplies,Saturday,5,0,197.01,135,4,788.04
+2025-05-31,P048,Scissors (Student),Desk Accessories,Saturday,5,0,40.6,143,4,162.4
+2025-06-01,P046,Eraser (Pcs),Desk Accessories,Sunday,6,1,9.64,96,41,395.24
+2025-06-03,P031,Plastic Folder A4,Filing,Tuesday,6,1,19.9,54,46,915.4
+2025-06-04,P026,Oil Pastel 12 Colors,Art Supplies,Wednesday,6,1,80.33,48,23,1847.59
+2025-06-04,P011,Ballpen Blue (Pcs),Writing,Wednesday,6,1,10.16,125,50,508.0
+2025-06-04,P034,Clear Book 40 Pockets,Filing,Wednesday,6,1,92.96,85,27,2509.92
+2025-06-05,P001,Notebook 80 Leaves,Paper,Thursday,6,1,32.49,82,42,1364.58
+2025-06-06,P066,Book Cover (Roll),Organization,Friday,6,1,25.85,85,33,853.05
+2025-06-07,P021,Highlighter Set (6 colors),Writing,Saturday,6,1,126.71,40,13,1647.23
+2025-06-08,P018,Whiteboard Marker,Writing,Sunday,6,1,43.12,65,15,646.8
+2025-06-11,P056,Glue Stick,Adhesives,Wednesday,6,1,33.44,99,36,1203.84
+2025-06-11,P035,Expanding Envelope,Filing,Wednesday,6,1,49.14,55,37,1818.18
+2025-06-11,P070,Clipboard,Organization,Wednesday,6,1,84.41,74,16,1350.56
+2025-06-11,P011,Ballpen Blue (Pcs),Writing,Wednesday,6,1,10.16,68,46,467.36
+2025-06-13,P022,Crayons 8 Colors,Art Supplies,Friday,6,1,27.79,116,40,1111.6
+2025-06-13,P049,Calculator (Basic),Desk Accessories,Friday,6,1,191.07,23,29,5541.03
+2025-06-14,P007,Yellow Pad Paper,Paper,Saturday,6,1,31.16,107,29,903.64
+2025-06-14,P005,Bond Paper A4 (Ream),Paper,Saturday,6,1,223.4,74,31,6925.4
+2025-06-16,P048,Scissors (Student),Desk Accessories,Monday,6,1,40.6,68,32,1299.2
+2025-06-16,P041,Ruler 12 inches (Plastic),Measuring,Monday,6,1,11.22,82,37,415.14
+2025-06-16,P017,Sign Pen Blue,Writing,Monday,6,1,27.61,69,33,911.13
+2025-06-16,P029,Acrylic Paint Set,Art Supplies,Monday,6,1,197.01,109,12,2364.12
+2025-06-17,P030,Paint Brush Set,Art Supplies,Tuesday,6,1,42.09,84,13,547.17
+2025-06-19,P012,Ballpen Black (Pcs),Writing,Thursday,6,1,17.76,42,36,639.36
+2025-06-20,P014,Pencil No. 2 (Pcs),Writing,Friday,6,1,9.49,44,40,379.6
+2025-06-21,P055,Desk Organizer,Desk Accessories,Saturday,6,1,151.75,94,7,1062.25
+2025-06-22,P049,Calculator (Basic),Desk Accessories,Sunday,6,1,191.07,84,18,3439.26
+2025-06-23,P013,Ballpen Red (Pcs),Writing,Monday,6,1,16.66,31,21,349.86
+2025-06-23,P045,Compass (Drawing),Measuring,Monday,6,1,34.06,121,14,476.84
+2025-06-23,P041,Ruler 12 inches (Plastic),Measuring,Monday,6,1,11.22,74,42,471.24
+2025-06-23,P012,Ballpen Black (Pcs),Writing,Monday,6,1,17.76,93,39,692.64
+2025-06-23,P033,Clear Book 20 Pockets,Filing,Monday,6,1,36.95,62,35,1293.25
+2025-06-23,P004,Spiral Notebook A4,Paper,Monday,6,1,77.96,63,33,2572.68
+2025-06-26,P022,Crayons 8 Colors,Art Supplies,Thursday,6,1,27.79,77,34,944.86
+2025-06-26,P003,Composition Notebook,Paper,Thursday,6,1,30.98,54,38,1177.24
+2025-06-27,P006,Bond Paper Short (Ream),Paper,Friday,6,1,198.72,86,45,8942.4
+2025-06-28,P012,Ballpen Black (Pcs),Writing,Saturday,6,1,17.76,57,32,568.32
+2025-06-30,P020,Highlighter (Pcs),Writing,Monday,6,1,25.82,88,28,722.96
+2025-06-30,P034,Clear Book 40 Pockets,Filing,Monday,6,1,92.96,65,25,2324.0
+2025-07-02,P013,Ballpen Red (Pcs),Writing,Wednesday,7,1,16.66,39,29,483.14
+2025-07-03,P066,Book Cover (Roll),Organization,Thursday,7,1,25.85,65,28,723.8
+2025-07-04,P011,Ballpen Blue (Pcs),Writing,Friday,7,1,10.16,153,48,487.68
+2025-07-04,P047,Sharpener (Pcs),Desk Accessories,Friday,7,1,8.12,72,45,365.4
+2025-07-05,P069,Sticky Notes (Set),Organization,Saturday,7,1,49.1,99,14,687.4
+2025-07-07,P008,Index Cards (Pack),Paper,Monday,7,1,42.32,108,30,1269.6
+2025-07-07,P006,Bond Paper Short (Ream),Paper,Monday,7,1,198.72,48,55,10929.6
+2025-07-09,P061,Correction Tape,Writing,Wednesday,7,1,26.55,53,35,929.25
+2025-07-10,P061,Correction Tape,Writing,Thursday,7,1,26.55,94,32,849.6
+2025-07-10,P046,Eraser (Pcs),Desk Accessories,Thursday,7,1,9.64,60,49,472.36
+2025-07-11,P013,Ballpen Red (Pcs),Writing,Friday,7,1,16.66,85,33,549.78
+2025-07-12,P061,Correction Tape,Writing,Saturday,7,1,26.55,34,18,477.9
+2025-07-12,P066,Book Cover (Roll),Organization,Saturday,7,1,25.85,75,22,568.7
+2025-07-13,P025,Watercolor Set,Art Supplies,Sunday,7,1,55.52,79,21,1165.92
+2025-07-13,P029,Acrylic Paint Set,Art Supplies,Sunday,7,1,197.01,75,8,1576.08
+2025-07-13,P011,Ballpen Blue (Pcs),Writing,Sunday,7,1,10.16,144,44,447.04
+2025-07-14,P017,Sign Pen Blue,Writing,Monday,7,1,27.61,113,27,745.47
+2025-07-14,P022,Crayons 8 Colors,Art Supplies,Monday,7,1,27.79,30,44,1222.76
+2025-07-14,P020,Highlighter (Pcs),Writing,Monday,7,1,25.82,99,41,1058.62
+2025-07-16,P065,Bag Tag / ID Lace,Organization,Wednesday,7,1,15.62,103,21,328.02
+2025-07-17,P057,White Glue 120ml,Adhesives,Thursday,7,1,21.77,39,35,761.95
+2025-07-18,P004,Spiral Notebook A4,Paper,Friday,7,1,77.96,73,35,2728.6
+2025-07-19,P046,Eraser (Pcs),Desk Accessories,Saturday,7,1,9.64,106,29,279.56
+2025-07-21,P001,Notebook 80 Leaves,Paper,Monday,7,1,32.49,49,49,1592.01
+2025-07-21,P031,Plastic Folder A4,Filing,Monday,7,1,19.9,94,39,776.1
+2025-07-22,P004,Spiral Notebook A4,Paper,Tuesday,7,1,77.96,85,39,3040.44
+2025-07-22,P006,Bond Paper Short (Ream),Paper,Tuesday,7,1,198.72,106,45,8942.4
+2025-07-22,P018,Whiteboard Marker,Writing,Tuesday,7,1,43.12,139,35,1509.2
+2025-07-23,P021,Highlighter Set (6 colors),Writing,Wednesday,7,1,126.71,5,35,4434.85
+2025-07-23,P062,Correction Fluid,Writing,Wednesday,7,1,31.78,82,21,667.38
+2025-07-23,P001,Notebook 80 Leaves,Paper,Wednesday,7,1,32.49,78,42,1364.58
+2025-07-24,P043,Protractor,Measuring,Thursday,7,1,10.52,51,23,241.96
+2025-07-25,P012,Ballpen Black (Pcs),Writing,Friday,7,1,17.76,100,58,1030.08
+2025-07-26,P035,Expanding Envelope,Filing,Saturday,7,1,49.14,140,23,1130.22
+2025-07-27,P065,Bag Tag / ID Lace,Organization,Sunday,7,1,15.62,77,18,281.16
+2025-07-28,P003,Composition Notebook,Paper,Monday,7,1,30.98,103,34,1053.32
+2025-07-28,P031,Plastic Folder A4,Filing,Monday,7,1,19.9,91,31,616.9
+2025-07-31,P037,Brown Envelope Short,Filing,Thursday,7,1,4.22,133,35,147.7
+2025-07-31,P040,File Organizer,Filing,Thursday,7,1,124.02,35,12,1488.24
+2025-08-01,P048,Scissors (Student),Desk Accessories,Friday,8,1,40.6,100,16,649.6
+2025-08-02,P022,Crayons 8 Colors,Art Supplies,Saturday,8,1,27.79,20,25,694.75
+2025-08-03,P057,White Glue 120ml,Adhesives,Sunday,8,1,21.77,44,11,239.47
+2025-08-03,P039,Ring Binder 2 inch,Filing,Sunday,8,1,129.48,86,7,906.36
+2025-08-04,P014,Pencil No. 2 (Pcs),Writing,Monday,8,1,9.49,50,39,370.11
+2025-08-05,P047,Sharpener (Pcs),Desk Accessories,Tuesday,8,1,8.12,103,29,235.48
+2025-08-07,P036,Brown Envelope Long,Filing,Thursday,8,1,7.04,123,29,204.16
+2025-08-09,P060,Double-Sided Tape,Adhesives,Saturday,8,1,34.76,69,6,208.56
+2025-08-09,P065,Bag Tag / ID Lace,Organization,Saturday,8,1,15.62,24,15,234.3
+2025-08-10,P002,Notebook 200 Leaves,Paper,Sunday,8,1,78.77,78,21,1654.17
+2025-08-10,P003,Composition Notebook,Paper,Sunday,8,1,30.98,48,17,526.66
+2025-08-11,P024,Crayons 24 Colors,Art Supplies,Monday,8,1,71.49,103,19,1358.31
+2025-08-12,P032,Plastic Folder Long,Filing,Tuesday,8,1,14.22,96,26,369.72
+2025-08-13,P005,Bond Paper A4 (Ream),Paper,Wednesday,8,1,223.4,47,29,6478.6
+2025-08-14,P001,Notebook 80 Leaves,Paper,Thursday,8,1,32.49,45,37,1202.13
+2025-08-16,P022,Crayons 8 Colors,Art Supplies,Saturday,8,1,27.79,91,22,611.38
+2025-08-16,P029,Acrylic Paint Set,Art Supplies,Saturday,8,1,197.01,124,8,1576.08
+2025-08-17,P006,Bond Paper Short (Ream),Paper,Sunday,8,1,198.72,111,16,3179.52
+2025-08-17,P061,Correction Tape,Writing,Sunday,8,1,26.55,92,17,451.35
+2025-08-17,P053,Paper Clips (Box),Desk Accessories,Sunday,8,1,29.09,24,9,261.81
+2025-08-18,P048,Scissors (Student),Desk Accessories,Monday,8,1,40.6,28,24,974.4
+2025-08-18,P002,Notebook 200 Leaves,Paper,Monday,8,1,78.77,57,27,2126.79
+2025-08-18,P001,Notebook 80 Leaves,Paper,Monday,8,1,32.49,49,35,1137.15
+2025-08-18,P056,Glue Stick,Adhesives,Monday,8,1,33.44,12,22,735.68
+2025-08-19,P002,Notebook 200 Leaves,Paper,Tuesday,8,1,78.77,64,30,2363.1
+2025-08-20,P035,Expanding Envelope,Filing,Wednesday,8,1,49.14,75,22,1081.08
+2025-08-20,P028,Colored Pencils 24s,Art Supplies,Wednesday,8,1,126.0,33,12,1512.0
+2025-08-20,P067,Sticker Labels (Pack),Organization,Wednesday,8,1,23.52,121,11,258.72
+2025-08-22,P016,Sign Pen Black,Writing,Friday,8,1,24.59,97,30,737.7
+2025-08-23,P057,White Glue 120ml,Adhesives,Saturday,8,1,21.77,75,16,348.32
+2025-08-24,P003,Composition Notebook,Paper,Sunday,8,1,30.98,62,21,650.58
+2025-08-24,P066,Book Cover (Roll),Organization,Sunday,8,1,25.85,65,18,465.3
+2025-08-25,P032,Plastic Folder Long,Filing,Monday,8,1,14.22,84,19,270.18
+2025-08-27,P004,Spiral Notebook A4,Paper,Wednesday,8,1,77.96,76,21,1637.16
+2025-08-28,P021,Highlighter Set (6 colors),Writing,Thursday,8,1,126.71,58,20,2534.2
+2025-08-28,P031,Plastic Folder A4,Filing,Thursday,8,1,19.9,99,23,457.7
+2025-08-30,P015,Mechanical Pencil,Writing,Saturday,8,1,31.36,84,20,627.2
+2025-08-30,P063,Pencil Case (Basic),Organization,Saturday,8,1,72.29,93,14,1012.06
+2025-08-30,P014,Pencil No. 2 (Pcs),Writing,Saturday,8,1,9.49,42,23,218.27
+2025-09-02,P021,Highlighter Set (6 colors),Writing,Tuesday,9,1,126.71,94,22,2787.62
+2025-09-02,P003,Composition Notebook,Paper,Tuesday,9,1,30.98,58,30,929.4
+2025-09-02,P004,Spiral Notebook A4,Paper,Tuesday,9,1,77.96,133,22,1715.12
+2025-09-03,P051,Stapler No. 35,Desk Accessories,Wednesday,9,1,118.02,91,10,1180.2
+2025-09-05,P035,Expanding Envelope,Filing,Friday,9,1,49.14,64,25,1228.5
+2025-09-05,P015,Mechanical Pencil,Writing,Friday,9,1,31.36,85,27,846.72
+2025-09-06,P060,Double-Sided Tape,Adhesives,Saturday,9,1,34.76,105,7,243.32
+2025-09-10,P064,Pencil Case (Premium),Organization,Wednesday,9,1,115.68,71,13,1503.84
+2025-09-10,P048,Scissors (Student),Desk Accessories,Wednesday,9,1,40.6,75,27,1096.2
+2025-09-10,P056,Glue Stick,Adhesives,Wednesday,9,1,33.44,120,18,601.92
+2025-09-10,P008,Index Cards (Pack),Paper,Wednesday,9,1,42.32,36,11,465.52
+2025-09-11,P029,Acrylic Paint Set,Art Supplies,Thursday,9,1,197.01,35,16,3152.16
+2025-09-11,P018,Whiteboard Marker,Writing,Thursday,9,1,43.12,120,19,819.28
+2025-09-11,P058,Packaging Tape,Adhesives,Thursday,9,1,35.88,32,19,681.72
+2025-09-11,P033,Clear Book 20 Pockets,Filing,Thursday,9,1,36.95,84,15,554.25
+2025-09-12,P050,Calculator (Scientific),Desk Accessories,Friday,9,1,423.94,119,21,8902.74
+2025-09-14,P058,Packaging Tape,Adhesives,Sunday,9,1,35.88,58,10,358.8
+2025-09-14,P037,Brown Envelope Short,Filing,Sunday,9,1,4.22,28,11,46.42
+2025-09-14,P045,Compass (Drawing),Measuring,Sunday,9,1,34.06,96,9,306.54
+2025-09-19,P044,Triangle Set,Measuring,Friday,9,1,42.73,89,14,598.22
+2025-09-19,P025,Watercolor Set,Art Supplies,Friday,9,1,55.52,117,7,388.64
+2025-09-19,P001,Notebook 80 Leaves,Paper,Friday,9,1,32.49,80,26,844.74
+2025-09-19,P047,Sharpener (Pcs),Desk Accessories,Friday,9,1,8.12,18,28,227.36
+2025-09-19,P020,Highlighter (Pcs),Writing,Friday,9,1,25.82,40,22,568.04
+2025-09-19,P006,Bond Paper Short (Ream),Paper,Friday,9,1,198.72,78,33,6557.76
+2025-09-20,P003,Composition Notebook,Paper,Saturday,9,1,30.98,61,19,588.62
+2025-09-22,P040,File Organizer,Filing,Monday,9,1,124.02,49,17,2108.34
+2025-09-23,P013,Ballpen Red (Pcs),Writing,Tuesday,9,1,16.66,45,26,433.16
+2025-09-23,P045,Compass (Drawing),Measuring,Tuesday,9,1,34.06,74,7,238.42
+2025-09-24,P011,Ballpen Blue (Pcs),Writing,Wednesday,9,1,10.16,98,36,365.76
+2025-09-25,P006,Bond Paper Short (Ream),Paper,Thursday,9,1,198.72,96,28,5564.16
+2025-09-25,P009,Construction Paper (Pack),Paper,Thursday,9,1,50.03,59,18,900.54
+2025-09-26,P011,Ballpen Blue (Pcs),Writing,Friday,9,1,10.16,69,41,416.56
+2025-09-28,P010,Pad Paper,Paper,Sunday,9,1,25.62,108,14,358.68
+2025-09-29,P048,Scissors (Student),Desk Accessories,Monday,9,1,40.6,5,21,852.6
+2025-09-30,P032,Plastic Folder Long,Filing,Tuesday,9,1,14.22,53,25,355.5
+2025-09-30,P001,Notebook 80 Leaves,Paper,Tuesday,9,1,32.49,65,39,1267.11
+2025-09-30,P043,Protractor,Measuring,Tuesday,9,1,10.52,107,8,84.16
+2025-10-01,P039,Ring Binder 2 inch,Filing,Wednesday,10,1,129.48,81,8,1035.84
+2025-10-03,P057,White Glue 120ml,Adhesives,Friday,10,1,21.77,60,21,457.17
+2025-10-03,P062,Correction Fluid,Writing,Friday,10,1,31.78,89,20,635.6
+2025-10-04,P026,Oil Pastel 12 Colors,Art Supplies,Saturday,10,1,80.33,60,16,1285.28
+2025-10-04,P018,Whiteboard Marker,Writing,Saturday,10,1,43.12,100,14,603.68
+2025-10-05,P062,Correction Fluid,Writing,Sunday,10,1,31.78,100,13,413.14
+2025-10-07,P054,Push Pins (Box),Desk Accessories,Tuesday,10,1,28.42,72,10,284.2
+2025-10-08,P064,Pencil Case (Premium),Organization,Wednesday,10,1,115.68,65,10,1156.8
+2025-10-09,P001,Notebook 80 Leaves,Paper,Thursday,10,1,32.49,106,42,1364.58
+2025-10-10,P002,Notebook 200 Leaves,Paper,Friday,10,1,78.77,89,34,2678.18
+2025-10-11,P014,Pencil No. 2 (Pcs),Writing,Saturday,10,1,9.49,66,24,227.76
+2025-10-12,P016,Sign Pen Black,Writing,Sunday,10,1,24.59,48,11,270.49
+2025-10-13,P021,Highlighter Set (6 colors),Writing,Monday,10,1,126.71,68,25,3167.75
+2025-10-14,P038,Ring Binder 1 inch,Filing,Tuesday,10,1,70.37,54,14,985.18
+2025-10-17,P048,Scissors (Student),Desk Accessories,Friday,10,1,40.6,63,12,487.2
+2025-10-18,P018,Whiteboard Marker,Writing,Saturday,10,1,43.12,67,9,388.08
+2025-10-18,P017,Sign Pen Blue,Writing,Saturday,10,1,27.61,105,14,386.54
+2025-10-19,P062,Correction Fluid,Writing,Sunday,10,1,31.78,47,9,286.02
+2025-10-21,P002,Notebook 200 Leaves,Paper,Tuesday,10,1,78.77,54,28,2205.56
+2025-10-22,P015,Mechanical Pencil,Writing,Wednesday,10,1,31.36,109,19,595.84
+2025-10-22,P050,Calculator (Scientific),Desk Accessories,Wednesday,10,1,423.94,68,9,3815.46
+2025-10-22,P022,Crayons 8 Colors,Art Supplies,Wednesday,10,1,27.79,95,29,805.91
+2025-10-22,P005,Bond Paper A4 (Ream),Paper,Wednesday,10,1,223.4,112,34,7595.6
+2025-10-22,P032,Plastic Folder Long,Filing,Wednesday,10,1,14.22,103,33,469.26
+2025-10-23,P033,Clear Book 20 Pockets,Filing,Thursday,10,1,36.95,65,30,1108.5
+2025-10-23,P035,Expanding Envelope,Filing,Thursday,10,1,49.14,50,33,1621.62
+2025-10-26,P052,Staple Wire No. 35,Desk Accessories,Sunday,10,1,35.5,97,12,426.0
+2025-10-26,P002,Notebook 200 Leaves,Paper,Sunday,10,1,78.77,145,21,1654.17
+2025-10-27,P016,Sign Pen Black,Writing,Monday,10,1,24.59,87,35,860.65
+2025-10-27,P038,Ring Binder 1 inch,Filing,Monday,10,1,70.37,71,15,1055.55
+2025-10-27,P012,Ballpen Black (Pcs),Writing,Monday,10,1,17.76,81,28,497.28
+2025-10-28,P044,Triangle Set,Measuring,Tuesday,10,1,42.73,55,10,427.3
+2025-10-29,P019,Permanent Marker,Writing,Wednesday,10,1,35.8,39,10,358.0
+2025-10-29,P017,Sign Pen Blue,Writing,Wednesday,10,1,27.61,82,20,552.2
+2025-10-31,P065,Bag Tag / ID Lace,Organization,Friday,10,1,15.62,51,19,296.78
+2025-11-02,P035,Expanding Envelope,Filing,Sunday,11,0,49.14,131,4,196.56
+2025-11-03,P015,Mechanical Pencil,Writing,Monday,11,0,31.36,102,6,188.16
+2025-11-03,P034,Clear Book 40 Pockets,Filing,Monday,11,0,92.96,160,2,185.92
+2025-11-04,P063,Pencil Case (Basic),Organization,Tuesday,11,0,72.29,156,11,795.19
+2025-11-05,P032,Plastic Folder Long,Filing,Wednesday,11,0,14.22,174,10,142.2
+2025-11-05,P026,Oil Pastel 12 Colors,Art Supplies,Wednesday,11,0,80.33,111,8,642.64
+2025-11-05,P031,Plastic Folder A4,Filing,Wednesday,11,0,19.9,153,8,159.2
+2025-11-06,P047,Sharpener (Pcs),Desk Accessories,Thursday,11,0,8.12,126,8,64.96
+2025-11-06,P011,Ballpen Blue (Pcs),Writing,Thursday,11,0,10.16,183,12,121.92
+2025-11-07,P025,Watercolor Set,Art Supplies,Friday,11,0,55.52,176,4,222.08
+2025-11-09,P032,Plastic Folder Long,Filing,Sunday,11,0,14.22,80,5,71.1
+2025-11-09,P061,Correction Tape,Writing,Sunday,11,0,26.55,131,6,159.3
+2025-11-10,P006,Bond Paper Short (Ream),Paper,Monday,11,0,198.72,134,8,1589.76
+2025-11-10,P022,Crayons 8 Colors,Art Supplies,Monday,11,0,27.79,63,8,222.32
+2025-11-11,P028,Colored Pencils 24s,Art Supplies,Tuesday,11,0,126.0,173,5,630.0
+2025-11-11,P001,Notebook 80 Leaves,Paper,Tuesday,11,0,32.49,120,11,357.39
+2025-11-12,P062,Correction Fluid,Writing,Wednesday,11,0,31.78,106,7,222.46
+2025-11-13,P061,Correction Tape,Writing,Thursday,11,0,26.55,140,12,318.6
+2025-11-14,P014,Pencil No. 2 (Pcs),Writing,Friday,11,0,9.49,267,7,66.43
+2025-11-15,P011,Ballpen Blue (Pcs),Writing,Saturday,11,0,10.16,152,4,40.64
+2025-11-15,P027,Colored Pencils 12s,Art Supplies,Saturday,11,0,59.98,197,4,239.92
+2025-11-15,P011,Ballpen Blue (Pcs),Writing,Saturday,11,0,10.16,68,10,101.6
+2025-11-16,P001,Notebook 80 Leaves,Paper,Sunday,11,0,32.49,162,7,227.43
+2025-11-16,P042,Ruler 18 inches (Plastic),Measuring,Sunday,11,0,22.43,144,3,67.29
+2025-11-18,P005,Bond Paper A4 (Ream),Paper,Tuesday,11,0,223.4,187,9,2010.6
+2025-11-18,P034,Clear Book 40 Pockets,Filing,Tuesday,11,0,92.96,57,4,371.84
+2025-11-19,P047,Sharpener (Pcs),Desk Accessories,Wednesday,11,0,8.12,151,11,89.32
+2025-11-19,P015,Mechanical Pencil,Writing,Wednesday,11,0,31.36,148,6,188.16
+2025-11-20,P031,Plastic Folder A4,Filing,Thursday,11,0,19.9,103,12,238.8
+2025-11-20,P023,Crayons 16 Colors,Art Supplies,Thursday,11,0,50.23,130,13,652.99
+2025-11-20,P024,Crayons 24 Colors,Art Supplies,Thursday,11,0,71.49,87,7,500.43
+2025-11-20,P036,Brown Envelope Long,Filing,Thursday,11,0,7.04,101,8,56.32
+2025-11-20,P005,Bond Paper A4 (Ream),Paper,Thursday,11,0,223.4,217,10,2234.0
+2025-11-21,P056,Glue Stick,Adhesives,Friday,11,0,33.44,234,7,234.08
+2025-11-21,P001,Notebook 80 Leaves,Paper,Friday,11,0,32.49,202,17,552.33
+2025-11-21,P002,Notebook 200 Leaves,Paper,Friday,11,0,78.77,115,9,708.93
+2025-11-21,P010,Pad Paper,Paper,Friday,11,0,25.62,155,9,230.58
+2025-11-21,P032,Plastic Folder Long,Filing,Friday,11,0,14.22,135,6,85.32
+2025-11-23,P063,Pencil Case (Basic),Organization,Sunday,11,0,72.29,215,2,144.58
+2025-11-24,P020,Highlighter (Pcs),Writing,Monday,11,0,25.82,131,9,232.38
+2025-11-25,P033,Clear Book 20 Pockets,Filing,Tuesday,11,0,36.95,185,8,295.6
+2025-11-27,P054,Push Pins (Box),Desk Accessories,Thursday,11,0,28.42,229,5,142.1
+2025-11-28,P066,Book Cover (Roll),Organization,Friday,11,0,25.85,137,9,232.65
+2025-11-28,P036,Brown Envelope Long,Filing,Friday,11,0,7.04,128,9,63.36
+2025-11-29,P038,Ring Binder 1 inch,Filing,Saturday,11,0,70.37,110,1,70.37
+2025-11-29,P022,Crayons 8 Colors,Art Supplies,Saturday,11,0,27.79,114,7,194.53
+2025-11-29,P020,Highlighter (Pcs),Writing,Saturday,11,0,25.82,197,5,129.1
+2025-11-30,P009,Construction Paper (Pack),Paper,Sunday,11,0,50.03,110,7,350.21
+2025-11-30,P021,Highlighter Set (6 colors),Writing,Sunday,11,0,126.71,144,4,506.84
+2025-12-01,P028,Colored Pencils 24s,Art Supplies,Monday,12,0,126.0,203,11,1386.0
+2025-12-01,P024,Crayons 24 Colors,Art Supplies,Monday,12,0,71.49,138,3,214.47
+2025-12-02,P032,Plastic Folder Long,Filing,Tuesday,12,0,14.22,136,6,85.32
+2025-12-02,P005,Bond Paper A4 (Ream),Paper,Tuesday,12,0,223.4,191,19,4244.6
+2025-12-04,P031,Plastic Folder A4,Filing,Thursday,12,0,19.9,80,18,358.2
+2025-12-07,P005,Bond Paper A4 (Ream),Paper,Sunday,12,0,223.4,178,14,3127.6
+2025-12-08,P061,Correction Tape,Writing,Monday,12,0,26.55,124,11,292.05
+2025-12-09,P039,Ring Binder 2 inch,Filing,Tuesday,12,0,129.48,175,4,517.92
+2025-12-12,P025,Watercolor Set,Art Supplies,Friday,12,0,55.52,183,8,444.16
+2025-12-13,P014,Pencil No. 2 (Pcs),Writing,Saturday,12,0,9.49,228,11,104.39
+2025-12-13,P045,Compass (Drawing),Measuring,Saturday,12,0,34.06,115,2,68.12
+2025-12-14,P061,Correction Tape,Writing,Sunday,12,0,26.55,146,11,292.05
+2025-12-15,P031,Plastic Folder A4,Filing,Monday,12,0,19.9,186,13,258.7
+2025-12-15,P050,Calculator (Scientific),Desk Accessories,Monday,12,0,423.94,189,10,4239.4
+2025-12-15,P064,Pencil Case (Premium),Organization,Monday,12,0,115.68,171,1,115.68
+2025-12-16,P047,Sharpener (Pcs),Desk Accessories,Tuesday,12,0,8.12,93,17,138.04
+2025-12-17,P022,Crayons 8 Colors,Art Supplies,Wednesday,12,0,27.79,187,10,277.9
+2025-12-17,P035,Expanding Envelope,Filing,Wednesday,12,0,49.14,73,9,442.26
+2025-12-18,P019,Permanent Marker,Writing,Thursday,12,0,35.8,152,7,250.6
+2025-12-18,P047,Sharpener (Pcs),Desk Accessories,Thursday,12,0,8.12,229,17,138.04
+2025-12-19,P028,Colored Pencils 24s,Art Supplies,Friday,12,0,126.0,190,5,630.0
+2025-12-20,P065,Bag Tag / ID Lace,Organization,Saturday,12,0,15.62,219,4,62.48
+2025-12-23,P039,Ring Binder 2 inch,Filing,Tuesday,12,0,129.48,125,5,647.4
+2025-12-23,P008,Index Cards (Pack),Paper,Tuesday,12,0,42.32,216,6,253.92
+2025-12-24,P068,Sticky Notes (Pad),Organization,Wednesday,12,0,44.07,162,13,572.91
+2025-12-25,P012,Ballpen Black (Pcs),Writing,Thursday,12,0,17.76,193,16,284.16
+2025-12-26,P037,Brown Envelope Short,Filing,Friday,12,0,4.22,131,14,59.08
+2025-12-26,P003,Composition Notebook,Paper,Friday,12,0,30.98,182,12,371.76
+2025-12-27,P044,Triangle Set,Measuring,Saturday,12,0,42.73,133,4,170.92
+2025-12-28,P057,White Glue 120ml,Adhesives,Sunday,12,0,21.77,146,6,130.62
+2025-12-28,P005,Bond Paper A4 (Ream),Paper,Sunday,12,0,223.4,151,10,2234.0
+2025-12-28,P061,Correction Tape,Writing,Sunday,12,0,26.55,129,6,159.3
+2026-01-01,P063,Pencil Case (Basic),Organization,Thursday,1,1,72.29,135,14,1012.06
+2026-01-02,P023,Crayons 16 Colors,Art Supplies,Friday,1,1,50.23,87,25,1255.75
+2026-01-02,P025,Watercolor Set,Art Supplies,Friday,1,1,55.52,74,19,1054.88
+2026-01-03,P035,Expanding Envelope,Filing,Saturday,1,1,49.14,92,16,786.24
+2026-01-04,P022,Crayons 8 Colors,Art Supplies,Sunday,1,1,27.79,127,14,389.06
+2026-01-04,P017,Sign Pen Blue,Writing,Sunday,1,1,27.61,44,16,441.76
+2026-01-07,P062,Correction Fluid,Writing,Wednesday,1,1,31.78,63,17,540.26
+2026-01-07,P014,Pencil No. 2 (Pcs),Writing,Wednesday,1,1,9.49,61,28,265.72
+2026-01-07,P067,Sticker Labels (Pack),Organization,Wednesday,1,1,23.52,139,16,376.32
+2026-01-07,P059,Masking Tape,Adhesives,Wednesday,1,1,26.13,54,16,418.08
+2026-01-07,P021,Highlighter Set (6 colors),Writing,Wednesday,1,1,126.71,81,15,1900.65
+2026-01-09,P007,Yellow Pad Paper,Paper,Friday,1,1,31.16,62,26,810.16
+2026-01-10,P051,Stapler No. 35,Desk Accessories,Saturday,1,1,118.02,97,8,944.16
+2026-01-11,P041,Ruler 12 inches (Plastic),Measuring,Sunday,1,1,11.22,85,9,100.98
+2026-01-11,P025,Watercolor Set,Art Supplies,Sunday,1,1,55.52,106,10,555.2
+2026-01-12,P001,Notebook 80 Leaves,Paper,Monday,1,1,32.49,28,27,877.23
+2026-01-12,P056,Glue Stick,Adhesives,Monday,1,1,33.44,105,24,802.56
+2026-01-13,P042,Ruler 18 inches (Plastic),Measuring,Tuesday,1,1,22.43,73,14,314.02
+2026-01-13,P061,Correction Tape,Writing,Tuesday,1,1,26.55,106,21,557.55
+2026-01-14,P027,Colored Pencils 12s,Art Supplies,Wednesday,1,1,59.98,61,22,1319.56
+2026-01-14,P033,Clear Book 20 Pockets,Filing,Wednesday,1,1,36.95,63,17,628.15
+2026-01-15,P068,Sticky Notes (Pad),Organization,Thursday,1,1,44.07,92,16,705.12
+2026-01-15,P005,Bond Paper A4 (Ream),Paper,Thursday,1,1,223.4,109,40,8936.0
+2026-01-15,P038,Ring Binder 1 inch,Filing,Thursday,1,1,70.37,14,7,492.59
+2026-01-15,P056,Glue Stick,Adhesives,Thursday,1,1,33.44,111,20,668.8
+2026-01-17,P007,Yellow Pad Paper,Paper,Saturday,1,1,31.16,129,13,405.08
+2026-01-18,P029,Acrylic Paint Set,Art Supplies,Sunday,1,1,197.01,62,7,1379.07
+2026-01-19,P037,Brown Envelope Short,Filing,Monday,1,1,4.22,119,28,118.16
+2026-01-20,P016,Sign Pen Black,Writing,Tuesday,1,1,24.59,60,18,442.62
+2026-01-22,P012,Ballpen Black (Pcs),Writing,Thursday,1,1,17.76,90,18,319.68
+2026-01-23,P046,Eraser (Pcs),Desk Accessories,Friday,1,1,9.64,62,19,183.16
+2026-01-23,P002,Notebook 200 Leaves,Paper,Friday,1,1,78.77,103,29,2284.33
+2026-01-24,P037,Brown Envelope Short,Filing,Saturday,1,1,4.22,124,20,84.4
+2026-01-25,P005,Bond Paper A4 (Ream),Paper,Sunday,1,1,223.4,32,21,4691.4
+2026-01-26,P065,Bag Tag / ID Lace,Organization,Monday,1,1,15.62,82,11,171.82
+2026-01-28,P003,Composition Notebook,Paper,Wednesday,1,1,30.98,133,23,712.54
+2026-01-28,P004,Spiral Notebook A4,Paper,Wednesday,1,1,77.96,88,22,1715.12
+2026-01-28,P032,Plastic Folder Long,Filing,Wednesday,1,1,14.22,116,31,440.82
+2026-01-30,P020,Highlighter (Pcs),Writing,Friday,1,1,25.82,71,28,722.96
+2026-01-31,P051,Stapler No. 35,Desk Accessories,Saturday,1,1,118.02,87,9,1062.18
+2026-02-01,P008,Index Cards (Pack),Paper,Sunday,2,1,42.32,104,8,338.56
+2026-02-03,P037,Brown Envelope Short,Filing,Tuesday,2,1,4.22,21,14,59.08
+2026-02-04,P025,Watercolor Set,Art Supplies,Wednesday,2,1,55.52,84,18,999.36
+2026-02-06,P041,Ruler 12 inches (Plastic),Measuring,Friday,2,1,11.22,64,16,179.52
+2026-02-07,P003,Composition Notebook,Paper,Saturday,2,1,30.98,86,22,681.56
+2026-02-07,P030,Paint Brush Set,Art Supplies,Saturday,2,1,42.09,87,10,420.9
+2026-02-07,P028,Colored Pencils 24s,Art Supplies,Saturday,2,1,126.0,21,7,882.0
+2026-02-08,P038,Ring Binder 1 inch,Filing,Sunday,2,1,70.37,68,10,703.7
+2026-02-08,P007,Yellow Pad Paper,Paper,Sunday,2,1,31.16,94,12,373.92
+2026-02-09,P013,Ballpen Red (Pcs),Writing,Monday,2,1,16.66,84,16,266.56
+2026-02-12,P003,Composition Notebook,Paper,Thursday,2,1,30.98,41,23,712.54
+2026-02-16,P046,Eraser (Pcs),Desk Accessories,Monday,2,1,9.64,55,24,231.36
+2026-02-16,P037,Brown Envelope Short,Filing,Monday,2,1,4.22,68,21,88.62
+2026-02-17,P027,Colored Pencils 12s,Art Supplies,Tuesday,2,1,59.98,156,24,1439.52
+2026-02-19,P039,Ring Binder 2 inch,Filing,Thursday,2,1,129.48,5,12,1553.76
+2026-02-20,P043,Protractor,Measuring,Friday,2,1,10.52,25,12,126.24
+2026-02-21,P008,Index Cards (Pack),Paper,Saturday,2,1,42.32,106,18,761.76
+2026-02-22,P052,Staple Wire No. 35,Desk Accessories,Sunday,2,1,35.5,100,7,248.5
+2026-02-23,P058,Packaging Tape,Adhesives,Monday,2,1,35.88,25,8,287.04
+2026-02-23,P014,Pencil No. 2 (Pcs),Writing,Monday,2,1,9.49,75,29,275.21
+2026-02-25,P061,Correction Tape,Writing,Wednesday,2,1,26.55,52,18,477.9
+2026-02-26,P002,Notebook 200 Leaves,Paper,Thursday,2,1,78.77,86,27,2126.79
+2026-02-26,P030,Paint Brush Set,Art Supplies,Thursday,2,1,42.09,116,11,462.99
+2026-02-28,P022,Crayons 8 Colors,Art Supplies,Saturday,2,1,27.79,38,21,583.59
+2026-02-28,P030,Paint Brush Set,Art Supplies,Saturday,2,1,42.09,68,6,252.54
+2026-03-01,P002,Notebook 200 Leaves,Paper,Sunday,3,1,78.77,91,9,708.93
+2026-03-03,P014,Pencil No. 2 (Pcs),Writing,Tuesday,3,1,9.49,55,25,237.25
+2026-03-03,P043,Protractor,Measuring,Tuesday,3,1,10.52,88,9,94.68
+2026-03-03,P041,Ruler 12 inches (Plastic),Measuring,Tuesday,3,1,11.22,41,19,213.18
+2026-03-04,P014,Pencil No. 2 (Pcs),Writing,Wednesday,3,1,9.49,90,24,227.76
+2026-03-04,P014,Pencil No. 2 (Pcs),Writing,Wednesday,3,1,9.49,85,21,199.29
+2026-03-04,P004,Spiral Notebook A4,Paper,Wednesday,3,1,77.96,85,20,1559.2
+2026-03-06,P004,Spiral Notebook A4,Paper,Friday,3,1,77.96,155,20,1559.2
+2026-03-06,P014,Pencil No. 2 (Pcs),Writing,Friday,3,1,9.49,99,21,199.29
+2026-03-08,P031,Plastic Folder A4,Filing,Sunday,3,1,19.9,99,15,298.5
+2026-03-09,P016,Sign Pen Black,Writing,Monday,3,1,24.59,53,15,368.85
+2026-03-09,P040,File Organizer,Filing,Monday,3,1,124.02,31,8,992.16
+2026-03-10,P024,Crayons 24 Colors,Art Supplies,Tuesday,3,1,71.49,73,18,1286.82
+2026-03-12,P051,Stapler No. 35,Desk Accessories,Thursday,3,1,118.02,89,10,1180.2
+2026-03-12,P004,Spiral Notebook A4,Paper,Thursday,3,1,77.96,74,14,1091.44
+2026-03-12,P046,Eraser (Pcs),Desk Accessories,Thursday,3,1,9.64,138,21,202.44
+2026-03-12,P068,Sticky Notes (Pad),Organization,Thursday,3,1,44.07,135,26,1145.82
+2026-03-13,P053,Paper Clips (Box),Desk Accessories,Friday,3,1,29.09,118,12,349.08
+2026-03-13,P055,Desk Organizer,Desk Accessories,Friday,3,1,151.75,108,7,1062.25
+2026-03-15,P020,Highlighter (Pcs),Writing,Sunday,3,1,25.82,76,13,335.66
+2026-03-15,P001,Notebook 80 Leaves,Paper,Sunday,3,1,32.49,31,23,747.27
+2026-03-15,P031,Plastic Folder A4,Filing,Sunday,3,1,19.9,78,23,457.7
+2026-03-16,P033,Clear Book 20 Pockets,Filing,Monday,3,1,36.95,74,14,517.3
+2026-03-19,P009,Construction Paper (Pack),Paper,Thursday,3,1,50.03,124,15,750.45
+2026-03-19,P012,Ballpen Black (Pcs),Writing,Thursday,3,1,17.76,47,29,515.04
+2026-03-20,P043,Protractor,Measuring,Friday,3,1,10.52,73,7,73.64
+2026-03-21,P023,Crayons 16 Colors,Art Supplies,Saturday,3,1,50.23,50,18,904.14
+2026-03-21,P068,Sticky Notes (Pad),Organization,Saturday,3,1,44.07,109,18,793.26
+2026-03-23,P049,Calculator (Basic),Desk Accessories,Monday,3,1,191.07,51,11,2101.77
+2026-03-24,P020,Highlighter (Pcs),Writing,Tuesday,3,1,25.82,81,22,568.04
+2026-03-25,P008,Index Cards (Pack),Paper,Wednesday,3,1,42.32,91,12,507.84
+2026-03-27,P023,Crayons 16 Colors,Art Supplies,Friday,3,1,50.23,87,15,753.45
+2026-03-29,P003,Composition Notebook,Paper,Sunday,3,1,30.98,58,9,278.82
+2026-03-30,P056,Glue Stick,Adhesives,Monday,3,1,33.44,39,19,635.36
+2026-03-30,P068,Sticky Notes (Pad),Organization,Monday,3,1,44.07,58,12,528.84
+2026-03-31,P016,Sign Pen Black,Writing,Tuesday,3,1,24.59,92,15,368.85
+2026-04-01,P046,Eraser (Pcs),Desk Accessories,Wednesday,4,0,9.64,157,9,86.76
+2026-04-02,P007,Yellow Pad Paper,Paper,Thursday,4,0,31.16,221,7,218.12
+2026-04-04,P012,Ballpen Black (Pcs),Writing,Saturday,4,0,17.76,135,6,106.56
+2026-04-04,P067,Sticker Labels (Pack),Organization,Saturday,4,0,23.52,195,2,47.04
+2026-04-05,P039,Ring Binder 2 inch,Filing,Sunday,4,0,129.48,162,2,258.96
+2026-04-05,P046,Eraser (Pcs),Desk Accessories,Sunday,4,0,9.64,183,5,48.2
+2026-04-05,P046,Eraser (Pcs),Desk Accessories,Sunday,4,0,9.64,199,10,96.4
+2026-04-06,P056,Glue Stick,Adhesives,Monday,4,0,33.44,163,10,334.4
+2026-04-07,P017,Sign Pen Blue,Writing,Tuesday,4,0,27.61,128,9,248.49
+2026-04-11,P019,Permanent Marker,Writing,Saturday,4,0,35.8,69,1,35.8
+2026-04-11,P065,Bag Tag / ID Lace,Organization,Saturday,4,0,15.62,139,8,124.96
+2026-04-14,P023,Crayons 16 Colors,Art Supplies,Tuesday,4,0,50.23,154,8,401.84
+2026-04-15,P062,Correction Fluid,Writing,Wednesday,4,0,31.78,175,2,63.56
+2026-04-15,P019,Permanent Marker,Writing,Wednesday,4,0,35.8,160,1,35.8
+2026-04-16,P012,Ballpen Black (Pcs),Writing,Thursday,4,0,17.76,79,6,106.56
+2026-04-16,P070,Clipboard,Organization,Thursday,4,0,84.41,163,4,337.64
+2026-04-17,P006,Bond Paper Short (Ream),Paper,Friday,4,0,198.72,127,8,1589.76
+2026-04-18,P005,Bond Paper A4 (Ream),Paper,Saturday,4,0,223.4,175,10,2234.0
+2026-04-18,P037,Brown Envelope Short,Filing,Saturday,4,0,4.22,164,4,16.88
+2026-04-18,P037,Brown Envelope Short,Filing,Saturday,4,0,4.22,200,1,4.22
+2026-04-19,P017,Sign Pen Blue,Writing,Sunday,4,0,27.61,79,2,55.22
+2026-04-19,P018,Whiteboard Marker,Writing,Sunday,4,0,43.12,76,6,258.72
+2026-04-19,P014,Pencil No. 2 (Pcs),Writing,Sunday,4,0,9.49,152,8,75.92
+2026-04-20,P004,Spiral Notebook A4,Paper,Monday,4,0,77.96,85,9,701.64
+2026-04-20,P013,Ballpen Red (Pcs),Writing,Monday,4,0,16.66,118,7,116.62
+2026-04-21,P005,Bond Paper A4 (Ream),Paper,Tuesday,4,0,223.4,255,8,1787.2
+2026-04-21,P013,Ballpen Red (Pcs),Writing,Tuesday,4,0,16.66,199,5,83.3
+2026-04-22,P029,Acrylic Paint Set,Art Supplies,Wednesday,4,0,197.01,171,4,788.04
+2026-04-22,P005,Bond Paper A4 (Ream),Paper,Wednesday,4,0,223.4,130,14,3127.6
+2026-04-23,P057,White Glue 120ml,Adhesives,Thursday,4,0,21.77,183,6,130.62
+2026-04-24,P015,Mechanical Pencil,Writing,Friday,4,0,31.36,166,8,250.88
+2026-04-24,P043,Protractor,Measuring,Friday,4,0,10.52,125,3,31.56
+2026-04-25,P027,Colored Pencils 12s,Art Supplies,Saturday,4,0,59.98,162,4,239.92
+2026-04-26,P033,Clear Book 20 Pockets,Filing,Sunday,4,0,36.95,92,8,295.6
+2026-04-27,P006,Bond Paper Short (Ream),Paper,Monday,4,0,198.72,200,13,2583.36
+2026-04-27,P068,Sticky Notes (Pad),Organization,Monday,4,0,44.07,141,10,440.7
+2026-04-28,P067,Sticker Labels (Pack),Organization,Tuesday,4,0,23.52,202,6,141.12
+2026-04-28,P046,Eraser (Pcs),Desk Accessories,Tuesday,4,0,9.64,191,13,125.32
+2026-04-28,P051,Stapler No. 35,Desk Accessories,Tuesday,4,0,118.02,234,2,236.04
+2026-04-29,P053,Paper Clips (Box),Desk Accessories,Wednesday,4,0,29.09,170,6,174.54
+2026-04-29,P056,Glue Stick,Adhesives,Wednesday,4,0,33.44,148,10,334.4
+2026-04-30,P044,Triangle Set,Measuring,Thursday,4,0,42.73,192,7,299.11
+2026-05-03,P052,Staple Wire No. 35,Desk Accessories,Sunday,5,0,35.5,168,4,142.0
+2026-05-03,P013,Ballpen Red (Pcs),Writing,Sunday,5,0,16.66,181,4,66.64
+2026-05-05,P033,Clear Book 20 Pockets,Filing,Tuesday,5,0,36.95,184,4,147.8
+2026-05-05,P041,Ruler 12 inches (Plastic),Measuring,Tuesday,5,0,11.22,112,13,145.86
+2026-05-06,P070,Clipboard,Organization,Wednesday,5,0,84.41,208,2,168.82
+2026-05-07,P006,Bond Paper Short (Ream),Paper,Thursday,5,0,198.72,88,6,1192.32
+2026-05-09,P015,Mechanical Pencil,Writing,Saturday,5,0,31.36,187,7,219.52
+2026-05-09,P040,File Organizer,Filing,Saturday,5,0,124.02,137,2,248.04
+2026-05-10,P065,Bag Tag / ID Lace,Organization,Sunday,5,0,15.62,73,2,31.24
+2026-05-13,P048,Scissors (Student),Desk Accessories,Wednesday,5,0,40.6,14,3,121.8
+2026-05-13,P041,Ruler 12 inches (Plastic),Measuring,Wednesday,5,0,11.22,147,7,78.54
+2026-05-14,P042,Ruler 18 inches (Plastic),Measuring,Thursday,5,0,22.43,172,5,112.15
+2026-05-17,P065,Bag Tag / ID Lace,Organization,Sunday,5,0,15.62,214,4,62.48
+2026-05-18,P006,Bond Paper Short (Ream),Paper,Monday,5,0,198.72,180,6,1192.32
+2026-05-20,P065,Bag Tag / ID Lace,Organization,Wednesday,5,0,15.62,214,6,93.72
+2026-05-21,P007,Yellow Pad Paper,Paper,Thursday,5,0,31.16,51,10,311.6
+2026-05-24,P016,Sign Pen Black,Writing,Sunday,5,0,24.59,179,4,98.36
+2026-05-28,P031,Plastic Folder A4,Filing,Thursday,5,0,19.9,96,9,179.1
+2026-05-29,P012,Ballpen Black (Pcs),Writing,Friday,5,0,17.76,201,9,159.84
+2026-05-30,P034,Clear Book 40 Pockets,Filing,Saturday,5,0,92.96,149,4,371.84
+2026-05-30,P006,Bond Paper Short (Ream),Paper,Saturday,5,0,198.72,119,9,1788.48
+2026-05-31,P020,Highlighter (Pcs),Writing,Sunday,5,0,25.82,127,9,232.38
+2026-05-31,P059,Masking Tape,Adhesives,Sunday,5,0,26.13,151,4,104.52
+2026-05-31,P020,Highlighter (Pcs),Writing,Sunday,5,0,25.82,131,2,51.64
+2026-06-01,P028,Colored Pencils 24s,Art Supplies,Monday,6,1,126.0,36,30,3780.0
+2026-06-01,P049,Calculator (Basic),Desk Accessories,Monday,6,1,191.07,102,18,3439.26
+2026-06-02,P024,Crayons 24 Colors,Art Supplies,Tuesday,6,1,71.49,140,27,1930.23
+2026-06-03,P057,White Glue 120ml,Adhesives,Wednesday,6,1,21.77,81,22,478.94
+2026-06-04,P018,Whiteboard Marker,Writing,Thursday,6,1,43.12,66,28,1207.36
+2026-06-04,P033,Clear Book 20 Pockets,Filing,Thursday,6,1,36.95,80,36,1330.2
+2026-06-05,P011,Ballpen Blue (Pcs),Writing,Friday,6,1,10.16,49,38,386.08
+2026-06-05,P005,Bond Paper A4 (Ream),Paper,Friday,6,1,223.4,74,47,10499.8
+2026-06-06,P022,Crayons 8 Colors,Art Supplies,Saturday,6,1,27.79,72,25,694.75
+2026-06-08,P052,Staple Wire No. 35,Desk Accessories,Monday,6,1,35.5,94,24,852.0
+2026-06-09,P017,Sign Pen Blue,Writing,Tuesday,6,1,27.61,89,28,773.08
+2026-06-10,P009,Construction Paper (Pack),Paper,Wednesday,6,1,50.03,55,17,850.51
+2026-06-12,P060,Double-Sided Tape,Adhesives,Friday,6,1,34.76,22,22,764.72
+2026-06-12,P033,Clear Book 20 Pockets,Filing,Friday,6,1,36.95,47,21,775.95
+2026-06-13,P061,Correction Tape,Writing,Saturday,6,1,26.55,103,31,823.05
+2026-06-15,P024,Crayons 24 Colors,Art Supplies,Monday,6,1,71.49,87,33,2359.17
+2026-06-16,P005,Bond Paper A4 (Ream),Paper,Tuesday,6,1,223.4,85,39,8712.6
+2026-06-18,P012,Ballpen Black (Pcs),Writing,Thursday,6,1,17.76,69,47,834.72
+2026-06-20,P014,Pencil No. 2 (Pcs),Writing,Saturday,6,1,9.49,127,28,265.72
+2026-06-22,P015,Mechanical Pencil,Writing,Monday,6,1,31.36,141,24,752.64
+2026-06-25,P007,Yellow Pad Paper,Paper,Thursday,6,1,31.16,25,31,965.96
+2026-06-27,P049,Calculator (Basic),Desk Accessories,Saturday,6,1,191.07,102,14,2674.98
+2026-06-27,P011,Ballpen Blue (Pcs),Writing,Saturday,6,1,10.16,55,32,325.12
+2026-06-28,P055,Desk Organizer,Desk Accessories,Sunday,6,1,151.75,63,11,1669.25
+2026-06-29,P029,Acrylic Paint Set,Art Supplies,Monday,6,1,197.01,103,17,3349.17
+2026-06-29,P013,Ballpen Red (Pcs),Writing,Monday,6,1,16.66,121,29,483.14
+2026-07-01,P006,Bond Paper Short (Ream),Paper,Wednesday,7,1,198.72,94,29,5762.88
+2026-07-03,P036,Brown Envelope Long,Filing,Friday,7,1,7.04,64,34,239.36
+2026-07-03,P031,Plastic Folder A4,Filing,Friday,7,1,19.9,113,29,577.1
+2026-07-03,P037,Brown Envelope Short,Filing,Friday,7,1,4.22,65,32,135.04
+2026-07-03,P016,Sign Pen Black,Writing,Friday,7,1,24.59,95,35,860.65
+2026-07-04,P018,Whiteboard Marker,Writing,Saturday,7,1,43.12,96,15,646.8
+2026-07-06,P047,Sharpener (Pcs),Desk Accessories,Monday,7,1,8.12,49,39,316.68
+2026-07-07,P032,Plastic Folder Long,Filing,Tuesday,7,1,14.22,50,41,583.02
+2026-07-09,P048,Scissors (Student),Desk Accessories,Thursday,7,1,40.6,60,32,1299.2
+2026-07-09,P005,Bond Paper A4 (Ream),Paper,Thursday,7,1,223.4,93,48,10723.2
+2026-07-11,P067,Sticker Labels (Pack),Organization,Saturday,7,1,23.52,136,15,352.8
+2026-07-11,P005,Bond Paper A4 (Ream),Paper,Saturday,7,1,223.4,74,25,5585.0
+2026-07-13,P012,Ballpen Black (Pcs),Writing,Monday,7,1,17.76,52,36,639.36
+2026-07-13,P001,Notebook 80 Leaves,Paper,Monday,7,1,32.49,102,41,1332.09
+2026-07-14,P034,Clear Book 40 Pockets,Filing,Tuesday,7,1,92.96,52,24,2231.04
+2026-07-15,P020,Highlighter (Pcs),Writing,Wednesday,7,1,25.82,60,35,903.7
+2026-07-17,P030,Paint Brush Set,Art Supplies,Friday,7,1,42.09,95,18,757.62
+2026-07-17,P048,Scissors (Student),Desk Accessories,Friday,7,1,40.6,98,33,1339.8
+2026-07-17,P024,Crayons 24 Colors,Art Supplies,Friday,7,1,71.49,76,38,2716.62
+2026-07-18,P057,White Glue 120ml,Adhesives,Saturday,7,1,21.77,128,21,457.17
+2026-07-20,P027,Colored Pencils 12s,Art Supplies,Monday,7,1,59.98,100,33,1979.34
+2026-07-23,P027,Colored Pencils 12s,Art Supplies,Thursday,7,1,59.98,77,36,2159.28
+2026-07-25,P009,Construction Paper (Pack),Paper,Saturday,7,1,50.03,77,13,650.39
+2026-07-26,P017,Sign Pen Blue,Writing,Sunday,7,1,27.61,89,20,552.2
+2026-07-27,P068,Sticky Notes (Pad),Organization,Monday,7,1,44.07,116,24,1057.68
+2026-07-27,P046,Eraser (Pcs),Desk Accessories,Monday,7,1,9.64,44,42,404.88
+2026-07-28,P048,Scissors (Student),Desk Accessories,Tuesday,7,1,40.6,68,20,812.0
+2026-07-30,P045,Compass (Drawing),Measuring,Thursday,7,1,34.06,42,12,408.72
+2026-07-31,P042,Ruler 18 inches (Plastic),Measuring,Friday,7,1,22.43,84,17,381.31
+2026-08-01,P012,Ballpen Black (Pcs),Writing,Saturday,8,1,17.76,56,24,426.24
+2026-08-02,P039,Ring Binder 2 inch,Filing,Sunday,8,1,129.48,93,3,388.44
+2026-08-03,P001,Notebook 80 Leaves,Paper,Monday,8,1,32.49,125,31,1007.19
+2026-08-03,P017,Sign Pen Blue,Writing,Monday,8,1,27.61,142,25,690.25
+2026-08-06,P045,Compass (Drawing),Measuring,Thursday,8,1,34.06,76,13,442.78
+2026-08-07,P041,Ruler 12 inches (Plastic),Measuring,Friday,8,1,11.22,61,27,302.94
+2026-08-07,P046,Eraser (Pcs),Desk Accessories,Friday,8,1,9.64,85,32,308.48
+2026-08-11,P050,Calculator (Scientific),Desk Accessories,Tuesday,8,1,423.94,106,12,5087.28
+2026-08-12,P061,Correction Tape,Writing,Wednesday,8,1,26.55,156,23,610.65
+2026-08-14,P003,Composition Notebook,Paper,Friday,8,1,30.98,58,23,712.54
+2026-08-15,P046,Eraser (Pcs),Desk Accessories,Saturday,8,1,9.64,61,22,212.08
+2026-08-15,P011,Ballpen Blue (Pcs),Writing,Saturday,8,1,10.16,86,25,254.0
+2026-08-15,P066,Book Cover (Roll),Organization,Saturday,8,1,25.85,83,11,284.35
+2026-08-19,P051,Stapler No. 35,Desk Accessories,Wednesday,8,1,118.02,130,13,1534.26
+2026-08-21,P016,Sign Pen Black,Writing,Friday,8,1,24.59,118,22,540.98
+2026-08-21,P023,Crayons 16 Colors,Art Supplies,Friday,8,1,50.23,50,27,1356.21
+2026-08-22,P066,Book Cover (Roll),Organization,Saturday,8,1,25.85,56,11,284.35
+2026-08-22,P036,Brown Envelope Long,Filing,Saturday,8,1,7.04,40,18,126.72
+2026-08-24,P068,Sticky Notes (Pad),Organization,Monday,8,1,44.07,83,21,925.47
+2026-08-26,P033,Clear Book 20 Pockets,Filing,Wednesday,8,1,36.95,36,20,739.0
+2026-08-27,P009,Construction Paper (Pack),Paper,Thursday,8,1,50.03,154,25,1250.75
+2026-08-31,P027,Colored Pencils 12s,Art Supplies,Monday,8,1,59.98,118,25,1499.5
+2026-08-31,P040,File Organizer,Filing,Monday,8,1,124.02,89,10,1240.2
+2026-08-31,P063,Pencil Case (Basic),Organization,Monday,8,1,72.29,18,24,1734.96
+2026-09-01,P046,Eraser (Pcs),Desk Accessories,Tuesday,9,1,9.64,92,39,375.96
+2026-09-02,P055,Desk Organizer,Desk Accessories,Wednesday,9,1,151.75,48,2,303.5
+2026-09-02,P023,Crayons 16 Colors,Art Supplies,Wednesday,9,1,50.23,60,33,1657.59
+2026-09-02,P054,Push Pins (Box),Desk Accessories,Wednesday,9,1,28.42,109,9,255.78
+2026-09-03,P045,Compass (Drawing),Measuring,Thursday,9,1,34.06,88,10,340.6
+2026-09-05,P023,Crayons 16 Colors,Art Supplies,Saturday,9,1,50.23,102,26,1305.98
+2026-09-07,P025,Watercolor Set,Art Supplies,Monday,9,1,55.52,138,14,777.28
+2026-09-08,P018,Whiteboard Marker,Writing,Tuesday,9,1,43.12,101,19,819.28
+2026-09-08,P017,Sign Pen Blue,Writing,Tuesday,9,1,27.61,127,23,635.03
+2026-09-08,P005,Bond Paper A4 (Ream),Paper,Tuesday,9,1,223.4,86,31,6925.4
+2026-09-09,P004,Spiral Notebook A4,Paper,Wednesday,9,1,77.96,118,19,1481.24
+2026-09-09,P014,Pencil No. 2 (Pcs),Writing,Wednesday,9,1,9.49,101,17,161.33
+2026-09-10,P020,Highlighter (Pcs),Writing,Thursday,9,1,25.82,55,40,1032.8
+2026-09-10,P006,Bond Paper Short (Ream),Paper,Thursday,9,1,198.72,117,29,5762.88
+2026-09-10,P014,Pencil No. 2 (Pcs),Writing,Thursday,9,1,9.49,83,47,446.03
+2026-09-11,P066,Book Cover (Roll),Organization,Friday,9,1,25.85,62,13,336.05
+2026-09-12,P014,Pencil No. 2 (Pcs),Writing,Saturday,9,1,9.49,83,16,151.84
+2026-09-12,P055,Desk Organizer,Desk Accessories,Saturday,9,1,151.75,58,2,303.5
+2026-09-12,P063,Pencil Case (Basic),Organization,Saturday,9,1,72.29,76,18,1301.22
+2026-09-12,P009,Construction Paper (Pack),Paper,Saturday,9,1,50.03,105,16,800.48
+2026-09-13,P005,Bond Paper A4 (Ream),Paper,Sunday,9,1,223.4,84,19,4244.6
+2026-09-14,P036,Brown Envelope Long,Filing,Monday,9,1,7.04,62,29,204.16
+2026-09-14,P040,File Organizer,Filing,Monday,9,1,124.02,26,8,992.16
+2026-09-15,P069,Sticky Notes (Set),Organization,Tuesday,9,1,49.1,119,14,687.4
+2026-09-15,P002,Notebook 200 Leaves,Paper,Tuesday,9,1,78.77,53,42,3308.34
+2026-09-17,P032,Plastic Folder Long,Filing,Thursday,9,1,14.22,114,33,469.26
+2026-09-17,P016,Sign Pen Black,Writing,Thursday,9,1,24.59,65,21,516.39
+2026-09-18,P016,Sign Pen Black,Writing,Friday,9,1,24.59,30,20,491.8
+2026-09-18,P014,Pencil No. 2 (Pcs),Writing,Friday,9,1,9.49,5,40,379.6
+2026-09-18,P001,Notebook 80 Leaves,Paper,Friday,9,1,32.49,125,33,1072.17
+2026-09-19,P025,Watercolor Set,Art Supplies,Saturday,9,1,55.52,77,9,499.68
+2026-09-20,P052,Staple Wire No. 35,Desk Accessories,Sunday,9,1,35.5,5,11,390.5
+2026-09-20,P032,Plastic Folder Long,Filing,Sunday,9,1,14.22,67,16,227.52
+2026-09-21,P046,Eraser (Pcs),Desk Accessories,Monday,9,1,9.64,116,27,260.28
+2026-09-21,P035,Expanding Envelope,Filing,Monday,9,1,49.14,5,21,1031.94
+2026-09-23,P048,Scissors (Student),Desk Accessories,Wednesday,9,1,40.6,81,25,1015.0
+2026-09-23,P023,Crayons 16 Colors,Art Supplies,Wednesday,9,1,50.23,66,35,1758.05
+2026-09-23,P006,Bond Paper Short (Ream),Paper,Wednesday,9,1,198.72,71,26,5166.72
+2026-09-24,P057,White Glue 120ml,Adhesives,Thursday,9,1,21.77,96,17,370.09
+2026-09-24,P012,Ballpen Black (Pcs),Writing,Thursday,9,1,17.76,60,39,692.64
+2026-09-24,P003,Composition Notebook,Paper,Thursday,9,1,30.98,88,25,774.5
+2026-09-25,P052,Staple Wire No. 35,Desk Accessories,Friday,9,1,35.5,94,23,816.5
+2026-09-25,P056,Glue Stick,Adhesives,Friday,9,1,33.44,5,17,568.48
+2026-09-27,P011,Ballpen Blue (Pcs),Writing,Sunday,9,1,10.16,53,16,162.56
+2026-09-27,P027,Colored Pencils 12s,Art Supplies,Sunday,9,1,59.98,31,18,1079.64
+2026-09-29,P007,Yellow Pad Paper,Paper,Tuesday,9,1,31.16,96,25,779.0
+2026-10-01,P057,White Glue 120ml,Adhesives,Thursday,10,1,21.77,84,18,391.86
+2026-10-01,P052,Staple Wire No. 35,Desk Accessories,Thursday,10,1,35.5,84,22,781.0
+2026-10-01,P018,Whiteboard Marker,Writing,Thursday,10,1,43.12,24,18,776.16
+2026-10-03,P004,Spiral Notebook A4,Paper,Saturday,10,1,77.96,108,14,1091.44
+2026-10-03,P047,Sharpener (Pcs),Desk Accessories,Saturday,10,1,8.12,85,21,170.52
+2026-10-04,P046,Eraser (Pcs),Desk Accessories,Sunday,10,1,9.64,87,29,279.56
+2026-10-04,P032,Plastic Folder Long,Filing,Sunday,10,1,14.22,73,23,327.06
+2026-10-04,P014,Pencil No. 2 (Pcs),Writing,Sunday,10,1,9.49,116,19,180.31
+2026-10-07,P035,Expanding Envelope,Filing,Wednesday,10,1,49.14,129,17,835.38
+2026-10-08,P017,Sign Pen Blue,Writing,Thursday,10,1,27.61,134,18,496.98
+2026-10-08,P054,Push Pins (Box),Desk Accessories,Thursday,10,1,28.42,77,9,255.78
+2026-10-09,P048,Scissors (Student),Desk Accessories,Friday,10,1,40.6,119,31,1258.6
+2026-10-09,P016,Sign Pen Black,Writing,Friday,10,1,24.59,132,23,565.57
+2026-10-09,P009,Construction Paper (Pack),Paper,Friday,10,1,50.03,68,21,1050.63
+2026-10-09,P005,Bond Paper A4 (Ream),Paper,Friday,10,1,223.4,99,42,9382.8
+2026-10-10,P013,Ballpen Red (Pcs),Writing,Saturday,10,1,16.66,75,11,183.26
+2026-10-10,P006,Bond Paper Short (Ream),Paper,Saturday,10,1,198.72,83,16,3179.52
+2026-10-10,P004,Spiral Notebook A4,Paper,Saturday,10,1,77.96,45,10,779.6
+2026-10-10,P019,Permanent Marker,Writing,Saturday,10,1,35.8,138,10,358.0
+2026-10-12,P043,Protractor,Measuring,Monday,10,1,10.52,102,10,105.2
+2026-10-12,P015,Mechanical Pencil,Writing,Monday,10,1,31.36,112,30,940.8
+2026-10-14,P042,Ruler 18 inches (Plastic),Measuring,Wednesday,10,1,22.43,115,23,515.89
+2026-10-14,P011,Ballpen Blue (Pcs),Writing,Wednesday,10,1,10.16,88,38,386.08
+2026-10-14,P016,Sign Pen Black,Writing,Wednesday,10,1,24.59,44,17,418.03
+2026-10-15,P010,Pad Paper,Paper,Thursday,10,1,25.62,102,26,666.12
+2026-10-15,P015,Mechanical Pencil,Writing,Thursday,10,1,31.36,59,26,815.36
+2026-10-17,P011,Ballpen Blue (Pcs),Writing,Saturday,10,1,10.16,59,31,314.96
+2026-10-21,P053,Paper Clips (Box),Desk Accessories,Wednesday,10,1,29.09,67,21,610.89
+2026-10-21,P007,Yellow Pad Paper,Paper,Wednesday,10,1,31.16,99,23,716.68
+2026-10-22,P044,Triangle Set,Measuring,Thursday,10,1,42.73,19,18,769.14
+2026-10-23,P024,Crayons 24 Colors,Art Supplies,Friday,10,1,71.49,52,24,1715.76
+2026-10-23,P018,Whiteboard Marker,Writing,Friday,10,1,43.12,52,20,862.4
+2026-10-24,P005,Bond Paper A4 (Ream),Paper,Saturday,10,1,223.4,103,25,5585.0
+2026-10-28,P012,Ballpen Black (Pcs),Writing,Wednesday,10,1,17.76,48,38,674.88
+2026-10-28,P001,Notebook 80 Leaves,Paper,Wednesday,10,1,32.49,85,38,1234.62
+2026-10-28,P041,Ruler 12 inches (Plastic),Measuring,Wednesday,10,1,11.22,68,22,246.84
+2026-10-30,P010,Pad Paper,Paper,Friday,10,1,25.62,101,19,486.78
+2026-10-30,P004,Spiral Notebook A4,Paper,Friday,10,1,77.96,94,16,1247.36
+2026-10-30,P056,Glue Stick,Adhesives,Friday,10,1,33.44,5,26,869.44

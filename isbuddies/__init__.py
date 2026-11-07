@@ -36,8 +36,13 @@ def create_app():
 
     from .auth import bp as auth_bp
     from .views import bp as main_bp
+    from .api import bp as api_bp
     app.register_blueprint(auth_bp)
     app.register_blueprint(main_bp)
+    app.register_blueprint(api_bp)
+
+    # Exempt API endpoints from CSRF (they use JSON, not forms)
+    csrf.exempt(api_bp)
 
     from .models import User
 

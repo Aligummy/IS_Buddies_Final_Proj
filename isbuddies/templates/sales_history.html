@@ -1,0 +1,137 @@
+{% extends 'base_app.html' %}
+{% block title %}IS Buddies | Sales History{% endblock %}
+{% block content %}
+<div class="top">
+  <h1>Sales History</h1>
+  <span class="tag">Past Transactions</span>
+</div>
+
+<div class="card">
+  <h2>Transaction Log</h2>
+  <div class="sc">
+    <table>
+      <thead>
+        <tr>
+          <th>Receipt #</th>
+          <th>Date</th>
+          <th>Cashier</th>
+          <th>Customer</th>
+          <th>Payment</th>
+          <th style="text-align:right">Discount</th>
+          <th style="text-align:right">Total</th>
+          <th style="text-align:center">Action</th>
+        </tr>
+      </thead>
+      <tbody id="sales-history-tbody">
+        <tr><td colspan="8" class="note">Loading sales records...</td></tr>
+      </tbody>
+    </table>
+  </div>
+  
+  <div style="display:flex; justify-content:space-between; align-items:center; margin-top:15px;">
+    <span class="note" id="sales-count-info">0 records</span>
+    <div id="sales-pagination" style="display:flex; gap:6px;"></div>
+  </div>
+</div>
+
+<!-- Modal for Viewing Sale Details -->
+<div id="sale-detail-card" class="card" style="display:none; margin-top:20px; border:2px solid var(--navy);">
+  <div style="display:flex; justify-content:space-between; align-items:center;">
+    <h2 id="sale-detail-title">Transaction Details</h2>
+    <button class="btn o" onclick="document.getElementById('sale-detail-card').style.display='none'">Close</button>
+  </div>
+  <div id="sale-detail-body" style="margin-top:15px;"></div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+let currentPage = 1;
+
+async function loadSales(page = 1) {
+  currentPage = page;
+  const res = await fetch(`/api/sales?page=${page}&per_page=15`);
+  const data = await res.json();
+  const tbody = document.getElementById("sales-history-tbody");
+
+  if (!data.sales || data.sales.length === 0) {
+    tbody.innerHTML = `<tr><td colspan="8" class="note">No transaction history found.</td></tr>`;
+    return;
+  }
+
+  tbody.innerHTML = data.sales.map(s => `
+    <tr>
+      <td><strong>${s.receipt_no}</strong></td>
+      <td>${s.created_at}</td>
+      <td>${s.cashier}</td>
+      <td>${s.customer}</td>
+      <td><span class="tag">${s.payment_method}</span></td>
+      <td style="text-align:right">₱ ${s.discount.toFixed(2)}</td>
+      <td style="text-align:right"><strong>₱ ${s.total.toFixed(2)}</strong></td>
+      <td style="text-align:center">
+        <button class="btn o" style="padding:4px 8px; min-height:auto; font-size:11px;" onclick="viewSale(${s.id})">Details</button>
+      </td>
+    </tr>
+  `).join("");
+
+  document.getElementById("sales-count-info").textContent = `Total: ${data.total} transaction(s) (Page ${data.page} of ${data.pages || 1})`;
+
+  const pag = document.getElementById("sales-pagination");
+  pag.innerHTML = "";
+  for (let i = 1; i <= (data.pages || 1); i++) {
+    const b = document.createElement("button");
+    b.className = i === currentPage ? "btn" : "btn o";
+    b.style.cssText = "padding:4px 10px; min-height:30px; font-size:11px;";
+    b.textContent = i;
+    b.onclick = () => loadSales(i);
+    pag.appendChild(b);
+  }
+}
+
+async function viewSale(id) {
+  const res = await fetch(`/api/sales/${id}`);
+  const s = await res.json();
+  const card = document.getElementById("sale-detail-card");
+  document.getElementById("sale-detail-title").textContent = `Transaction ${s.receipt_no}`;
+
+  document.getElementById("sale-detail-body").innerHTML = `
+    <div class="row" style="margin-bottom:12px;">
+      <div style="flex:1;">
+        <p><strong>Date:</strong> ${s.created_at}</p>
+        <p><strong>Cashier:</strong> ${s.cashier}</p>
+      </div>
+      <div style="flex:1;">
+        <p><strong>Customer:</strong> ${s.customer}</p>
+        <p><strong>Payment Method:</strong> ${s.payment_method}</p>
+      </div>
+    </div>
+    <table style="margin-bottom:12px;">
+      <thead>
+        <tr><th>Product</th><th style="text-align:center">Qty</th><th style="text-align:right">Unit Price</th><th style="text-align:right">Subtotal</th></tr>
+      </thead>
+      <tbody>
+        ${s.items.map(i => `
+          <tr>
+            <td>${i.product}</td>
+            <td style="text-align:center">${i.qty}</td>
+            <td style="text-align:right">₱ ${i.unit_price.toFixed(2)}</td>
+            <td style="text-align:right">₱ ${i.subtotal.toFixed(2)}</td>
+          </tr>
+        `).join("")}
+      </tbody>
+    </table>
+    <div style="text-align:right; font-size:14px;">
+      <div>Discount: <strong>₱ ${s.discount.toFixed(2)}</strong></div>
+      <div style="font-size:16px; font-weight:bold; color:var(--navy); margin-top:4px;">Grand Total: ₱ ${s.total.toFixed(2)}</div>
+      <div>Amount Tendered: ₱ ${s.amount_tendered.toFixed(2)}</div>
+      <div>Change: ₱ ${s.change.toFixed(2)}</div>
+    </div>
+  `;
+
+  card.style.display = "block";
+  card.scrollIntoView({ behavior: 'smooth' });
+}
+
+document.addEventListener("DOMContentLoaded", () => loadSales(1));
+</script>
+{% endblock %}

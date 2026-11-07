@@ -1,75 +1,402 @@
 {% extends 'base_app.html' %}
-{% block title %}IS Buddies | Knowledge Analysis{% endblock %}
+{% block title %}IS Buddies | Knowledge Analysis & Prediction{% endblock %}
 {% block content %}
-      <!-- Page header -->
-      <div class="top">
-        <h1>Knowledge Analysis &amp; Prediction</h1>
-        <span class="tag">Admin: inputs and output | Instructor: everything</span>
-      </div>
-      <!-- Tabs -->
-      <div class="tabs">
-        <span class="on">Product Demand</span>
-        <span>Sales Prediction</span>
-        <span>Slow-Moving</span>
-        <span>Best-Selling</span>
-      </div>
-      <div class="row">
-        <!-- Card: Inputs -->
-        <div class="card" style="flex:1">
-          <h2>Inputs</h2>
-          <label class="f">Model<input class="in" placeholder="Simple Linear Regression / Random Forest"/></label>
-          <label class="f">Product / Category<input class="in" placeholder=""/></label>
-          <label class="f">Period (month / week)<input class="in" placeholder=""/></label>
-          <label class="f">Forecast horizon<input class="in" placeholder=""/></label>
-          <div class="row">
-            <button class="btn">Train &amp; Save Model</button>
-            <button class="btn o">Load Model</button>
-          </div>
-          <button class="btn y" style="margin-top:10px;width:100%">Predict</button>
-        </div>
-        <div class="col" style="flex:2">
-          <!-- Card: Prediction Output -->
-          <div class="card">
-            <h2>Prediction Output</h2>
-            <div class="row">
-              <div class="ph" style="flex:1;height:70px">Predicted value [0]</div>
-              <div class="ph" style="flex:1;height:70px">Class: Fast / Slow-moving</div>
-            </div>
-            <svg aria-label="Line chart placeholder" role="img" style="width:100%;height:200px" viewbox="0 0 400 160">
-              <rect fill="#eef1fb" height="160" width="400"/>
-              <polyline fill="none" points="10,130 70,100 130,110 190,70 250,80 310,40 390,30" stroke="#1e2a5a" stroke-width="3"/>
-              </polyline>
-              <polyline fill="none" points="190,70 250,60 310,50 390,40" stroke="#1e2a5a" stroke-dasharray="6" stroke-width="2" style="stroke:#d99a00"/>
-              </polyline>
-            </svg>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <!-- Card: Evaluation Metrics Instructor -->
-        <div class="card inst">
-          <h2>Evaluation Metrics <span class="tag">Instructor</span></h2>
-          <div class="sc">
-            <table>
-              <tr><th>Metric</th><th>SLR</th><th>Random Forest</th><th>Description</th></tr>
-              <tr><td>MAE</td><td>[ ]</td><td>[ ]</td><td>[description]</td></tr>
-              <tr><td>MSE / RMSE</td><td>[ ]</td><td>[ ]</td><td>[description]</td></tr>
-              <tr><td>R²</td><td>[ ]</td><td>[ ]</td><td>[description]</td></tr>
-            </table>
-          </div>
-        </div>
-        <!-- Card: Dataset Preview (1,000+ rows, CSV) Instructor -->
-        <div class="card inst">
-          <h2>Dataset Preview (1,000+ rows, CSV) <span class="tag">Instructor</span></h2>
-          <div class="sc">
-            <table>
-              <tr><th>date</th><th>product</th><th>category</th><th>qty</th><th>price</th></tr>
-              <tr><td>[ ]</td><td>[ ]</td><td>[ ]</td><td>[ ]</td><td>[ ]</td></tr>
-              <tr><td>[ ]</td><td>[ ]</td><td>[ ]</td><td>[ ]</td><td>[ ]</td></tr>
-              <tr><td>[ ]</td><td>[ ]</td><td>[ ]</td><td>[ ]</td><td>[ ]</td></tr>
-              <tr><td>...</td><td>...</td><td>...</td><td>...</td><td>...</td></tr>
-            </table>
-          </div>
+<div class="top">
+  <h1>Knowledge Analysis &amp; Prediction</h1>
+  <span class="tag">
+    {% if current_user.role == 'instructor' %}
+      Instructor Mode: Full Access (Inputs, Outputs, Metrics &amp; Datasets)
+    {% else %}
+      Admin Mode: Inputs &amp; Prediction Outputs
+    {% endif %}
+  </span>
+</div>
+
+<!-- Tabs -->
+<div class="tabs" style="margin-bottom:15px;">
+  <span id="tab-demand" class="on" onclick="switchTab('demand')">📈 Product Demand</span>
+  <span id="tab-sales" onclick="switchTab('sales')">💰 Sales Prediction</span>
+  <span id="tab-slow_moving" onclick="switchTab('slow_moving')">🐢 Slow-Moving Products</span>
+  <span id="tab-best_selling" onclick="switchTab('best_selling')">⭐ Best-Selling Products</span>
+</div>
+
+<div class="row">
+  <!-- Inputs Card -->
+  <div class="card" style="flex:1; min-width:320px;">
+    <h2>Model &amp; Forecasting Inputs</h2>
+    
+    <label class="f">Algorithm / Model
+      <select id="model-choice" class="in">
+        <option value="slr">Simple Linear Regression (SLR)</option>
+        <option value="random_forest">Random Forest (Ensemble Learning)</option>
+      </select>
+    </label>
+
+    <!-- Dynamic Form Fields depending on active tab -->
+    <div id="dynamic-inputs">
+      <!-- Injected by JavaScript -->
+    </div>
+
+    <div class="row" style="margin-top:12px; gap:8px;">
+      <button class="btn" style="flex:1" onclick="trainModel()">💾 Train &amp; Save Model</button>
+      <button class="btn y" style="flex:1" onclick="runPrediction()">⚡ Predict</button>
+    </div>
+    <div id="train-status" style="margin-top:10px; font-size:11px;"></div>
+  </div>
+
+  <!-- Prediction Output Card -->
+  <div class="col" style="flex:2">
+    <div class="card">
+      <h2>Prediction Output</h2>
+      <div id="output-box" style="background:var(--tint); border:1.5px dashed var(--dashed); border-radius:12px; padding:20px; text-align:center; min-height:120px; display:flex; flex-direction:column; justify-content:center; align-items:center;">
+        <span class="note" id="output-placeholder">Configure input parameters and click "⚡ Predict"</span>
+        <div id="output-result" style="display:none; width:100%;">
+          <div style="font-size:13px; color:var(--muted); text-transform:uppercase; letter-spacing:1px;" id="output-label">Predicted Result</div>
+          <div style="font-size:32px; font-weight:700; color:var(--navy); margin:8px 0;" id="output-value">-</div>
+          <div id="output-badge"></div>
         </div>
       </div>
+      
+      <div style="margin-top:15px; font-size:12px; color:var(--muted);">
+        <strong>Model Status:</strong> <span id="model-status-indicator">Ready to train / predict</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Evaluation Metrics & Dataset Preview (Visible to Instructor, or admin viewing details) -->
+<div class="row" id="instructor-section">
+  <!-- Card: Evaluation Metrics -->
+  <div class="card inst" style="flex:1">
+    <h2>Evaluation Metrics &amp; Interpretations <span class="tag">Instructor Access</span></h2>
+    <div class="sc">
+      <table id="metrics-table">
+        <thead>
+          <tr>
+            <th>Metric</th>
+            <th style="text-align:right">Score</th>
+            <th>Description &amp; Formula Context</th>
+          </tr>
+        </thead>
+        <tbody id="metrics-tbody">
+          <tr><td colspan="3" class="note">Train a model above to view calculated evaluation metrics.</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Card: Dataset Preview (1,000+ rows CSV) -->
+  <div class="card inst" style="flex:1.5">
+    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
+      <h2>Dataset Preview (1,000+ CSV Records) <span class="tag">Instructor Access</span></h2>
+      <span class="note" id="dataset-total-info">Loading dataset info...</span>
+    </div>
+    <div class="sc" style="max-height:280px; overflow-y:auto;">
+      <table id="dataset-table">
+        <thead id="dataset-thead"></thead>
+        <tbody id="dataset-tbody">
+          <tr><td class="note">Loading CSV preview...</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+let currentTab = 'demand';
+
+const TAB_CONFIGS = {
+  demand: {
+    dataset: 'product_demand.csv',
+    renderInputs: () => `
+      <label class="f">Month (1 - 12)
+        <select id="p_month" class="in">
+          <option value="1">January</option>
+          <option value="2">February</option>
+          <option value="3">March</option>
+          <option value="4">April</option>
+          <option value="5">May</option>
+          <option value="6" selected>June (School Opening)</option>
+          <option value="7">July (School Season)</option>
+          <option value="8">August</option>
+          <option value="9">September</option>
+          <option value="10">October</option>
+          <option value="11">November</option>
+          <option value="12">December</option>
+        </select>
+      </label>
+      <label class="f">Day of Week
+        <select id="p_dow" class="in">
+          <option value="0">Monday</option>
+          <option value="1">Tuesday</option>
+          <option value="2" selected>Wednesday</option>
+          <option value="3">Thursday</option>
+          <option value="4">Friday</option>
+          <option value="5">Saturday</option>
+          <option value="6">Sunday</option>
+        </select>
+      </label>
+      <label class="f">Is School Season?
+        <select id="p_school" class="in">
+          <option value="1" selected>Yes (Active Semester)</option>
+          <option value="0">No (Vacation Period)</option>
+        </select>
+      </label>
+      <label class="f">Product Unit Price (₱)
+        <input id="p_price" class="in" type="number" step="0.5" value="45.00">
+      </label>
+      <label class="f">Current Stock Level
+        <input id="p_stock" class="in" type="number" value="120">
+      </label>
+    `,
+    getParams: () => ({
+      month: parseInt(document.getElementById("p_month").value, 10),
+      day_of_week: parseInt(document.getElementById("p_dow").value, 10),
+      is_school_season: parseInt(document.getElementById("p_school").value, 10),
+      unit_price: parseFloat(document.getElementById("p_price").value),
+      stock_level: parseInt(document.getElementById("p_stock").value, 10),
+    }),
+    formatOutput: (res) => ({
+      label: 'Predicted Product Demand',
+      value: `${Math.round(res.predicted_qty)} units`,
+      badge: `<span class="tag">Expected unit sales in horizon</span>`
+    })
+  },
+  sales: {
+    dataset: 'sales_history.csv',
+    renderInputs: () => `
+      <label class="f">Target Month (1 - 12)
+        <select id="s_month" class="in">
+          <option value="1">January</option>
+          <option value="6" selected>June</option>
+          <option value="7">July</option>
+          <option value="12">December</option>
+        </select>
+      </label>
+      <label class="f">Forecast Year
+        <input id="s_year" class="in" type="number" value="2026">
+      </label>
+      <label class="f">Estimated Volume (Units Sold)
+        <input id="s_qty" class="in" type="number" value="50">
+      </label>
+      <label class="f">Average Unit Price (₱)
+        <input id="s_price" class="in" type="number" step="0.5" value="85.00">
+      </label>
+      <label class="f">Average Discount (%)
+        <input id="s_discount" class="in" type="number" step="1" value="5">
+      </label>
+    `,
+    getParams: () => ({
+      month: parseInt(document.getElementById("s_month").value, 10),
+      year: parseInt(document.getElementById("s_year").value, 10),
+      qty_sold: parseInt(document.getElementById("s_qty").value, 10),
+      unit_price: parseFloat(document.getElementById("s_price").value),
+      discount_pct: parseFloat(document.getElementById("s_discount").value),
+    }),
+    formatOutput: (res) => ({
+      label: 'Predicted Net Revenue',
+      value: `₱ ${Number(res.predicted_amount).toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2})}`,
+      badge: `<span class="tag">Estimated sales earnings</span>`
+    })
+  },
+  slow_moving: {
+    dataset: 'slow_moving_products.csv',
+    renderInputs: () => `
+      <label class="f">Unit Price (₱)
+        <input id="sm_price" class="in" type="number" step="0.5" value="120.00">
+      </label>
+      <label class="f">Average Monthly Sales (Units)
+        <input id="sm_sales" class="in" type="number" value="3">
+      </label>
+      <label class="f">Current Stock Level
+        <input id="sm_stock" class="in" type="number" value="85">
+      </label>
+      <label class="f">Days Since Last Sale
+        <input id="sm_days" class="in" type="number" value="45">
+      </label>
+      <label class="f">Reorder Level
+        <input id="sm_reorder" class="in" type="number" value="10">
+      </label>
+      <label class="f">Turnover Rate (Sales / Stock)
+        <input id="sm_turnover" class="in" type="number" step="0.01" value="0.04">
+      </label>
+    `,
+    getParams: () => ({
+      unit_price: parseFloat(document.getElementById("sm_price").value),
+      avg_monthly_sales: parseFloat(document.getElementById("sm_sales").value),
+      stock_level: parseInt(document.getElementById("sm_stock").value, 10),
+      days_since_last_sale: parseInt(document.getElementById("sm_days").value, 10),
+      reorder_level: parseInt(document.getElementById("sm_reorder").value, 10),
+      turnover_rate: parseFloat(document.getElementById("sm_turnover").value),
+    }),
+    formatOutput: (res) => ({
+      label: 'Inventory Velocity Classification',
+      value: res.classification,
+      badge: res.is_slow_moving === 1 
+        ? `<span class="p r" style="font-size:14px; padding:4px 12px;">⚠️ Slow-Moving Item (Stock Risk)</span>` 
+        : `<span class="p g" style="font-size:14px; padding:4px 12px;">✓ Healthy Movement Item</span>`
+    })
+  },
+  best_selling: {
+    dataset: 'best_selling_products.csv',
+    renderInputs: () => `
+      <label class="f">Unit Price (₱)
+        <input id="bs_price" class="in" type="number" step="0.5" value="35.00">
+      </label>
+      <label class="f">Total Historical Qty Sold
+        <input id="bs_qty" class="in" type="number" value="650">
+      </label>
+      <label class="f">Total Revenue Generated (₱)
+        <input id="bs_rev" class="in" type="number" value="22750">
+      </label>
+      <label class="f">Average Monthly Sales
+        <input id="bs_avg" class="in" type="number" value="65">
+      </label>
+      <label class="f">Months on Shelves
+        <input id="bs_months" class="in" type="number" value="10">
+      </label>
+      <label class="f">Product Popularity Score (0 - 100)
+        <input id="bs_pop" class="in" type="number" step="0.1" value="82.5">
+      </label>
+    `,
+    getParams: () => ({
+      unit_price: parseFloat(document.getElementById("bs_price").value),
+      total_qty_sold: parseInt(document.getElementById("bs_qty").value, 10),
+      total_revenue: parseFloat(document.getElementById("bs_rev").value),
+      avg_monthly_sales: parseFloat(document.getElementById("bs_avg").value),
+      months_available: parseInt(document.getElementById("bs_months").value, 10),
+      popularity_score: parseFloat(document.getElementById("bs_pop").value),
+    }),
+    formatOutput: (res) => ({
+      label: 'Product Success Tier',
+      value: res.classification,
+      badge: res.is_best_seller === 1 
+        ? `<span class="p g" style="font-size:14px; padding:4px 12px;">⭐ Certified Best-Seller</span>` 
+        : `<span class="tag" style="font-size:14px; padding:4px 12px;">Standard Catalog Item</span>`
+    })
+  }
+};
+
+function switchTab(tab) {
+  currentTab = tab;
+  document.querySelectorAll(".tabs span").forEach(el => el.classList.remove("on"));
+  document.getElementById(`tab-${tab}`).classList.add("on");
+
+  // Render input fields
+  document.getElementById("dynamic-inputs").innerHTML = TAB_CONFIGS[tab].renderInputs();
+
+  // Reset output
+  document.getElementById("output-placeholder").style.display = "block";
+  document.getElementById("output-result").style.display = "none";
+  document.getElementById("train-status").innerHTML = "";
+
+  // Auto-train or preview dataset
+  loadDatasetPreview(TAB_CONFIGS[tab].dataset);
+}
+
+async function trainModel() {
+  const model = document.getElementById("model-choice").value;
+  const statusEl = document.getElementById("train-status");
+  statusEl.innerHTML = `<span style="color:var(--navy);">⏳ Training and saving ${model} model...</span>`;
+
+  try {
+    const res = await fetch("/api/knowledge/train", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ prediction_type: currentTab, model: model })
+    });
+    const data = await res.json();
+    if (!res.ok) throw new Error(data.error || "Training failed");
+
+    statusEl.innerHTML = `<span style="color:var(--ok-text); font-weight:600;">✓ Model successfully trained and saved (${data.model})</span>`;
+    document.getElementById("model-status-indicator").textContent = `Trained ${data.model.toUpperCase()} model loaded`;
+
+    // Render evaluation metrics table
+    renderMetrics(data.metrics);
+  } catch (err) {
+    statusEl.innerHTML = `<span style="color:var(--bad-text);">✕ Error: ${err.message}</span>`;
+  }
+}
+
+async function runPrediction() {
+  const model = document.getElementById("model-choice").value;
+  const config = TAB_CONFIGS[currentTab];
+  const params = config.getParams();
+
+  try {
+    const res = await fetch("/api/knowledge/predict", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        prediction_type: currentTab,
+        model: model,
+        params: params
+      })
+    });
+    const data = await res.json();
+    if (!res.ok) {
+      if (data.error && data.error.includes("Train first")) {
+        // Auto-train if model hasn't been saved yet
+        await trainModel();
+        return runPrediction();
+      }
+      throw new Error(data.error || "Prediction failed");
+    }
+
+    const formatted = config.formatOutput(data.result);
+    document.getElementById("output-placeholder").style.display = "none";
+    document.getElementById("output-result").style.display = "block";
+    document.getElementById("output-label").textContent = formatted.label;
+    document.getElementById("output-value").textContent = formatted.value;
+    document.getElementById("output-badge").innerHTML = formatted.badge;
+  } catch (err) {
+    alert("Prediction error: " + err.message);
+  }
+}
+
+function renderMetrics(metrics) {
+  const tbody = document.getElementById("metrics-tbody");
+  if (!metrics || Object.keys(metrics).length === 0) {
+    tbody.innerHTML = `<tr><td colspan="3" class="note">No metrics available.</td></tr>`;
+    return;
+  }
+  tbody.innerHTML = Object.entries(metrics).map(([key, info]) => `
+    <tr>
+      <td><strong>${key}</strong></td>
+      <td style="text-align:right"><span class="p g">${info.value}</span></td>
+      <td><small>${info.description}</small></td>
+    </tr>
+  `).join("");
+}
+
+async function loadDatasetPreview(datasetName) {
+  try {
+    const res = await fetch(`/api/knowledge/datasets/${datasetName}?rows=15`);
+    const data = await res.json();
+    if (!res.ok) return;
+
+    document.getElementById("dataset-total-info").textContent = `Showing 15 of ${data.total_rows.toLocaleString()} CSV records`;
+
+    // Render headers
+    const thead = document.getElementById("dataset-thead");
+    thead.innerHTML = `<tr>${data.columns.map(c => `<th>${c}</th>`).join("")}</tr>`;
+
+    // Render rows
+    const tbody = document.getElementById("dataset-tbody");
+    tbody.innerHTML = data.rows.map(row => `
+      <tr>${row.map(cell => `<td>${cell}</td>`).join("")}</tr>
+    `).join("");
+  } catch (err) {
+    console.error("Dataset preview error:", err);
+  }
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  switchTab('demand');
+  // Auto-train default model so prediction works immediately
+  trainModel();
+});
+</script>
 {% endblock %}

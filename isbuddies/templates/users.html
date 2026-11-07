@@ -1,28 +1,79 @@
 {% extends 'base_app.html' %}
-{% block title %}IS Buddies | Users{% endblock %}
+{% block title %}IS Buddies | User Management{% endblock %}
 {% block content %}
-<div class="top"><h1>Users</h1><span class="tag">Admin</span></div>
+<div class="top">
+  <h1>User Management</h1>
+  <span class="tag">Admin Only</span>
+</div>
+
 <div class="card">
+  <h2>Registered Accounts</h2>
   <div class="sc">
     <table>
-      <tr><th>Name</th><th>Username</th><th>Email</th><th>Role</th><th>Status</th><th>Actions</th></tr>
-      {% for u in users %}
-      <tr>
-        <td>{{ u.full_name }}</td><td>{{ u.username }}</td><td>{{ u.email }}</td>
-        <td>{{ u.role_label }}</td>
-        <td><span class="p {{ 'g' if u.status == 'active' else 'r' }}">{{ u.status }}</span></td>
-        <td>
-          {% if u.id != current_user.id %}
-          <form method="post" action="{{ url_for('main.set_status', user_id=u.id) }}" style="display:inline">
-            <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
-            {% if u.status != 'active' %}<button class="btn y" name="status" value="active">Approve</button>{% endif %}
-            {% if u.status != 'locked' %}<button class="btn o" name="status" value="locked">Lock</button>{% endif %}
-          </form>
-          {% endif %}
-        </td>
-      </tr>
-      {% endfor %}
+      <thead>
+        <tr>
+          <th>Full Name</th>
+          <th>Username</th>
+          <th>Email</th>
+          <th>Role</th>
+          <th>Status</th>
+          <th>Change Role</th>
+          <th>Account Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for u in users %}
+        <tr>
+          <td><strong>{{ u.full_name }}</strong></td>
+          <td><code>{{ u.username }}</code></td>
+          <td>{{ u.email }}</td>
+          <td><span class="tag">{{ u.role_label }}</span></td>
+          <td><span class="p {{ 'g' if u.status == 'active' else 'r' }}">{{ u.status }}</span></td>
+          <td>
+            {% if u.id != current_user.id %}
+            <select class="in" style="min-height:32px; padding:4px 8px; font-size:11px; max-width:150px;" onchange="updateRole({{ u.id }}, this.value)">
+              <option value="admin" {% if u.role == 'admin' %}selected{% endif %}>Admin</option>
+              <option value="instructor" {% if u.role == 'instructor' %}selected{% endif %}>Instructor</option>
+              <option value="inventory_clerk" {% if u.role == 'inventory_clerk' %}selected{% endif %}>Inventory Clerk</option>
+              <option value="sales_personnel" {% if u.role == 'sales_personnel' %}selected{% endif %}>Sales Personnel</option>
+            </select>
+            {% else %}
+            <span class="note">Current User</span>
+            {% endif %}
+          </td>
+          <td>
+            {% if u.id != current_user.id %}
+            <form method="post" action="{{ url_for('main.set_status', user_id=u.id) }}" style="display:inline">
+              <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+              {% if u.status != 'active' %}<button class="btn y" name="status" value="active" style="padding:4px 8px; min-height:auto; font-size:11px;">Approve</button>{% endif %}
+              {% if u.status != 'locked' %}<button class="btn o" name="status" value="locked" style="padding:4px 8px; min-height:auto; font-size:11px;">Lock</button>{% endif %}
+            </form>
+            {% endif %}
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
     </table>
   </div>
 </div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+async function updateRole(userId, newRole) {
+  try {
+    const res = await fetch(`/api/users/${userId}/role`, {
+      method: "PUT",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ role: newRole })
+    });
+    const data = await res.json();
+    if (!res.ok) throw new Error(data.error || "Role update failed");
+    alert("Role updated successfully!");
+    location.reload();
+  } catch (err) {
+    alert(err.message);
+  }
+}
+</script>
 {% endblock %}
