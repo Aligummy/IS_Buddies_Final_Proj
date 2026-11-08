@@ -4,23 +4,74 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{% block title %}IS Buddies{% endblock %}</title>
-  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+  <meta name="theme-color" content="#172554">
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css', v='2') }}">
 </head>
 <body>
   <div class="app">
-    <div class="sb">
-      <b>IS Buddies Supplies</b>
-      <i>{{ current_user.role_label }}</i>
-      {% for endpoint, icon, label in nav_items %}
-        <a href="{{ url_for(endpoint) }}"{% if request.endpoint == endpoint %} class="on"{% endif %}>{{ icon }} {{ label }}</a>
-      {% endfor %}
-      <a href="{{ url_for('auth.logout') }}" style="margin-top:auto">🚪 Logout</a>
-    </div>
-    <div class="mn">
-      {% for m in get_flashed_messages() %}<p class="note flash-msg">{{ m }}</p>{% endfor %}
-{% block content %}{% endblock %}
-    </div>
+    {% from '_icons.html' import icon %}
+    <button class="nav-scrim" id="nav-scrim" type="button" aria-label="Close navigation" tabindex="-1"></button>
+    <aside class="sb" id="app-sidebar" aria-label="Main navigation">
+      <a class="brand" href="{{ url_for('main.dashboard') if current_user.role in ['admin', 'instructor'] else url_for('main.inventory') if current_user.role == 'inventory_clerk' else url_for('main.sales') }}">
+        <span class="brand-mark">{{ icon('package', 21) }}</span>
+        <span class="brand-copy"><strong>IS Buddies</strong><small>Supplies &amp; inventory</small></span>
+      </a>
+      <div class="profile-chip">
+        <span class="avatar">{{ current_user.full_name[:1]|upper }}</span>
+        <span><strong>{{ current_user.full_name }}</strong><small>{{ current_user.role_label }}</small></span>
+      </div>
+      <span class="nav-caption">WORKSPACE</span>
+      <nav class="nav-links">
+        {% for endpoint, icon_name, label in nav_items %}
+          <a href="{{ url_for(endpoint) }}"{% if request.endpoint == endpoint %} class="on" aria-current="page"{% endif %}>
+            {{ icon(icon_name, 18) }}<span>{{ label }}</span>
+          </a>
+        {% endfor %}
+      </nav>
+      <a class="logout-link" href="{{ url_for('auth.logout') }}">{{ icon('logout', 18) }}<span>Sign out</span></a>
+      <div class="sidebar-footer">IS Buddies · Inventory workspace</div>
+    </aside>
+    <main class="mn">
+      <header class="mobile-header">
+        <button class="icon-button" id="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false">
+          {{ icon('menu', 21) }}
+        </button>
+        <a class="mobile-brand" href="{{ url_for('main.dashboard') if current_user.role in ['admin', 'instructor'] else url_for('main.inventory') if current_user.role == 'inventory_clerk' else url_for('main.sales') }}">
+          <span class="brand-mark">{{ icon('package', 18) }}</span><strong>IS Buddies</strong>
+        </a>
+        <span class="mobile-role">{{ current_user.role_label }}</span>
+      </header>
+      {% with messages = get_flashed_messages() %}
+        {% for message in messages %}<p class="note flash-msg">{{ message }}</p>{% endfor %}
+      {% endwith %}
+      {% block content %}{% endblock %}
+      <footer class="page-footer">IS Buddies <span>·</span> School &amp; office supplies</footer>
+    </main>
   </div>
+<script>
+(() => {
+  const sidebar = document.getElementById("app-sidebar");
+  const toggle = document.getElementById("nav-toggle");
+  const scrim = document.getElementById("nav-scrim");
+  const closeNav = () => {
+    sidebar.classList.remove("open");
+    scrim.classList.remove("visible");
+    toggle.setAttribute("aria-expanded", "false");
+    document.body.classList.remove("nav-open");
+  };
+  toggle.addEventListener("click", () => {
+    const open = sidebar.classList.toggle("open");
+    scrim.classList.toggle("visible", open);
+    toggle.setAttribute("aria-expanded", String(open));
+    document.body.classList.toggle("nav-open", open);
+  });
+  scrim.addEventListener("click", closeNav);
+  sidebar.querySelectorAll("a").forEach(link => link.addEventListener("click", closeNav));
+  window.addEventListener("resize", () => {
+    if (window.innerWidth > 760) closeNav();
+  });
+})();
+</script>
 {% block scripts %}{% endblock %}
 </body>
 </html>

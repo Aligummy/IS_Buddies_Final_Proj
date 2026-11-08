@@ -2,14 +2,16 @@
 {% block title %}IS Buddies | Sales Transaction{% endblock %}
 {% block content %}
 <div class="top">
-  <h1>Sales Transaction (POS)</h1>
-  <span class="tag">Cashier: {{ current_user.full_name }}</span>
+  <h1>{{ 'Sales Transaction (POS)' if current_user.role != 'instructor' else 'Sales Product View' }}</h1>
+  <span class="tag">{{ 'Cashier: ' ~ current_user.full_name if current_user.role in ['admin', 'sales_personnel'] else 'Read-only' }}</span>
 </div>
 
 <div class="row">
-  <!-- Left Side: Product Selection -->
   <div class="card" style="flex:3">
     <h2>Available Products</h2>
+    {% if current_user.role == 'instructor' %}
+    <p class="note">You can view products here. Sales transactions are available to Admin and Sales Personnel.</p>
+    {% endif %}
     <input id="pos-search" class="in" placeholder="🔍 Search product name or scan SKU..." style="margin-bottom:12px"/>
     <div class="sc" style="max-height:480px; overflow-y:auto;">
       <table>
@@ -20,17 +22,17 @@
             <th>Category</th>
             <th style="text-align:right">Stock</th>
             <th style="text-align:right">Price</th>
-            <th style="text-align:center">Action</th>
+            {% if current_user.role in ['admin', 'sales_personnel'] %}<th style="text-align:center">Action</th>{% endif %}
           </tr>
         </thead>
         <tbody id="pos-products-tbody">
-          <tr><td colspan="6" class="note">Loading available products...</td></tr>
+          <tr><td colspan="{{ 6 if current_user.role in ['admin', 'sales_personnel'] else 5 }}" class="note">Loading available products...</td></tr>
         </tbody>
       </table>
     </div>
   </div>
 
-  <!-- Right Side: Current Order / Cart -->
+  {% if current_user.role in ['admin', 'sales_personnel'] %}
   <div class="card" style="flex:2">
     <h2>Current Order</h2>
     <div class="sc" style="max-height:220px; overflow-y:auto; margin-bottom:12px;">
@@ -61,7 +63,8 @@
     </div>
 
     <label class="f">Customer Name (optional)
-      <input id="pos-customer" class="in" placeholder="e.g. Juan Cruz / Walk-in">
+      <input id="pos-customer" class="in" list="customer-options" placeholder="Search or enter a customer">
+      <datalist id="customer-options"></datalist>
     </label>
 
     <div class="row" style="gap:10px;">
@@ -87,8 +90,10 @@
       <button class="btn o" style="flex:1" onclick="clearCart()">Clear</button>
     </div>
   </div>
+  {% endif %}
 </div>
 
+{% if current_user.role in ['admin', 'sales_personnel'] %}
 <!-- Receipt Modal / Printable Preview -->
 <div id="receipt-card" class="card" style="display:none; margin-top:20px; border:2px solid var(--navy);">
   <div style="display:flex; justify-content:space-between; align-items:center;">
@@ -97,6 +102,7 @@
       <button class="btn y" onclick="window.print()">🖨️ Print Receipt</button>
       <button class="btn o" onclick="document.getElementById('receipt-card').style.display='none'">Close</button>
     </div>
+    {% endif %}
   </div>
   <div id="receipt-content" style="background:#fff; border:1px dashed var(--dashed); padding:20px; border-radius:10px; max-width:420px; margin:15px auto; font-family:monospace; font-size:12px;">
     <!-- Filled dynamically -->
@@ -108,6 +114,26 @@
 <script>
 let products = [];
 let cart = []; // [{ product_id, name, unit_price, qty, stock }]
+const canTransact = {{ 'true' if current_user.role in ['admin', 'sales_personnel'] else 'false' }};
+
+function escapeHTML(value) {
+  return String(value ?? "").replace(/[&<>"']/g, ch => ({
+    "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"
+  }[ch]));
+}
+
+async function loadCustomerOptions() {
+  const response = await fetch("/api/customers");
+  const data = await response.json();
+  if (!response.ok) return;
+  const options = document.getElementById("customer-options");
+  options.replaceChildren();
+  for (const customer of data) {
+    const option = document.createElement("option");
+    option.value = customer.name;
+    options.append(option);
+  }
+}
 
 async function loadPosProducts() {
   const q = document.getElementById("pos-search").value.trim();
@@ -117,24 +143,24 @@ async function loadPosProducts() {
 
   const tbody = document.getElementById("pos-products-tbody");
   if (products.length === 0) {
-    tbody.innerHTML = `<tr><td colspan="6" class="note">No products available.</td></tr>`;
+    tbody.innerHTML = `<tr><td colspan="${canTransact ? 6 : 5}" class="note">No products available.</td></tr>`;
     return;
   }
 
   tbody.innerHTML = products.map(p => `
     <tr>
-      <td><code>${p.sku}</code></td>
-      <td><strong>${p.name}</strong></td>
-      <td><span class="tag">${p.category || 'General'}</span></td>
+      <td><code>${escapeHTML(p.sku)}</code></td>
+      <td><strong>${escapeHTML(p.name)}</strong></td>
+      <td><span class="tag">${escapeHTML(p.category || 'General')}</span></td>
       <td style="text-align:right"><strong>${p.stock}</strong></td>
       <td style="text-align:right">₱ ${p.unit_price.toFixed(2)}</td>
-      <td style="text-align:center">
+      ${canTransact ? `<td style="text-align:center">
         <button class="btn y" style="padding:4px 10px; min-height:auto; font-size:11px;" 
           ${p.stock <= 0 ? 'disabled style="opacity:0.5"' : ''}
           onclick="addToCart(${p.id})">
           ${p.stock <= 0 ? 'Out of Stock' : '+ Add'}
         </button>
-      </td>
+      </td>` : ""}
     </tr>
   `).join("");
 }
@@ -197,7 +223,7 @@ function renderCart() {
   } else {
     tbody.innerHTML = cart.map((item, idx) => `
       <tr>
-        <td><strong>${item.name}</strong><br><small>₱${item.unit_price.toFixed(2)} each</small></td>
+        <td><strong>${escapeHTML(item.name)}</strong><br><small>₱${item.unit_price.toFixed(2)} each</small></td>
         <td style="text-align:center">
           <button class="btn o" style="padding:2px 6px; min-height:auto;" onclick="changeCartQty(${idx}, -1)">-</button>
           <span style="margin:0 6px; font-weight:600;">${item.qty}</span>
@@ -274,14 +300,14 @@ async function submitSale() {
     </div>
     <div>Receipt No: <strong>${data.receipt_no}</strong></div>
     <div>Date: ${new Date().toLocaleString()}</div>
-    <div>Cashier: {{ current_user.full_name }}</div>
-    <div>Customer: ${payload.customer || 'Walk-in'}</div>
-    <div>Payment: ${payload.payment_method}</div>
+    <div>Cashier: ${escapeHTML({{ current_user.full_name|tojson }})}</div>
+    <div>Customer: ${escapeHTML(payload.customer || 'Walk-in')}</div>
+    <div>Payment: ${escapeHTML(payload.payment_method)}</div>
     <hr style="border:none; border-top:1px dashed #000; margin:8px 0;">
     <table style="width:100%; border:none; font-family:monospace;">
       ${cart.map(c => `
         <tr>
-          <td>${c.name} x ${c.qty}</td>
+          <td>${escapeHTML(c.name)} x ${c.qty}</td>
           <td style="text-align:right">₱${(c.qty * c.unit_price).toFixed(2)}</td>
         </tr>
       `).join("")}
@@ -305,6 +331,9 @@ async function submitSale() {
 }
 
 document.getElementById("pos-search").addEventListener("input", loadPosProducts);
-document.addEventListener("DOMContentLoaded", loadPosProducts);
+document.addEventListener("DOMContentLoaded", () => {
+  loadPosProducts();
+  if (canTransact) loadCustomerOptions();
+});
 </script>
 {% endblock %}

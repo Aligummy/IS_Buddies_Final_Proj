@@ -8,10 +8,8 @@ Implements Simple Linear Regression (SLR) and Random Forest for:
 
 Models can be trained, saved (pickle), loaded, and used for prediction.
 """
-import json
 import os
 import pickle
-from datetime import datetime
 
 import numpy as np
 import pandas as pd
@@ -19,7 +17,6 @@ from sklearn.ensemble import RandomForestClassifier, RandomForestRegressor
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import (
     accuracy_score,
-    classification_report,
     mean_absolute_error,
     mean_squared_error,
     precision_score,
@@ -28,7 +25,6 @@ from sklearn.metrics import (
     f1_score,
 )
 from sklearn.model_selection import train_test_split
-from sklearn.preprocessing import LabelEncoder
 
 # Directory where trained models are persisted
 MODEL_DIR = os.path.join(os.path.dirname(__file__), "saved_models")

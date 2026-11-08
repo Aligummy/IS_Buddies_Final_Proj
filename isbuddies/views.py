@@ -1,29 +1,37 @@
 from functools import wraps
+import json
 
 from flask import Blueprint, abort, flash, redirect, render_template, request, url_for
 from flask_login import current_user, login_required
 
 from . import db
-from .models import User, Product, Sale, SaleItem
+from .models import AuditLog, User, Product
 
 bp = Blueprint("main", __name__)
 
 # (endpoint, icon, label) per role -> drives the sidebar in base_app.html
 NAV = {
-    "admin": [("main.dashboard", "📊", "Dashboard"),
-              ("main.inventory", "📦", "Inventory"),
-              ("main.sales", "🛒", "Sales"),
-              ("main.users", "👥", "Users"),
-              ("main.suppliers_page", "🏭", "Suppliers"),
-              ("main.knowledge", "🧠", "Knowledge Analysis")],
-    "instructor": [("main.dashboard", "📊", "Dashboard"),
-                   ("main.inventory", "📦", "Inventory (view)"),
-                   ("main.sales", "🛒", "Sales (view)"),
-                   ("main.knowledge", "🧠", "Knowledge Analysis")],
-    "inventory_clerk": [("main.inventory", "📦", "Inventory"),
-                        ("main.suppliers_page", "🏭", "Suppliers")],
-    "sales_personnel": [("main.sales", "🛒", "Sales"),
-                        ("main.sales_history", "📋", "Sales History")],
+    "admin": [("main.dashboard", "dashboard", "Dashboard"),
+              ("main.inventory", "inventory", "Inventory"),
+              ("main.sales", "sales", "Sales"),
+              ("main.sales_history", "history", "Sales History"),
+              ("main.users", "users", "Users"),
+              ("main.suppliers_page", "suppliers", "Suppliers"),
+              ("main.customers_page", "customers", "Customers"),
+              ("main.reports_page", "reports", "Reports"),
+              ("main.knowledge", "knowledge", "Knowledge Analysis")],
+    "instructor": [("main.dashboard", "dashboard", "Dashboard"),
+                   ("main.inventory", "inventory", "Inventory (view)"),
+                   ("main.sales", "sales", "Sales (view)"),
+                   ("main.sales_history", "history", "Sales History"),
+                   ("main.customers_page", "customers", "Customers"),
+                   ("main.reports_page", "reports", "Reports"),
+                   ("main.knowledge", "knowledge", "Knowledge Analysis")],
+    "inventory_clerk": [("main.inventory", "inventory", "Inventory"),
+                        ("main.suppliers_page", "suppliers", "Suppliers")],
+    "sales_personnel": [("main.sales", "sales", "Sales"),
+                        ("main.sales_history", "history", "Sales History"),
+                        ("main.customers_page", "customers", "Customers")],
 }
 
 
@@ -71,7 +79,11 @@ def sales():
 @bp.route("/sales/history")
 @roles_required("admin", "instructor", "sales_personnel")
 def sales_history():
-    return render_template("sales_history.html")
+    return render_template(
+        "sales_history.html",
+        can_return=current_user.role in ("admin", "sales_personnel"),
+        can_report=current_user.role in ("admin", "instructor"),
+    )
 
 
 @bp.route("/knowledge")
@@ -86,6 +98,21 @@ def suppliers_page():
     return render_template("suppliers.html")
 
 
+@bp.route("/customers")
+@roles_required("admin", "instructor", "sales_personnel")
+def customers_page():
+    return render_template(
+        "customers.html",
+        can_manage=current_user.role in ("admin", "sales_personnel"),
+    )
+
+
+@bp.route("/reports")
+@roles_required("admin", "instructor")
+def reports_page():
+    return render_template("reports.html")
+
+
 @bp.route("/users")
 @roles_required("admin")
 def users():
@@ -96,9 +123,25 @@ def users():
 @roles_required("admin")
 def set_status(user_id):
     user = db.get_or_404(User, user_id)
-    status = request.form["status"]
-    if status in ("active", "locked") and user.id != current_user.id:
+    status = request.form.get("status")
+    if status not in ("active", "locked"):
+        flash("Invalid account status.")
+    elif user.id == current_user.id:
+        flash("You cannot change your own account status.")
+    elif user.role == "admin" and user.status == "active" and status == "locked" and User.query.filter_by(
+        role="admin", status="active"
+    ).count() <= 1:
+        flash("At least one active admin account must remain.")
+    else:
+        previous_status = user.status
         user.status = status
+        db.session.add(AuditLog(
+            user_id=current_user.id,
+            action="change_status",
+            entity_type="user",
+            entity_id=user.id,
+            details=json.dumps({"from": previous_status, "to": status}),
+        ))
         db.session.commit()
         flash(f"{user.username} is now {status}.")
     return redirect(url_for("main.users"))

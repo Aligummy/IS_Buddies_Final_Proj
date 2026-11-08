@@ -1,0 +1,92 @@
+{% extends 'base_app.html' %}
+{% block title %}IS Buddies | Reports{% endblock %}
+{% block content %}
+<div class="top">
+  <h1>Reports & Exports</h1>
+  <span class="tag">Sales and Inventory</span>
+</div>
+
+<div class="card">
+  <h2>Sales Date Range</h2>
+  <div class="row" style="align-items:end; flex-wrap:wrap">
+    <label class="f">From<input id="report-from" class="in" type="date"></label>
+    <label class="f">To<input id="report-to" class="in" type="date"></label>
+    <button class="btn" onclick="loadReports()">Apply</button>
+    <a id="sales-csv" class="btn o" href="/api/reports/sales.csv">Download Sales CSV</a>
+    <a class="btn o" href="/api/reports/inventory.csv">Download Inventory CSV</a>
+  </div>
+</div>
+
+<div class="row">
+  <div class="card"><span class="note">Transactions</span><b class="n" id="report-count">-</b></div>
+  <div class="card"><span class="note">Gross Sales</span><b class="n" id="report-gross">-</b></div>
+  <div class="card"><span class="note">Refunds</span><b class="n" id="report-refunds">-</b></div>
+  <div class="card"><span class="note">Net Sales</span><b class="n" id="report-net">-</b></div>
+</div>
+
+<div class="card">
+  <h2>Inventory Snapshot</h2>
+  <p id="inventory-summary" class="note">Loading inventory report...</p>
+  <div class="sc">
+    <table>
+      <thead><tr><th>SKU</th><th>Product</th><th>Category</th><th style="text-align:right">Stock</th><th style="text-align:right">Unit Price</th><th style="text-align:right">Stock Value</th><th>Status</th></tr></thead>
+      <tbody id="report-products"><tr><td colspan="7" class="note">Loading...</td></tr></tbody>
+    </table>
+  </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+function money(value) {
+  return "₱ " + Number(value || 0).toLocaleString("en-PH", {minimumFractionDigits: 2, maximumFractionDigits: 2});
+}
+
+async function loadReports() {
+  const params = new URLSearchParams();
+  const from = document.getElementById("report-from").value;
+  const to = document.getElementById("report-to").value;
+  if (from) params.set("date_from", from);
+  if (to) params.set("date_to", to);
+  const query = params.toString();
+  document.getElementById("sales-csv").href = `/api/reports/sales.csv${query ? `?${query}` : ""}`;
+  const response = await fetch(`/api/reports/sales${query ? `?${query}` : ""}`);
+  const sales = await response.json();
+  if (!response.ok) {
+    alert(sales.error || "Could not load sales report.");
+    return;
+  }
+  document.getElementById("report-count").textContent = sales.transaction_count;
+  document.getElementById("report-gross").textContent = money(sales.gross_sales);
+  document.getElementById("report-refunds").textContent = money(sales.refunds);
+  document.getElementById("report-net").textContent = money(sales.net_sales);
+
+  const inventoryResponse = await fetch("/api/reports/inventory");
+  const inventory = await inventoryResponse.json();
+  if (!inventoryResponse.ok) {
+    document.getElementById("inventory-summary").textContent = inventory.error || "Could not load inventory report.";
+    return;
+  }
+  document.getElementById("inventory-summary").textContent =
+    `${inventory.product_count} products · ${inventory.low_stock_count} low-stock · ${money(inventory.inventory_value)} total stock value`;
+  const body = document.getElementById("report-products");
+  body.replaceChildren();
+  for (const product of inventory.products) {
+    const row = body.insertRow();
+    for (const value of [
+      product.sku, product.name, product.category || "-", product.stock,
+      money(product.unit_price), money(product.inventory_value), product.status
+    ]) row.insertCell().textContent = value;
+  }
+  if (!inventory.products.length) {
+    const row = body.insertRow();
+    const cell = row.insertCell();
+    cell.colSpan = 7;
+    cell.className = "note";
+    cell.textContent = "No products recorded.";
+  }
+}
+
+document.addEventListener("DOMContentLoaded", loadReports);
+</script>
+{% endblock %}

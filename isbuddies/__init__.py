@@ -1,7 +1,7 @@
 import click
 from sqlalchemy import create_engine, text
 from sqlalchemy.engine import make_url
-from flask import Flask
+from flask import Flask, jsonify, redirect, request, url_for
 from flask_login import LoginManager
 from flask_sqlalchemy import SQLAlchemy
 from flask_wtf.csrf import CSRFProtect
@@ -9,14 +9,19 @@ from flask_wtf.csrf import CSRFProtect
 from config import Config
 
 def ensure_database(uri):
-    """Create the MySQL database if it does not exist yet."""
+    """Create the configured MySQL database if it does not exist yet."""
     url = make_url(uri)
+    if url.get_backend_name() != "mysql" or not url.database:
+        return
     server = create_engine(url._replace(database=None))
-    with server.begin() as conn:
-        conn.execute(text(
-            f"CREATE DATABASE IF NOT EXISTS `{url.database}` "
-            "CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci"))
-    server.dispose()
+    try:
+        database_name = url.database.replace("`", "``")
+        with server.begin() as conn:
+            conn.execute(text(
+                f"CREATE DATABASE IF NOT EXISTS `{database_name}` "
+                "CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci"))
+    finally:
+        server.dispose()
 
 
 db = SQLAlchemy()
@@ -33,6 +38,12 @@ def create_app():
     csrf.init_app(app)
     login_manager.init_app(app)
     login_manager.login_view = "auth.login"
+
+    @login_manager.unauthorized_handler
+    def handle_unauthorized():
+        if request.blueprint == "api":
+            return jsonify({"error": "Authentication required."}), 401
+        return redirect(url_for(login_manager.login_view, next=request.url))
 
     from .auth import bp as auth_bp
     from .views import bp as main_bp

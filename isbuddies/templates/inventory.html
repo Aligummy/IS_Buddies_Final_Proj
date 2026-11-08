@@ -21,6 +21,22 @@
 </div>
 
 <div class="row">
+  <div class="card" style="flex:1">
+    <h2>Low-Stock Alerts <span class="tag" id="low-stock-count">0</span></h2>
+    <div class="sc"><table><thead><tr><th>SKU</th><th>Product</th><th>Stock</th><th>Reorder At</th></tr></thead>
+      <tbody id="low-stock-tbody"><tr><td colspan="4" class="note">Loading alerts...</td></tr></tbody>
+    </table></div>
+  </div>
+  <div class="card" style="flex:2">
+    <h2>Recent Stock Movements</h2>
+    <div class="sc"><table><thead><tr><th>Date</th><th>Product</th><th>Change</th><th>Reason</th><th>User</th></tr></thead>
+      <tbody id="stock-movements-tbody"><tr><td colspan="5" class="note">Loading stock history...</td></tr></tbody>
+    </table></div>
+    <button id="stock-movements-older" class="btn o" style="margin-top:10px;display:none" onclick="loadStockMovements(stockPage + 1)">Older</button>
+  </div>
+</div>
+
+<div class="row">
   <!-- Products Table Card -->
   <div class="card" style="flex:3">
     <h2>Product Catalog</h2>
@@ -102,8 +118,16 @@
 {% block scripts %}
 <script>
 let currentPage = 1;
+let stockPage = 1;
+let loadedProducts = [];
 const userRole = "{{ current_user.role }}";
 const canEdit = userRole === 'admin' || userRole === 'inventory_clerk';
+
+function escapeHTML(value) {
+  return String(value ?? "").replace(/[&<>"']/g, ch => ({
+    "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"
+  }[ch]));
+}
 
 async function loadProducts(page = 1) {
   currentPage = page;
@@ -116,28 +140,33 @@ async function loadProducts(page = 1) {
   const res = await fetch(`/api/products?${params}`);
   const data = await res.json();
   const tbody = document.getElementById("products-tbody");
+  if (!res.ok) {
+    tbody.innerHTML = `<tr><td colspan="${canEdit ? 9 : 8}" class="note">${escapeHTML(data.error || "Could not load products.")}</td></tr>`;
+    return;
+  }
+  loadedProducts = data.products || [];
 
-  if (!data.products || data.products.length === 0) {
+  if (loadedProducts.length === 0) {
     tbody.innerHTML = `<tr><td colspan="${canEdit ? 9 : 8}" class="note">No products found.</td></tr>`;
     document.getElementById("inv-count-info").textContent = "0 products";
     document.getElementById("inv-pagination").innerHTML = "";
     return;
   }
 
-  tbody.innerHTML = data.products.map(p => `
+  tbody.innerHTML = loadedProducts.map(p => `
     <tr>
-      <td><code>${p.sku}</code></td>
-      <td><strong>${p.name}</strong></td>
-      <td><span class="tag">${p.category || 'General'}</span></td>
-      <td>${p.supplier || '-'}</td>
+      <td><code>${escapeHTML(p.sku)}</code></td>
+      <td><strong>${escapeHTML(p.name)}</strong></td>
+      <td><span class="tag">${escapeHTML(p.category || 'General')}</span></td>
+      <td>${escapeHTML(p.supplier || '-')}</td>
       <td style="text-align:right"><strong>${p.stock}</strong></td>
       <td style="text-align:right">${p.reorder_level}</td>
       <td style="text-align:right">₱ ${p.unit_price.toFixed(2)}</td>
-      <td><span class="p ${p.status_class}">${p.status}</span></td>
+      <td><span class="p ${escapeHTML(p.status_class)}">${escapeHTML(p.status)}</span></td>
       ${canEdit ? `
         <td>
-          <button class="btn o" style="padding:4px 8px; min-height:auto; font-size:11px;" onclick='editProduct(${JSON.stringify(p)})'>Edit</button>
-          <button class="btn y" style="padding:4px 8px; min-height:auto; font-size:11px;" onclick="restockModal(${p.id}, '${p.name}')">+Stock</button>
+          <button class="btn o" style="padding:4px 8px; min-height:auto; font-size:11px;" onclick="editProductById(${p.id})">Edit</button>
+          <button class="btn y" style="padding:4px 8px; min-height:auto; font-size:11px;" onclick="restockModal(${p.id})">+Stock</button>
           <button class="btn" style="padding:4px 8px; min-height:auto; font-size:11px; background:var(--bad-bg); color:var(--bad-text);" onclick="deleteProduct(${p.id})">✕</button>
         </td>
       ` : ''}
@@ -170,7 +199,9 @@ function resetForm() {
   document.getElementById("prod-sku").disabled = false;
 }
 
-function editProduct(p) {
+function editProductById(id) {
+  const p = loadedProducts.find(product => product.id === id);
+  if (!p) return;
   document.getElementById("form-heading").textContent = "Edit Product";
   document.getElementById("prod-id").value = p.id;
   document.getElementById("prod-sku").value = p.sku;
@@ -213,6 +244,7 @@ async function handleSaveProduct(e) {
 
   resetForm();
   loadProducts(currentPage);
+  loadInventoryInsights();
 }
 
 async function deleteProduct(id) {
@@ -224,9 +256,13 @@ async function deleteProduct(id) {
     return;
   }
   loadProducts(currentPage);
+  loadInventoryInsights();
 }
 
-async function restockModal(id, name) {
+async function restockModal(id) {
+  const product = loadedProducts.find(item => item.id === id);
+  if (!product) return;
+  const name = product.name;
   const qtyStr = prompt(`Add stock quantity for "${name}":`, "10");
   if (!qtyStr) return;
   const qty = parseInt(qtyStr, 10);
@@ -245,11 +281,66 @@ async function restockModal(id, name) {
     return;
   }
   loadProducts(currentPage);
+  loadInventoryInsights();
+}
+
+async function loadInventoryInsights() {
+  const alertsResponse = await fetch("/api/inventory/low-stock");
+  const alerts = await alertsResponse.json();
+  const alertBody = document.getElementById("low-stock-tbody");
+  document.getElementById("low-stock-count").textContent = alerts.count ?? "!";
+  alertBody.replaceChildren();
+  if (!alertsResponse.ok || !alerts.products?.length) {
+    const row = alertBody.insertRow();
+    const cell = row.insertCell();
+    cell.colSpan = 4;
+    cell.className = "note";
+    cell.textContent = alertsResponse.ok ? "All products are above their reorder level." : (alerts.error || "Could not load alerts.");
+  } else {
+    for (const product of alerts.products) {
+      const row = alertBody.insertRow();
+      for (const value of [product.sku, product.name, product.stock, product.reorder_level]) {
+        row.insertCell().textContent = value;
+      }
+    }
+  }
+
+  await loadStockMovements(1);
+}
+
+async function loadStockMovements(page) {
+  const movementsResponse = await fetch(`/api/stock-movements?page=${page}&per_page=8`);
+  const movements = await movementsResponse.json();
+  const movementBody = document.getElementById("stock-movements-tbody");
+  const olderButton = document.getElementById("stock-movements-older");
+  movementBody.replaceChildren();
+  if (!movementsResponse.ok || !movements.movements?.length) {
+    const row = movementBody.insertRow();
+    const cell = row.insertCell();
+    cell.colSpan = 5;
+    cell.className = "note";
+    cell.textContent = movementsResponse.ok ? "No stock movements recorded." : (movements.error || "Could not load stock history.");
+    olderButton.style.display = "none";
+  } else {
+    stockPage = movements.page;
+    for (const movement of movements.movements) {
+      const row = movementBody.insertRow();
+      for (const value of [movement.created_at, `${movement.product} (${movement.sku})`,
+        movement.change > 0 ? `+${movement.change}` : movement.change,
+        movement.reason || "-", movement.user]) {
+        row.insertCell().textContent = value;
+      }
+    }
+    olderButton.style.display = stockPage < movements.pages ? "inline-flex" : "none";
+  }
 }
 
 document.getElementById("inv-search").addEventListener("input", () => loadProducts(1));
 document.getElementById("inv-category-filter").addEventListener("change", () => loadProducts(1));
 
-document.addEventListener("DOMContentLoaded", () => loadProducts(1));
+document.addEventListener("DOMContentLoaded", () => {
+  loadProducts(1);
+  loadInventoryInsights();
+});
 </script>
 {% endblock %}

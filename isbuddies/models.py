@@ -69,6 +69,8 @@ class Sale(db.Model):
     created_at = db.Column(db.DateTime, default=datetime.utcnow, index=True)
     cashier_id = db.Column(db.ForeignKey("users.id"))
     cashier = db.relationship("User", backref="sales")
+    customer_id = db.Column(db.ForeignKey("customer.id"))
+    customer_record = db.relationship("Customer", backref="sales")
     customer = db.Column(db.String(120))
     payment_method = db.Column(db.String(32), default="Cash")
     amount_tendered = db.Column(db.Numeric(10, 2), default=0)
@@ -91,6 +93,7 @@ class SaleItem(db.Model):
     product_id = db.Column(db.ForeignKey("product.id"), nullable=False)
     product = db.relationship("Product")
     qty = db.Column(db.Integer, nullable=False)
+    returned_qty = db.Column(db.Integer, default=0, nullable=False)
     unit_price = db.Column(db.Numeric(10, 2), nullable=False)
 
     @property
@@ -120,6 +123,70 @@ class Supplier(db.Model):
     email = db.Column(db.String(120))
     address = db.Column(db.Text)
     created_at = db.Column(db.DateTime, default=datetime.utcnow)
+
+
+class Customer(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(120), nullable=False, index=True)
+    email = db.Column(db.String(120))
+    phone = db.Column(db.String(32))
+    created_at = db.Column(db.DateTime, default=datetime.utcnow)
+
+
+class PurchaseOrder(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    supplier_id = db.Column(db.ForeignKey("supplier.id"), nullable=False)
+    supplier = db.relationship("Supplier")
+    user_id = db.Column(db.ForeignKey("users.id"), nullable=False)
+    user = db.relationship("User")
+    status = db.Column(db.String(16), nullable=False, default="ordered")
+    note = db.Column(db.String(255))
+    created_at = db.Column(db.DateTime, default=datetime.utcnow)
+    received_at = db.Column(db.DateTime)
+    items = db.relationship("PurchaseOrderItem", backref="order",
+                            cascade="all, delete-orphan")
+
+
+class PurchaseOrderItem(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    order_id = db.Column(db.ForeignKey("purchase_order.id"), nullable=False)
+    product_id = db.Column(db.ForeignKey("product.id"), nullable=False)
+    product = db.relationship("Product")
+    quantity_ordered = db.Column(db.Integer, nullable=False)
+    unit_cost = db.Column(db.Numeric(10, 2), nullable=False)
+
+
+class SaleReturn(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    sale_id = db.Column(db.ForeignKey("sale.id"), nullable=False)
+    sale = db.relationship("Sale", backref="returns")
+    user_id = db.Column(db.ForeignKey("users.id"), nullable=False)
+    user = db.relationship("User")
+    reason = db.Column(db.String(255))
+    refund_amount = db.Column(db.Numeric(10, 2), nullable=False, default=0)
+    created_at = db.Column(db.DateTime, default=datetime.utcnow)
+    items = db.relationship("SaleReturnItem", backref="sale_return",
+                            cascade="all, delete-orphan")
+
+
+class SaleReturnItem(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    return_id = db.Column(db.ForeignKey("sale_return.id"), nullable=False)
+    sale_item_id = db.Column(db.ForeignKey("sale_item.id"), nullable=False)
+    sale_item = db.relationship("SaleItem")
+    qty = db.Column(db.Integer, nullable=False)
+    unit_price = db.Column(db.Numeric(10, 2), nullable=False)
+
+
+class AuditLog(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    user_id = db.Column(db.ForeignKey("users.id"))
+    user = db.relationship("User")
+    action = db.Column(db.String(64), nullable=False)
+    entity_type = db.Column(db.String(64), nullable=False)
+    entity_id = db.Column(db.Integer)
+    details = db.Column(db.Text)
+    created_at = db.Column(db.DateTime, default=datetime.utcnow, index=True)
 
 
 class PredictionLog(db.Model):

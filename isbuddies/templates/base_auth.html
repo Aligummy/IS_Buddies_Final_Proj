@@ -4,15 +4,23 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{% block title %}IS Buddies{% endblock %}</title>
-  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css', v='2') }}">
 </head>
 <body>
   <main class="auth">
-    <!-- Brand panel -->
     <section class="auth-brand">
-      <div class="auth-logo"></div>
+      {% from '_icons.html' import icon %}
+      <a class="auth-brand-mark" href="{{ url_for('auth.login') }}">{{ icon('package', 28) }}</a>
+      <span class="auth-eyebrow">YOUR STORE, IN SYNC</span>
       <h1>IS Buddies<br>School &amp; Office Supplies</h1>
-      <p>Inventory, sales and demand prediction in one place.</p>
+      <p>One simple workspace for your products, sales and stock.</p>
+      <div class="auth-feature-list">
+        <span>{{ icon('inventory', 18) }} Inventory that stays organized</span>
+        <span>{{ icon('sales', 18) }} Checkout that keeps moving</span>
+        <span>{{ icon('reports', 18) }} Insights for smarter decisions</span>
+      </div>
+      <div class="auth-decoration auth-decoration-one"></div>
+      <div class="auth-decoration auth-decoration-two"></div>
     </section>
 
     <section class="auth-panel">

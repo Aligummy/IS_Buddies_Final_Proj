@@ -1,29 +1,30 @@
 {% extends 'base_app.html' %}
 {% block title %}IS Buddies | Dashboard{% endblock %}
 {% block content %}
+{% from '_icons.html' import icon %}
 <div class="top">
-  <h1>Dashboard</h1>
+  <h1>{{ icon('dashboard', 24) }} Dashboard</h1>
   <span class="tag">{{ current_user.role_label }} Overview</span>
 </div>
 
 <div class="row">
   <div class="card">
-    <span class="ic c"></span>
+    <span class="ic c">{{ icon('trend', 20) }}</span>
     Sales Today
     <b class="n" id="stat-sales-today">₱ 0.00</b>
   </div>
   <div class="card">
-    <span class="ic d"></span>
+    <span class="ic d">{{ icon('alert', 20) }}</span>
     Low-Stock Items
     <b class="n" id="stat-low-stock">0</b>
   </div>
   <div class="card">
-    <span class="ic"></span>
+    <span class="ic">{{ icon('inventory', 20) }}</span>
     Total Products
     <b class="n" id="stat-total-products">0</b>
   </div>
   <div class="card">
-    <span class="ic b"></span>
+    <span class="ic b">{{ icon('sales', 20) }}</span>
     Top Best-Seller
     <b class="n" id="stat-best-seller" style="font-size:16px; margin-top:8px;">-</b>
   </div>
@@ -89,6 +90,12 @@
 
 {% block scripts %}
 <script>
+function escapeHTML(value) {
+  return String(value ?? "").replace(/[&<>"']/g, ch => ({
+    "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"
+  }[ch]));
+}
+
 document.addEventListener("DOMContentLoaded", async () => {
   try {
     const res = await fetch("/api/dashboard/stats");
@@ -105,7 +112,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     if (data.top_products && data.top_products.length > 0) {
       topTbody.innerHTML = data.top_products.map(p => `
         <tr>
-          <td><strong>${p.name}</strong></td>
+          <td><strong>${escapeHTML(p.name)}</strong></td>
           <td style="text-align:right"><span class="p g">${p.qty}</span></td>
         </tr>
       `).join("");
@@ -118,8 +125,8 @@ document.addEventListener("DOMContentLoaded", async () => {
     if (data.slow_products && data.slow_products.length > 0) {
       slowTbody.innerHTML = data.slow_products.map(p => `
         <tr>
-          <td>${p.name}</td>
-          <td><span class="tag">${p.category || 'General'}</span></td>
+          <td>${escapeHTML(p.name)}</td>
+          <td><span class="tag">${escapeHTML(p.category || 'General')}</span></td>
           <td style="text-align:right"><strong>${p.stock}</strong></td>
         </tr>
       `).join("");
@@ -132,9 +139,9 @@ document.addEventListener("DOMContentLoaded", async () => {
     if (data.recent_sales && data.recent_sales.length > 0) {
       recTbody.innerHTML = data.recent_sales.map(s => `
         <tr>
-          <td><strong>${s.receipt_no}</strong></td>
-          <td>${s.cashier}</td>
-          <td>${s.date}</td>
+          <td><strong>${escapeHTML(s.receipt_no)}</strong></td>
+          <td>${escapeHTML(s.cashier)}</td>
+          <td>${escapeHTML(s.date)}</td>
           <td style="text-align:right"><strong>₱ ${Number(s.total).toFixed(2)}</strong></td>
         </tr>
       `).join("");

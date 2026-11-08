@@ -1,0 +1,181 @@
+{% extends 'base_app.html' %}
+{% block title %}IS Buddies | Customers{% endblock %}
+{% block content %}
+<div class="top">
+  <h1>Customer Directory</h1>
+  <span class="tag">Customer History</span>
+</div>
+
+<div class="row">
+  <div class="card" style="flex:2">
+    <div class="row" style="align-items:center">
+      <h2 style="flex:1">Customers</h2>
+      <input id="customer-search" class="in" style="max-width:260px" placeholder="Search customers...">
+    </div>
+    <div class="sc">
+      <table>
+        <thead><tr><th>Name</th><th>Email</th><th>Phone</th><th>Sales</th><th>History</th>{% if can_manage %}<th>Actions</th>{% endif %}</tr></thead>
+        <tbody id="customers-tbody"><tr><td colspan="{{ 6 if can_manage else 5 }}" class="note">Loading customers...</td></tr></tbody>
+      </table>
+    </div>
+  </div>
+
+  {% if can_manage %}
+  <div class="card" style="flex:1; min-width:260px">
+    <h2 id="customer-form-title">Add Customer</h2>
+    <form id="customer-form" onsubmit="saveCustomer(event)">
+      <input id="customer-id" type="hidden">
+      <label class="f">Name<input id="customer-name" class="in" maxlength="120" required></label>
+      <label class="f">Email<input id="customer-email" class="in" type="email" maxlength="120"></label>
+      <label class="f">Phone<input id="customer-phone" class="in" maxlength="32"></label>
+      <div class="row">
+        <button class="btn" type="submit">Save Customer</button>
+        <button class="btn o" type="button" onclick="resetCustomerForm()">Clear</button>
+      </div>
+    </form>
+  </div>
+  {% endif %}
+</div>
+
+<div class="card">
+  <h2 id="customer-history-title">Customer Sales History</h2>
+  <div class="sc"><table>
+    <thead><tr><th>Receipt</th><th>Date</th><th>Payment</th><th>Total</th><th>Refunds</th></tr></thead>
+    <tbody id="customer-history-tbody"><tr><td colspan="5" class="note">Choose a customer to view sales.</td></tr></tbody>
+  </table></div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+const canManageCustomers = {{ 'true' if can_manage else 'false' }};
+let customers = [];
+
+async function loadCustomers() {
+  const query = document.getElementById("customer-search").value.trim();
+  const response = await fetch(`/api/customers?q=${encodeURIComponent(query)}`);
+  const data = await response.json();
+  const body = document.getElementById("customers-tbody");
+  if (!response.ok) {
+    body.replaceChildren();
+    const row = body.insertRow();
+    const cell = row.insertCell();
+    cell.colSpan = canManageCustomers ? 6 : 5;
+    cell.className = "note";
+    cell.textContent = data.error || "Could not load customers.";
+    return;
+  }
+  customers = data;
+  body.replaceChildren();
+  if (!customers.length) {
+    const row = body.insertRow();
+    const cell = row.insertCell();
+    cell.colSpan = canManageCustomers ? 6 : 5;
+    cell.className = "note";
+    cell.textContent = "No customers found.";
+    return;
+  }
+  for (const customer of customers) {
+    const row = body.insertRow();
+    for (const value of [customer.name, customer.email || "-", customer.phone || "-", customer.sales_count]) {
+      row.insertCell().textContent = value;
+    }
+    const historyCell = row.insertCell();
+    const historyButton = document.createElement("button");
+    historyButton.className = "btn o";
+    historyButton.textContent = "View";
+    historyButton.onclick = () => loadCustomerSales(customer.id);
+    historyCell.append(historyButton);
+    if (canManageCustomers) {
+      const actions = row.insertCell();
+      const edit = document.createElement("button");
+      edit.className = "btn o";
+      edit.textContent = "Edit";
+      edit.onclick = () => editCustomer(customer.id);
+      actions.append(edit, " ");
+      const remove = document.createElement("button");
+      remove.className = "btn o";
+      remove.textContent = "Delete";
+      remove.onclick = () => deleteCustomer(customer.id);
+      actions.append(remove);
+    }
+  }
+}
+
+async function loadCustomerSales(id) {
+  const body = document.getElementById("customer-history-tbody");
+  const response = await fetch(`/api/customers/${id}/sales`);
+  const data = await response.json();
+  document.getElementById("customer-history-title").textContent =
+    response.ok ? `Sales History: ${data.customer}` : "Customer Sales History";
+  body.replaceChildren();
+  if (!response.ok || !data.sales.length) {
+    const row = body.insertRow();
+    const cell = row.insertCell();
+    cell.colSpan = 5;
+    cell.className = "note";
+    cell.textContent = response.ok ? "No sales linked to this customer." : (data.error || "Could not load sales history.");
+    return;
+  }
+  for (const sale of data.sales) {
+    const row = body.insertRow();
+    for (const value of [sale.receipt_no, sale.created_at, sale.payment_method,
+      `₱ ${Number(sale.total).toFixed(2)}`, `₱ ${Number(sale.refunds).toFixed(2)}`]) {
+      row.insertCell().textContent = value;
+    }
+  }
+}
+
+function resetCustomerForm() {
+  document.getElementById("customer-form").reset();
+  document.getElementById("customer-id").value = "";
+  document.getElementById("customer-form-title").textContent = "Add Customer";
+}
+
+function editCustomer(id) {
+  const customer = customers.find(item => item.id === id);
+  if (!customer) return;
+  document.getElementById("customer-id").value = customer.id;
+  document.getElementById("customer-name").value = customer.name;
+  document.getElementById("customer-email").value = customer.email || "";
+  document.getElementById("customer-phone").value = customer.phone || "";
+  document.getElementById("customer-form-title").textContent = "Edit Customer";
+}
+
+async function saveCustomer(event) {
+  event.preventDefault();
+  const id = document.getElementById("customer-id").value;
+  const payload = {
+    name: document.getElementById("customer-name").value.trim(),
+    email: document.getElementById("customer-email").value.trim(),
+    phone: document.getElementById("customer-phone").value.trim()
+  };
+  const response = await fetch(id ? `/api/customers/${id}` : "/api/customers", {
+    method: id ? "PUT" : "POST",
+    headers: {"Content-Type": "application/json"},
+    body: JSON.stringify(payload)
+  });
+  const data = await response.json();
+  if (!response.ok) {
+    alert(data.error || "Could not save customer.");
+    return;
+  }
+  resetCustomerForm();
+  loadCustomers();
+}
+
+async function deleteCustomer(id) {
+  if (!confirm("Delete this customer?")) return;
+  const response = await fetch(`/api/customers/${id}`, {method: "DELETE"});
+  const data = await response.json();
+  if (!response.ok) {
+    alert(data.error || "Could not delete customer.");
+    return;
+  }
+  loadCustomers();
+}
+
+document.getElementById("customer-search").addEventListener("input", loadCustomers);
+document.addEventListener("DOMContentLoaded", loadCustomers);
+</script>
+{% endblock %}

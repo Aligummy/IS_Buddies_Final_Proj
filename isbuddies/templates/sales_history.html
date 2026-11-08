@@ -8,6 +8,14 @@
 
 <div class="card">
   <h2>Transaction Log</h2>
+  <div class="row" style="align-items:end; flex-wrap:wrap">
+    <label class="f">From<input id="sales-date-from" class="in" type="date"></label>
+    <label class="f">To<input id="sales-date-to" class="in" type="date"></label>
+    <label class="f">Customer / Receipt<input id="sales-search" class="in" placeholder="Search..."></label>
+    <button class="btn" onclick="loadSales(1)">Filter</button>
+    <button class="btn o" onclick="clearFilters()">Clear</button>
+    {% if can_report %}<a id="sales-export" class="btn o" href="/api/reports/sales.csv">Export CSV</a>{% endif %}
+  </div>
   <div class="sc">
     <table>
       <thead>
@@ -47,13 +55,43 @@
 {% block scripts %}
 <script>
 let currentPage = 1;
+const canReturn = {{ 'true' if can_return else 'false' }};
+
+function escapeHTML(value) {
+  return String(value ?? "").replace(/[&<>"']/g, ch => ({
+    "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"
+  }[ch]));
+}
+
+function filterParams(page) {
+  const params = new URLSearchParams({page, per_page: 15});
+  const dateFrom = document.getElementById("sales-date-from").value;
+  const dateTo = document.getElementById("sales-date-to").value;
+  const search = document.getElementById("sales-search").value.trim();
+  if (dateFrom) params.set("date_from", dateFrom);
+  if (dateTo) params.set("date_to", dateTo);
+  if (search) params.set("q", search);
+  return params;
+}
 
 async function loadSales(page = 1) {
   currentPage = page;
-  const res = await fetch(`/api/sales?page=${page}&per_page=15`);
+  const params = filterParams(page);
+  const res = await fetch(`/api/sales?${params}`);
   const data = await res.json();
   const tbody = document.getElementById("sales-history-tbody");
 
+  {% if can_report %}
+  const exportParams = new URLSearchParams();
+  if (document.getElementById("sales-date-from").value) exportParams.set("date_from", document.getElementById("sales-date-from").value);
+  if (document.getElementById("sales-date-to").value) exportParams.set("date_to", document.getElementById("sales-date-to").value);
+  document.getElementById("sales-export").href = `/api/reports/sales.csv${exportParams.toString() ? `?${exportParams}` : ""}`;
+  {% endif %}
+
+  if (!res.ok) {
+    tbody.innerHTML = `<tr><td colspan="8" class="note">${escapeHTML(data.error || "Could not load sales.")}</td></tr>`;
+    return;
+  }
   if (!data.sales || data.sales.length === 0) {
     tbody.innerHTML = `<tr><td colspan="8" class="note">No transaction history found.</td></tr>`;
     return;
@@ -61,11 +99,11 @@ async function loadSales(page = 1) {
 
   tbody.innerHTML = data.sales.map(s => `
     <tr>
-      <td><strong>${s.receipt_no}</strong></td>
-      <td>${s.created_at}</td>
-      <td>${s.cashier}</td>
-      <td>${s.customer}</td>
-      <td><span class="tag">${s.payment_method}</span></td>
+      <td><strong>${escapeHTML(s.receipt_no)}</strong></td>
+      <td>${escapeHTML(s.created_at)}</td>
+      <td>${escapeHTML(s.cashier)}</td>
+      <td>${escapeHTML(s.customer)}</td>
+      <td><span class="tag">${escapeHTML(s.payment_method)}</span></td>
       <td style="text-align:right">₱ ${s.discount.toFixed(2)}</td>
       <td style="text-align:right"><strong>₱ ${s.total.toFixed(2)}</strong></td>
       <td style="text-align:center">
@@ -91,33 +129,38 @@ async function loadSales(page = 1) {
 async function viewSale(id) {
   const res = await fetch(`/api/sales/${id}`);
   const s = await res.json();
+  if (!res.ok) {
+    alert(s.error || "Could not load sale.");
+    return;
+  }
   const card = document.getElementById("sale-detail-card");
   document.getElementById("sale-detail-title").textContent = `Transaction ${s.receipt_no}`;
+  const returnRows = s.items.map(i => `
+    <tr>
+      <td>${escapeHTML(i.product)}</td>
+      <td style="text-align:center">${i.qty}</td>
+      <td style="text-align:center">${i.returned_qty}</td>
+      <td style="text-align:right">₱ ${i.unit_price.toFixed(2)}</td>
+      ${canReturn ? `<td><input class="in return-qty" type="number" min="0" max="${i.qty - i.returned_qty}" value="0" data-sale-item-id="${i.sale_item_id}" style="width:80px" ${i.qty === i.returned_qty ? "disabled" : ""}></td>` : ""}
+    </tr>`).join("");
 
   document.getElementById("sale-detail-body").innerHTML = `
     <div class="row" style="margin-bottom:12px;">
       <div style="flex:1;">
-        <p><strong>Date:</strong> ${s.created_at}</p>
-        <p><strong>Cashier:</strong> ${s.cashier}</p>
+        <p><strong>Date:</strong> ${escapeHTML(s.created_at)}</p>
+        <p><strong>Cashier:</strong> ${escapeHTML(s.cashier)}</p>
       </div>
       <div style="flex:1;">
-        <p><strong>Customer:</strong> ${s.customer}</p>
-        <p><strong>Payment Method:</strong> ${s.payment_method}</p>
+        <p><strong>Customer:</strong> ${escapeHTML(s.customer)}</p>
+        <p><strong>Payment Method:</strong> ${escapeHTML(s.payment_method)}</p>
       </div>
     </div>
     <table style="margin-bottom:12px;">
       <thead>
-        <tr><th>Product</th><th style="text-align:center">Qty</th><th style="text-align:right">Unit Price</th><th style="text-align:right">Subtotal</th></tr>
+        <tr><th>Product</th><th style="text-align:center">Qty</th><th style="text-align:center">Returned</th><th style="text-align:right">Unit Price</th>${canReturn ? "<th>Return Qty</th>" : ""}</tr>
       </thead>
       <tbody>
-        ${s.items.map(i => `
-          <tr>
-            <td>${i.product}</td>
-            <td style="text-align:center">${i.qty}</td>
-            <td style="text-align:right">₱ ${i.unit_price.toFixed(2)}</td>
-            <td style="text-align:right">₱ ${i.subtotal.toFixed(2)}</td>
-          </tr>
-        `).join("")}
+        ${returnRows}
       </tbody>
     </table>
     <div style="text-align:right; font-size:14px;">
@@ -125,11 +168,43 @@ async function viewSale(id) {
       <div style="font-size:16px; font-weight:bold; color:var(--navy); margin-top:4px;">Grand Total: ₱ ${s.total.toFixed(2)}</div>
       <div>Amount Tendered: ₱ ${s.amount_tendered.toFixed(2)}</div>
       <div>Change: ₱ ${s.change.toFixed(2)}</div>
+      <div>Total refunded: ₱ ${(s.returns || []).reduce((total, item) => total + item.refund_amount, 0).toFixed(2)}</div>
     </div>
+    ${canReturn ? `<div class="row" style="justify-content:flex-end;margin-top:12px"><button class="btn y" onclick="submitReturn(${s.id})">Record Return</button></div>` : ""}
   `;
 
   card.style.display = "block";
   card.scrollIntoView({ behavior: 'smooth' });
+}
+
+async function submitReturn(saleId) {
+  const items = [...document.querySelectorAll(".return-qty")]
+    .map(input => ({sale_item_id: Number(input.dataset.saleItemId), qty: Number(input.value)}))
+    .filter(item => item.qty > 0);
+  if (!items.length) {
+    alert("Enter a return quantity for at least one item.");
+    return;
+  }
+  const reason = prompt("Return reason (optional):", "") || "";
+  const response = await fetch(`/api/sales/${saleId}/returns`, {
+    method: "POST",
+    headers: {"Content-Type": "application/json"},
+    body: JSON.stringify({items, reason})
+  });
+  const data = await response.json();
+  if (!response.ok) {
+    alert(data.error || "Could not record return.");
+    return;
+  }
+  alert(`Return recorded. Refund: ₱ ${Number(data.refund_amount).toFixed(2)}`);
+  await Promise.all([loadSales(currentPage), viewSale(saleId)]);
+}
+
+function clearFilters() {
+  document.getElementById("sales-date-from").value = "";
+  document.getElementById("sales-date-to").value = "";
+  document.getElementById("sales-search").value = "";
+  loadSales(1);
 }
 
 document.addEventListener("DOMContentLoaded", () => loadSales(1));

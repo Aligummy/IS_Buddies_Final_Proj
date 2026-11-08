@@ -1,9 +1,15 @@
 """
 Database Seeder for IS Buddies (School & Office Supplies)
 Seeds realistic initial products, suppliers, and instructor account.
+
+Use ``python seed_db.py --demo`` to add fictional customers and sales for testing.
 """
+import argparse
+from datetime import datetime, timedelta
+from decimal import Decimal
+
 from isbuddies import create_app, db
-from isbuddies.models import Product, Supplier, User
+from isbuddies.models import Customer, Product, Sale, SaleItem, Supplier, User
 
 app = create_app()
 
@@ -81,7 +87,40 @@ INITIAL_PRODUCTS = [
 ]
 
 
-def seed():
+DEMO_CUSTOMERS = [
+    {"name": "Demo Customer 01", "email": "customer01@example.test", "phone": "09170000001"},
+    {"name": "Demo Customer 02", "email": "customer02@example.test", "phone": "09170000002"},
+    {"name": "Demo Customer 03", "email": "customer03@example.test", "phone": "09170000003"},
+    {"name": "Demo Customer 04", "email": "customer04@example.test", "phone": "09170000004"},
+    {"name": "Demo Customer 05", "email": "customer05@example.test", "phone": "09170000005"},
+]
+
+# days ago, customer index, payment method, and (product SKU, quantity) pairs
+DEMO_SALES = [
+    (1, 0, "Cash", [("NB-SP-001", 2), ("BP-HB-01", 3)]),
+    (3, 1, "GCash", [("BP-A4-001", 1), ("PEN-BK-01", 1)]),
+    (5, 2, "Cash", [("FL-CL-03", 2), ("GL-ST-01", 1)]),
+    (8, 3, "Card", [("CR-CY-24", 1), ("OS-WS-12", 1), ("SC-SS-01", 2)]),
+    (12, 4, "Cash", [("NB-CM-002", 3), ("BP-HB-02", 2)]),
+    (16, 0, "GCash", [("BP-ST-002", 1), ("YP-PAD-01", 2)]),
+    (21, 1, "Cash", [("PC-FB-01", 1), ("ER-FB-01", 2)]),
+    (27, 2, "Card", [("CT-CR-01", 2), ("WB-MK-01", 1)]),
+    (34, 3, "Cash", [("IP-PAD-02", 4), ("RL-PL-12", 2)]),
+    (42, 4, "GCash", [("CL-SC-01", 1), ("MT-ST-01", 1)]),
+    (50, 0, "Cash", [("NB-SP-001", 2), ("BP-HB-02", 5)]),
+    (59, 1, "Card", [("BP-LG-003", 1), ("FL-LG-02", 2)]),
+    (68, 2, "Cash", [("HL-PS-01", 1), ("GL-ST-01", 2)]),
+    (77, 3, "GCash", [("BP-HB-03", 4), ("FL-SH-01", 2)]),
+    (88, 4, "Cash", [("BD-RN-01", 1), ("TP-CL-01", 2)]),
+    (99, 0, "Card", [("NB-CM-002", 2), ("PEN-BL-02", 1)]),
+    (111, 1, "Cash", [("ST-HD-01", 1), ("CT-CR-01", 1)]),
+    (124, 2, "GCash", [("BP-A4-001", 1), ("IP-PAD-02", 2)]),
+    (137, 3, "Cash", [("CR-CY-24", 2), ("PC-FB-01", 1)]),
+    (150, 4, "Card", [("NB-SP-001", 3), ("BP-HB-01", 4)]),
+]
+
+
+def seed(include_demo=False):
     with app.app_context():
         # Ensure database tables exist
         db.create_all()
@@ -121,6 +160,60 @@ def seed():
             db.session.commit()
             print("Instructor account already exists.")
 
+        if include_demo:
+            instructor = User.query.filter_by(username="instructor").one()
+            customers = []
+            for customer_data in DEMO_CUSTOMERS:
+                customer = Customer.query.filter_by(email=customer_data["email"]).first()
+                if customer is None:
+                    customer = Customer(**customer_data)
+                    db.session.add(customer)
+                customers.append(customer)
+            db.session.flush()
+
+            if Sale.query.filter(Sale.customer.like("DEMO - %")).first():
+                print("Demo sales already exist; leaving them unchanged.")
+            else:
+                products = {product.sku: product for product in Product.query.all()}
+                now = datetime.utcnow()
+                for index, (days_ago, customer_index, payment_method, item_data) in enumerate(DEMO_SALES):
+                    sale_time = now - timedelta(days=days_ago, hours=index % 9)
+                    sale = Sale(
+                        created_at=sale_time,
+                        cashier_id=instructor.id,
+                        customer_id=customers[customer_index].id,
+                        customer=f"DEMO - {customers[customer_index].name}",
+                        payment_method=payment_method,
+                        discount=Decimal("0.00"),
+                        amount_tendered=Decimal("0.00"),
+                        total=Decimal("0.00"),
+                    )
+                    total = Decimal("0.00")
+                    for sku, quantity in item_data:
+                        product = products.get(sku)
+                        if product is None:
+                            raise RuntimeError(f"Cannot create demo sale: product {sku} is missing.")
+                        unit_price = Decimal(product.unit_price)
+                        total += unit_price * quantity
+                        sale.items.append(SaleItem(
+                            product_id=product.id,
+                            qty=quantity,
+                            returned_qty=0,
+                            unit_price=unit_price,
+                        ))
+                    sale.total = total
+                    sale.amount_tendered = total
+                    db.session.add(sale)
+                db.session.commit()
+                print(f"Demo data seeded: {len(customers)} customers and {len(DEMO_SALES)} sales.")
+            db.session.commit()
+
 
 if __name__ == "__main__":
-    seed()
+    parser = argparse.ArgumentParser(description="Seed IS Buddies products, suppliers, and optional demo activity.")
+    parser.add_argument(
+        "--demo",
+        action="store_true",
+        help="also add clearly labeled fictional customers and historical sales",
+    )
+    seed(include_demo=parser.parse_args().demo)

@@ -2,7 +2,7 @@
 {% block title %}IS Buddies | Suppliers{% endblock %}
 {% block content %}
 <div class="top">
-  <h1>Suppliers Directory</h1>
+  <h1>Suppliers & Purchase Orders</h1>
   <span class="tag">Supply Chain</span>
 </div>
 
@@ -11,89 +11,292 @@
     <h2>Registered Suppliers</h2>
     <div class="sc">
       <table>
-        <thead>
-          <tr>
-            <th>Company Name</th>
-            <th>Contact Person</th>
-            <th>Phone</th>
-            <th>Email</th>
-            <th>Address</th>
-          </tr>
-        </thead>
-        <tbody id="suppliers-tbody">
-          <tr><td colspan="5" class="note">Loading suppliers...</td></tr>
-        </tbody>
+        <thead><tr><th>Company</th><th>Contact</th><th>Phone</th><th>Email</th><th>Address</th><th>Actions</th></tr></thead>
+        <tbody id="suppliers-tbody"><tr><td colspan="6" class="note">Loading suppliers...</td></tr></tbody>
       </table>
     </div>
   </div>
-
-  <div class="card" style="flex:1">
-    <h2>Add New Supplier</h2>
-    <form id="supplier-form" onsubmit="createSupplier(event)">
-      <label class="f">Company Name
-        <input id="sup-name" class="in" required placeholder="e.g. Star Paper Corp">
-      </label>
-      <label class="f">Contact Person
-        <input id="sup-contact" class="in" placeholder="e.g. Maria Santos">
-      </label>
-      <label class="f">Phone Number
-        <input id="sup-phone" class="in" placeholder="e.g. 0917-123-4567">
-      </label>
-      <label class="f">Email
-        <input id="sup-email" type="email" class="in" placeholder="sales@starpaper.ph">
-      </label>
-      <label class="f">Address
-        <textarea id="sup-address" class="in" style="min-height:70px;" placeholder="Metro Manila, Philippines"></textarea>
-      </label>
-      <button type="submit" class="btn" style="width:100%; margin-top:8px;">Save Supplier</button>
+  <div class="card" style="flex:1; min-width:260px">
+    <h2 id="supplier-form-title">Add Supplier</h2>
+    <form id="supplier-form" onsubmit="saveSupplier(event)">
+      <input id="supplier-id" type="hidden">
+      <label class="f">Company Name<input id="sup-name" class="in" maxlength="120" required></label>
+      <label class="f">Contact Person<input id="sup-contact" class="in" maxlength="120"></label>
+      <label class="f">Phone Number<input id="sup-phone" class="in" maxlength="32"></label>
+      <label class="f">Email<input id="sup-email" type="email" class="in" maxlength="120"></label>
+      <label class="f">Address<textarea id="sup-address" class="in" maxlength="2000" style="min-height:70px"></textarea></label>
+      <div class="row">
+        <button type="submit" class="btn">Save Supplier</button>
+        <button type="button" class="btn o" onclick="resetSupplierForm()">Clear</button>
+      </div>
     </form>
+  </div>
+</div>
+
+<div class="row">
+  <div class="card" style="flex:1">
+    <h2>Create Purchase Order</h2>
+    <form id="purchase-order-form" onsubmit="createPurchaseOrder(event)">
+      <label class="f">Supplier<select id="order-supplier" class="in" required></select></label>
+      <label class="f">Product<select id="order-product" class="in" required></select></label>
+      <div class="row">
+        <label class="f">Quantity<input id="order-qty" class="in" type="number" min="1" value="1" required></label>
+        <label class="f">Unit Cost<input id="order-cost" class="in" type="number" min="0" step="0.01" value="0" required></label>
+      </div>
+      <button class="btn o" type="button" onclick="addOrderItem()">Add Line Item</button>
+      <div class="sc"><table>
+        <thead><tr><th>Product</th><th>Qty</th><th>Cost</th><th></th></tr></thead>
+        <tbody id="order-items-tbody"><tr><td colspan="4" class="note">No items added.</td></tr></tbody>
+      </table></div>
+      <label class="f">Note<input id="order-note" class="in" maxlength="255"></label>
+      <button class="btn" type="submit">Place Purchase Order</button>
+    </form>
+  </div>
+  <div class="card" style="flex:2">
+    <h2>Purchase Order History</h2>
+    <div class="sc"><table>
+      <thead><tr><th>Order</th><th>Supplier</th><th>Items</th><th>Created</th><th>Status</th><th>Action</th></tr></thead>
+      <tbody id="orders-tbody"><tr><td colspan="6" class="note">Loading orders...</td></tr></tbody>
+    </table></div>
   </div>
 </div>
 {% endblock %}
 
 {% block scripts %}
 <script>
-async function loadSuppliers() {
-  const res = await fetch("/api/suppliers");
-  const list = await res.json();
-  const tbody = document.getElementById("suppliers-tbody");
-  if (!list || list.length === 0) {
-    tbody.innerHTML = `<tr><td colspan="5" class="note">No suppliers recorded yet.</td></tr>`;
-    return;
-  }
-  tbody.innerHTML = list.map(s => `
-    <tr>
-      <td><strong>${s.name}</strong></td>
-      <td>${s.contact_person || '-'}</td>
-      <td>${s.phone || '-'}</td>
-      <td>${s.email || '-'}</td>
-      <td>${s.address || '-'}</td>
-    </tr>
-  `).join("");
+let suppliers = [];
+let products = [];
+let orderItems = [];
+
+async function responseData(response) {
+  const data = await response.json();
+  if (!response.ok) throw new Error(data.error || "The request could not be completed.");
+  return data;
 }
 
-async function createSupplier(e) {
-  e.preventDefault();
-  const body = {
+function resetSupplierForm() {
+  document.getElementById("supplier-form").reset();
+  document.getElementById("supplier-id").value = "";
+  document.getElementById("supplier-form-title").textContent = "Add Supplier";
+}
+
+function editSupplier(id) {
+  const supplier = suppliers.find(item => item.id === id);
+  if (!supplier) return;
+  document.getElementById("supplier-id").value = supplier.id;
+  document.getElementById("sup-name").value = supplier.name;
+  document.getElementById("sup-contact").value = supplier.contact_person || "";
+  document.getElementById("sup-phone").value = supplier.phone || "";
+  document.getElementById("sup-email").value = supplier.email || "";
+  document.getElementById("sup-address").value = supplier.address || "";
+  document.getElementById("supplier-form-title").textContent = "Edit Supplier";
+}
+
+async function loadSuppliers() {
+  const list = await responseData(await fetch("/api/suppliers"));
+  suppliers = list;
+  const body = document.getElementById("suppliers-tbody");
+  body.replaceChildren();
+  if (!list.length) {
+    const row = body.insertRow();
+    const cell = row.insertCell();
+    cell.colSpan = 6;
+    cell.className = "note";
+    cell.textContent = "No suppliers recorded yet.";
+  }
+  for (const supplier of list) {
+    const row = body.insertRow();
+    for (const value of [supplier.name, supplier.contact_person || "-", supplier.phone || "-",
+      supplier.email || "-", supplier.address || "-"]) row.insertCell().textContent = value;
+    const actions = row.insertCell();
+    const edit = document.createElement("button");
+    edit.className = "btn o";
+    edit.textContent = "Edit";
+    edit.onclick = () => editSupplier(supplier.id);
+    actions.append(edit, " ");
+    const remove = document.createElement("button");
+    remove.className = "btn o";
+    remove.textContent = "Delete";
+    remove.onclick = () => deleteSupplier(supplier.id);
+    actions.append(remove);
+  }
+  const select = document.getElementById("order-supplier");
+  select.replaceChildren();
+  for (const supplier of list) {
+    const option = document.createElement("option");
+    option.value = supplier.id;
+    option.textContent = supplier.name;
+    select.append(option);
+  }
+}
+
+async function saveSupplier(event) {
+  event.preventDefault();
+  const id = document.getElementById("supplier-id").value;
+  const payload = {
     name: document.getElementById("sup-name").value.trim(),
     contact_person: document.getElementById("sup-contact").value.trim(),
     phone: document.getElementById("sup-phone").value.trim(),
     email: document.getElementById("sup-email").value.trim(),
     address: document.getElementById("sup-address").value.trim()
   };
-  const res = await fetch("/api/suppliers", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(body)
-  });
-  if (!res.ok) {
-    alert("Failed to create supplier.");
-    return;
+  try {
+    await responseData(await fetch(id ? `/api/suppliers/${id}` : "/api/suppliers", {
+      method: id ? "PUT" : "POST",
+      headers: {"Content-Type": "application/json"},
+      body: JSON.stringify(payload)
+    }));
+    resetSupplierForm();
+    await loadSuppliers();
+  } catch (error) {
+    alert(error.message);
   }
-  document.getElementById("supplier-form").reset();
-  loadSuppliers();
 }
 
-document.addEventListener("DOMContentLoaded", loadSuppliers);
+async function deleteSupplier(id) {
+  if (!confirm("Delete this supplier?")) return;
+  try {
+    await responseData(await fetch(`/api/suppliers/${id}`, {method: "DELETE"}));
+    await loadSuppliers();
+  } catch (error) {
+    alert(error.message);
+  }
+}
+
+async function loadOrderProducts() {
+  const data = await responseData(await fetch("/api/products?per_page=100"));
+  products = data.products;
+  const select = document.getElementById("order-product");
+  select.replaceChildren();
+  for (const product of data.products) {
+    const option = document.createElement("option");
+    option.value = product.id;
+    option.textContent = `${product.name} (${product.sku})`;
+    select.append(option);
+  }
+}
+
+function renderOrderItems() {
+  const body = document.getElementById("order-items-tbody");
+  body.replaceChildren();
+  if (!orderItems.length) {
+    const row = body.insertRow();
+    const cell = row.insertCell();
+    cell.colSpan = 4;
+    cell.className = "note";
+    cell.textContent = "No items added.";
+    return;
+  }
+  for (const [index, item] of orderItems.entries()) {
+    const product = products.find(entry => entry.id === item.product_id);
+    const row = body.insertRow();
+    for (const value of [product ? product.name : `Product ${item.product_id}`,
+      item.quantity, `₱ ${item.unit_cost.toFixed(2)}`]) row.insertCell().textContent = value;
+    const action = row.insertCell();
+    const remove = document.createElement("button");
+    remove.type = "button";
+    remove.className = "btn o";
+    remove.textContent = "Remove";
+    remove.onclick = () => {
+      orderItems.splice(index, 1);
+      renderOrderItems();
+    };
+    action.append(remove);
+  }
+}
+
+function addOrderItem() {
+  const productId = Number(document.getElementById("order-product").value);
+  const quantity = Number(document.getElementById("order-qty").value);
+  const unitCost = Number(document.getElementById("order-cost").value);
+  if (!productId || !Number.isInteger(quantity) || quantity <= 0 ||
+      !Number.isFinite(unitCost) || unitCost < 0) {
+    alert("Choose a product and enter a valid quantity and unit cost.");
+    return;
+  }
+  const existing = orderItems.find(item => item.product_id === productId);
+  if (existing) {
+    existing.quantity += quantity;
+    existing.unit_cost = unitCost;
+  } else {
+    orderItems.push({product_id: productId, quantity, unit_cost: unitCost});
+  }
+  renderOrderItems();
+}
+
+async function loadOrders() {
+  const data = await responseData(await fetch("/api/purchase-orders?per_page=20"));
+  const body = document.getElementById("orders-tbody");
+  body.replaceChildren();
+  if (!data.orders.length) {
+    const row = body.insertRow();
+    const cell = row.insertCell();
+    cell.colSpan = 6;
+    cell.className = "note";
+    cell.textContent = "No purchase orders recorded.";
+  }
+  for (const order of data.orders) {
+    const row = body.insertRow();
+    for (const value of [
+      `PO-${String(order.id).padStart(6, "0")}`, order.supplier,
+      order.items.map(item => `${item.product} × ${item.quantity}`).join(", "),
+      order.created_at, order.status
+    ]) row.insertCell().textContent = value;
+    const action = row.insertCell();
+    if (order.status === "received") {
+      action.textContent = order.received_at || "Received";
+    } else {
+      const receive = document.createElement("button");
+      receive.className = "btn y";
+      receive.textContent = "Receive";
+      receive.onclick = () => receiveOrder(order.id);
+      action.append(receive);
+    }
+  }
+}
+
+async function createPurchaseOrder(event) {
+  event.preventDefault();
+  if (!orderItems.length) {
+    alert("Add at least one product to this purchase order.");
+    return;
+  }
+  const payload = {
+    supplier_id: Number(document.getElementById("order-supplier").value),
+    note: document.getElementById("order-note").value.trim(),
+    items: orderItems
+  };
+  try {
+    await responseData(await fetch("/api/purchase-orders", {
+      method: "POST",
+      headers: {"Content-Type": "application/json"},
+      body: JSON.stringify(payload)
+    }));
+    orderItems = [];
+    document.getElementById("purchase-order-form").reset();
+    renderOrderItems();
+    await loadOrders();
+  } catch (error) {
+    alert(error.message);
+  }
+}
+
+async function receiveOrder(id) {
+  if (!confirm("Receive this order and add its quantities to inventory?")) return;
+  try {
+    await responseData(await fetch(`/api/purchase-orders/${id}/receive`, {method: "POST"}));
+    await Promise.all([loadOrders(), loadOrderProducts()]);
+  } catch (error) {
+    alert(error.message);
+  }
+}
+
+document.addEventListener("DOMContentLoaded", async () => {
+  try {
+    await Promise.all([loadSuppliers(), loadOrderProducts(), loadOrders()]);
+  } catch (error) {
+    alert(error.message);
+  }
+});
 </script>
 {% endblock %}
