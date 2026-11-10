@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{% block title %}IS Buddies{% endblock %}</title>
   <meta name="theme-color" content="#172554">
-  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css', v='2') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css', v='3') }}">
 </head>
 <body>
   <div class="app">
@@ -39,8 +39,26 @@
         <a class="mobile-brand" href="{{ url_for('main.dashboard') if current_user.role in ['admin', 'instructor'] else url_for('main.inventory') if current_user.role == 'inventory_clerk' else url_for('main.sales') }}">
           <span class="brand-mark">{{ icon('package', 18) }}</span><strong>IS Buddies</strong>
         </a>
+        <button class="icon-button fs-btn" type="button" onclick="toggleFullScreen()" title="Toggle Fullscreen" style="margin-left:auto;">
+          <span class="icon-expand">{{ icon('fullscreen', 18) }}</span>
+          <span class="icon-compress" style="display:none;">{{ icon('compress', 18) }}</span>
+        </button>
         <span class="mobile-role">{{ current_user.role_label }}</span>
       </header>
+
+      <div class="desktop-topbar">
+        <div class="topbar-left">
+          <span class="system-status-indicator"><span class="dot-live"></span> System Online · {{ current_user.role_label }} Workspace</span>
+        </div>
+        <div class="topbar-right">
+          <button class="btn o fs-btn" id="btn-fullscreen" type="button" onclick="toggleFullScreen()" title="Toggle Fullscreen Mode (F11)">
+            <span class="icon-expand">{{ icon('fullscreen', 16) }}</span>
+            <span class="icon-compress" style="display:none;">{{ icon('compress', 16) }}</span>
+            <span class="fs-text">Fullscreen Mode</span>
+          </button>
+        </div>
+      </div>
+
       {% with messages = get_flashed_messages() %}
         {% for message in messages %}<p class="note flash-msg">{{ message }}</p>{% endfor %}
       {% endwith %}
@@ -71,6 +89,33 @@
     if (window.innerWidth > 760) closeNav();
   });
 })();
+
+function toggleFullScreen() {
+  if (!document.fullscreenElement) {
+    document.documentElement.requestFullscreen().catch(err => {
+      console.warn("Fullscreen request error:", err);
+    });
+  } else {
+    if (document.exitFullscreen) {
+      document.exitFullscreen().catch(err => {
+        console.warn("Exit fullscreen error:", err);
+      });
+    }
+  }
+}
+
+document.addEventListener("fullscreenchange", () => {
+  const isFs = !!document.fullscreenElement;
+  document.querySelectorAll(".fs-btn").forEach(btn => {
+    const expand = btn.querySelector(".icon-expand");
+    const compress = btn.querySelector(".icon-compress");
+    const text = btn.querySelector(".fs-text");
+    if (expand) expand.style.display = isFs ? "none" : "inline-flex";
+    if (compress) compress.style.display = isFs ? "inline-flex" : "none";
+    if (text) text.textContent = isFs ? "Exit Fullscreen" : "Fullscreen Mode";
+    btn.classList.toggle("active-fullscreen", isFs);
+  });
+});
 </script>
 {% block scripts %}{% endblock %}
 </body>

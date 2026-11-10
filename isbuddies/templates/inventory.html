@@ -16,7 +16,7 @@
   </select>
   <span style="flex:1"></span>
   {% if current_user.role in ['admin', 'inventory_clerk'] %}
-  <button id="btn-show-add" class="btn y" onclick="resetForm()">+ New Product</button>
+  <button id="btn-show-add" class="btn y" onclick="goToAddForm()">+ New Product</button>
   {% endif %}
 </div>
 
@@ -188,6 +188,12 @@ async function loadProducts(page = 1) {
       pag.appendChild(b);
     }
   }
+}
+
+function goToAddForm(){
+  // slide to the add product form
+  const formCard = document.getElementById("product-form").closest(".card");
+  formCard.scrollIntoView({ behavior: "smooth" });
 }
 
 function resetForm() {

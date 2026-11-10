@@ -13,7 +13,7 @@ bp = Blueprint("main", __name__)
 NAV = {
     "admin": [("main.dashboard", "dashboard", "Dashboard"),
               ("main.inventory", "inventory", "Inventory"),
-              ("main.sales", "sales", "Sales"),
+              ("main.sales", "sales", "Transactions"),
               ("main.sales_history", "history", "Sales History"),
               ("main.users", "users", "Users"),
               ("main.suppliers_page", "suppliers", "Suppliers"),
@@ -22,7 +22,7 @@ NAV = {
               ("main.knowledge", "knowledge", "Knowledge Analysis")],
     "instructor": [("main.dashboard", "dashboard", "Dashboard"),
                    ("main.inventory", "inventory", "Inventory (view)"),
-                   ("main.sales", "sales", "Sales (view)"),
+                   ("main.sales", "sales", "Transactions (view)"),
                    ("main.sales_history", "history", "Sales History"),
                    ("main.customers_page", "customers", "Customers"),
                    ("main.reports_page", "reports", "Reports"),
